@@ -1,0 +1,238 @@
+
+# Table of Contents
+
+-   [cosmology FAQ](#csmlgyfq) 
+-   [measuring distances in universe](#msrngdstncsnnvrs) 
+-   [Olber's paradox: split universe in shells, consider shell at dist X each shell at dist 2X has 4x as many stars, and 1/4 bright, so total brightness is infinite](#lbrsprdxspltnvrsnshllscnssndbrghtsttlbrghtnsssnfnt) 
+-   [What happens to microscopic black hole?](#whthppnstmcrscpcblckhl) 
+    -   [https://ru-scifi.livejournal.com/422702.html](#srscflvjrnlcmhtml) 
+    -   [https://ru-scifi.livejournal.com/424541.html &#x2013; what if it's charged](#srscflvjrnlcmhtmlwhtftschrgd) 
+    -   [https://ru-scifi.livejournal.com/427770.html &#x2013; ocsillating black hole in the middle of the Earth](#srscflvjrnlcmhtmlcslltngblckhlnthmddlfthrth) 
+    -   [https://ru-scifi.livejournal.com/427978.html &#x2013; heating up a planet with Hawking radiation](#srscflvjrnlcmhtmlhtngpplntwthhwkngrdtn) 
+-   [`[2018-07-03]` old notes](#ldnts) 
+-   [Friedman equation derivation](#frdmnqtndrvtn) [[study]] [[cosmology]]
+-   [susskind, cosmology 1](#ssskndcsmlgy) [[cosmology]]
+-   [`[2015-06-14]` CMB](#cmb) [[cosmology]]
+-   [`[2019-02-21]` 'A Universe From Nothing' by Lawrence Krauss, AAI 2009 - YouTube](#nvrsfrmnthngbylwrnckrssytb) 
+-   [`[2019-02-09]` Dark matter black hole](#drkmttrblckhl) [[darkmatter]] [[blackhole]]
+    -   [`[2019-02-11]` https://medium.com/starts-with-a-bang/ask-ethan-100-why-doesn-t-dark-matter-form-black-holes-c5b6d90b1883](#smdmcmstrtswthbngskthnwhydsntdrkmttrfrmblckhlscbdb) 
+-   [`[2020-07-21]` Гравитационная неустойчивость — Википедия](#srwkpdrgwkdddbdbdbddbddbdаянеустойчивостьвикипедия) 
+-   [`[2020-08-10]` Thermodynamics and the End of the Universe: Energy, Entropy, and the fundamental laws of physics. - YouTube](#swwwytbcmwtchvgrwyynbvythyndthfndmntllwsfphyscsytb) 
+-   [`[2019-11-21]` Physicists Just Created the Most Detailed Simulation of the Universe in History /r/Physics](#srddtcmrphyscscmmntsdzjphsmltnfthnvrsnhstryrphyscs) [[sim]]
+    -   [`[2019-11-21]` Physicists Just Created the Most Detailed Simulation of the Universe in History /r/Physics](#srddtcmrphyscscmmntsdzjphsmltnfthnvrsnhstryrphyscs) 
+-   [`[2020-07-21]` general relativity - Can black holes form in a finite amount of time? - Physics Stack Exchange](#sphyscsstckxchngcmqstnscnnfntmntftmphyscsstckxchng) 
+-   [rendering curved spacetime](#rndrngcrvdspctm) [[blackhole]]
+    -   [`[2019-04-24]` Именно такъ - внутри дыры никакихъ статическихъ наблюдателей не можетъ существовать](#именнотакъвнутридырыникактелейнеможетъсуществовать) 
+-   [black hole study](#blckhlstdy) 
+-   [`[2020-05-19]` (3) Mapping the Multiverse - YouTube](#swwwytbcmwtchvvhqcbqmppngthmltvrsytb) [[tostudy]] [[blackhole]]
+
+
+
+
+
+# cosmology FAQ
+
+<http://cosmo.labrate.ru/cosmology_faq.html>  
+
+
+
+
+# measuring distances in universe
+
+<http://cosmo.labrate.ru/distance.htm>  
+
+
+
+
+# Olber's paradox: split universe in shells, consider shell at dist X each shell at dist 2X has 4x as many stars, and 1/4 bright, so total brightness is infinite
+
+<https://en.wikipedia.org/wiki/Olbers'_paradox>  
+
+
+
+
+# What happens to microscopic black hole?
+
+
+
+
+
+## <https://ru-scifi.livejournal.com/422702.html> 
+
+
+
+
+## <https://ru-scifi.livejournal.com/424541.html> &#x2013; what if it's charged
+
+
+
+
+## <https://ru-scifi.livejournal.com/427770.html> &#x2013; ocsillating black hole in the middle of the Earth
+
+
+
+
+## <https://ru-scifi.livejournal.com/427978.html> &#x2013; heating up a planet with Hawking radiation
+
+
+
+
+# `[2018-07-03]` old notes
+
+    Flatness problem: fine tuning, Omega parameter diverges from 1 TODO
+    
+    Anthropic principle:
+    Anthropic principle[edit]
+    One solution to the problem is to invoke the anthropic principle, which states that humans should take into account the conditions necessary for them to exist when speculating about causes of the universe's properties. If two types of universe seem equally likely but only one is suitable for the evolution of intelligent life, the anthropic principle suggests that finding ourselves in that universe is no surprise: if the other universe had existed instead, there would be no observers to notice the fact.
+    
+    The principle can be applied to solve the flatness problem in two somewhat different ways. The first (an application of the 'strong anthropic principle'[citation needed]) was suggested by C. B. Collins and Stephen Hawking,[11][12] who in 1973 considered the existence of an infinite number of universes such that every possible combination of initial properties was held by some universe. In such a situation, they argued, only those universes with exactly the correct density for forming galaxies and stars would give rise to intelligent observers such as humans: therefore, the fact that we observe Ω to be so close to 1 would be "simply a reflection of our own existence."[11]
+    
+    Solution: Cosmic inflation
+    
+    Big Crunch/Big Rip
+    
+    Neutrinos are the candidates for dark matter
+    
+    Relic neutrinos, comsic background
+    
+    Spinning black holes could be bounces from each other
+    
+    The cosmological constant (usually denoted by the Greek capital letter lambda: Λ) is the value of the energy density of the vacuum of space.
+    
+    Universe expansion:
+    
+    Are distant galaxies moving faster than the speed of light? Wouldn't that violate relativity?
+    A profound feature of relativity is that two objects passing by each other cannot have a relative velocity greater than the speed of light. An even more profound feature, one which has received much less publicity, is that the concept of "relative velocity" does not even make sense unless the objects are very close to each other. In Einstein's general theory of relativity (which describes gravity as the curvature of spacetime), there is no way to define the velocity between two widely-separated objects in any strictly correct sense. The "velocity" that cosmologists speak of between distant galaxies is really just a shorthand for the expansion of the universe; it's not that the galaxies are moving, it's that the space between them is expanding. If the distance isn't too great, this expansion looks and feels just like a recession velocity, but when the distance becomes very large that resemblance breaks down. In particular, it's perfectly plausible to have distant galaxies whose "recession velocity" is greater than the speed of light. (We couldn't see such galaxies directly, since light from them would never reach us, but that doesn't mean they aren't there.) The resolution to this paradox is simply that we have taken a convenient analogy too far, and there isn't a well-defined "speed" between us and distant objects.
+    
+    http://preposterousuniverse.com/writings/cosmologyprimer/faq.html
+    TODO ugh. link is dead
+    
+    
+    Could we detect the expansion of the universe by trying to measure the expansion of the solar system?
+    No. Any system that is bound together by internal forces -- whether it is a table, the solar system, or the galaxy -- does not expand along with the universe. (Not just that it only expands slightly; it really doesn't expand at all (TODO: ??????), or at least not because of the expansion of the universe.) To observe the expansion, we need to study objects that are very distant, not directly bound to us by gravity or anything else.
+    
+    
+    Is energy conserved in an expanding universe?
+    This is a tricky question, depending on what you mean by "energy." Usually we ascribe energy to the different components of the universe (radiation, matter, dark energy), not including gravity itself. In that case the total energy, given by adding up the energy density in each component, is certainly not conserved. The most dramatic example occurs with dark energy -- the energy density (energy per unit volume) remains approximately constant, while the volume increases as the universe expands, so the total energy increases. But even ordinary radiation exhibits similar behavior; the number of photons remains constant, while each individual photon loses energy as it redshifts, so the total energy in radiation decreases. (A decrease in energy is just as much a violation of energy conservation as an increase would be.) In a sense, the energy in "stuff" is being transferred to the energy of the gravitational field, as manifested in the expansion of the universe. But there is no exact definition of "the energy of the gravitational field," so this explanation is imperfect. Nevertheless, although energy is not really conserved in an expanding universe, there is a very strict rule that is obeyed by the total energy, which reduces to perfect conservation when the expansion rate goes to zero; the expansion changes the rules, but that doesn't mean that anything goes.
+
+
+
+
+# Friedman equation derivation      [[study]] [[cosmology]]
+
+<https://en.wikipedia.org/wiki/Friedmann_equations>  
+metric must be of form ds<sup>2</sup> = a(t)<sup>2</sup> ds<sub>3</sub><sup>2</sup> -c<sup>2</sup> t<sup>2</sup>  
+
+
+
+
+# susskind, cosmology 1      [[cosmology]]
+
+D is a 'grid coordinate', basically an index, it's unchanging  
+D = a(t) dx  
+V = a'(t) dx  
+V/D = a /a' = H(t) &#x2013; hubble's constant  
+hmm, but does it make sense to speak about V if D is not changing???  
+
+
+
+
+# `[2015-06-14]` CMB      [[cosmology]]
+
+    Just like the CMB tells us what was happening 300,000 years ago, the cosmological gravitational wave background will tell us about the nature of the universe at the time when they start their journey toward us.
+
+
+
+
+# `[2019-02-21]` 'A Universe From Nothing' by Lawrence Krauss, AAI 2009 - YouTube
+
+<https://www.youtube.com/watch?v=7ImvlS8PLIo&list=WL&index=70>  
+all the heavy elements in the human bodies were created from exploded starts. this is indeed beautiful!  
+
+
+
+
+# `[2019-02-09]` Dark matter black hole      [[darkmatter]] [[blackhole]]
+
+
+
+
+
+## `[2019-02-11]` <https://medium.com/starts-with-a-bang/ask-ethan-100-why-doesn-t-dark-matter-form-black-holes-c5b6d90b1883>
+
+right, so interaction only throught gravity is not powerful enough to make the clump of matter dense enough to form a black hole  
+without other forces there's nothing to slow the dark matter particles down when they reach each other and their momentum just carries them past each other.  
+
+
+
+
+# `[2020-07-21]` [Гравитационная неустойчивость — Википедия](https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D1%8C)
+
+    Гравитационная неустойчивость (неустойчивость Джинса) — нарастание со временем пространственных флуктуаций скорости и плотности вещества под действием сил тяготения (гравитационных возмущений).
+    Гравитационная неустойчивость ведёт к образованию неоднородностей (сгустков) в первоначально однородной среде и сопровождается уменьшением гравитационной энергии системы, переходящей в кинетическую энергию сжимающегося вещества, которая, в свою очередь, может переходить в тепловую энергию и излучение.
+
+
+
+
+# `[2020-08-10]` [Thermodynamics and the End of the Universe: Energy, Entropy, and the fundamental laws of physics. - YouTube](https://www.youtube.com/watch?v=GOrWy_yNBvY)
+
+    I don't understand why you say it will NEVER happen that the balls will all go back into the corner. It can happen, it's just extremely unlikely, and becomes more unlikely the more balls you add.
+
+-   
+
+    The caveat is that though there IS a small chance, that probability is several orders of magnitude beyond the predicted lifespan of the current universe. And just for one event so never is quite appropriate but for extremely intense critics, just don't take it so literally.
+
+
+
+
+# `[2019-11-21]` [Physicists Just Created the Most Detailed Simulation of the Universe in History](https://reddit.com/r/Physics/comments/dzj60i/physicists_just_created_the_most_detailed/) /r/Physics      [[sim]]
+
+
+
+
+
+## `[2019-11-21]` [Physicists Just Created the Most Detailed Simulation of the Universe in History](https://reddit.com/r/Physics/comments/dzj60i/physicists_just_created_the_most_detailed/f88mqvr/) /r/Physics
+
+    [Direct link to 1080p simulation on Max Planck](https://www.tng-project.org/images/press/tng50_galaxy_evolution_1080p.mp4) because fuck this obnoxiously ad-laden website. Absolute cancer to navigate on mobile.
+
+
+
+
+# `[2020-07-21]` [general relativity - Can black holes form in a finite amount of time? - Physics Stack Exchange](https://physics.stackexchange.com/questions/5031/can-black-holes-form-in-a-finite-amount-of-time)
+
+
+
+
+# rendering curved spacetime      [[blackhole]]
+
+<https://thedeemon.livejournal.com/127151.html>  
+<https://thedeemon.livejournal.com/127473.html>  
+<https://thedeemon.livejournal.com/127697.html>  
+covariant derivative &#x2013; takes geometry change along the derivation variable into account  
+something useful about parallel transport  
+parallell transport means that the vector is locally parallell to the curve.  
+geodesic is a curve whose tangent vector is parallell transported along the curve itself  
+
+if you parallell transport a pair of vectors, the angle should be preserverd, hence the covariant derivative of metric tensor must be 0  
+
+interesting point about coordinates swapping in black hole <https://thedeemon.dreamwidth.org/123575.html?thread=1996983#cmt1996983>  
+
+
+
+
+## `[2019-04-24]` Именно такъ - внутри дыры никакихъ статическихъ наблюдателей не можетъ существовать
+
+
+
+
+# black hole study
+
+<https://twitter.com/preskill/status/1177270572125810688>  
+
+
+
+
+# `[2020-05-19]` [(3) Mapping the Multiverse - YouTube](https://www.youtube.com/watch?v=4v9A9hQUcBQ)      [[tostudy]] [[blackhole]]
+
+shit 4:00 actually great demo of normal spacetime & black hole on the penrose diagram  
+

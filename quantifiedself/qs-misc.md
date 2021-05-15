@@ -1,0 +1,2926 @@
+
+# Table of Contents
+
+-   [`[2020-02-17]` My 12-year journey to logging my life! /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsfbyyrjrnytlggngmylfrqntfdslf) 
+-   [`[2020-01-13]` What do you all do with your data? /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntscktbwhtdylldwthyrdtrqntfdslf) 
+-   [`[2019-12-09]` I Logged 2,000 Nights of Sleep (6 years) OC /r/dataisbeautiful](#srddtcmrdtsbtflcmmntstylglggdnghtsfslpyrscrdtsbtfl) 
+-   [`[2019-12-02]` Beyond the “Quantified Self” | Ian Cackett](#byndthqntfdslfnccktt) 
+-   [track alarm stats: set up, dismissed etc](#trcklrmsttsstpdsmssdtc) [[qs]] [[sleep]]
+-   [cross correlation &#x2013; dependency of correlation on shift](#crsscrrltndpndncyfcrrltnnshft) [[qs]]
+-   [figure out a better way of recording HR data, not requiring endomondo?](#fgrtbttrwyfrcrdnghrdtntrqrngndmnd) [[qs]]
+-   [`[2019-02-24]` The Quantified Brain of a Self-Tracking Neuroscientist - MIT Technology Review](#thqntfdbrnfslftrckngnrscntstmttchnlgyrvw) 
+    -   [`[2019-08-09]` https://news.stanford.edu/2015/12/09/brain-study-poldrack-120915/ followup](#snwsstnfrddbrnstdypldrckfllwp) 
+-   [`[2019-02-24]` QS Resource Guide](#qsrsrcgd) 
+-   [`[2019-03-13]` What’s the best sleep tracking device? Who’s actually looked into the science of how it works? /r/Biohackers](#srddtcmrbhckrscmmntsyjwhtkdntthscncfhwtwrksrbhckrs) 
+-   [`[2019-03-13]` What’s the best sleep tracking device? Who’s actually looked into the science of how it works? /r/Biohackers](#srddtcmrbhckrscmmntsyjwhtkdntthscncfhwtwrksrbhckrs) 
+-   [`[2019-09-30]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis](#mrkwkqsldgrqntfdslfprsnldtggrgtrnddtnlyss) [[dashboard]]
+-   [`[2019-11-16]` Best way to quantify/rank subjective attributes? /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsdwvyrnksbjctvttrbtsrqntfdslf) [[dashboard]] [[hpi]]
+-   [`[2020-04-06]` Ask HN: Tools or mental model for answering subjective questions quantitatively?](#snwsycmbntrcmtmdskhntlsrmnswrngsbjctvqstnsqntttvly) [[qs]]
+-   [Tweet from @ilyaraz2](#twtfrmlyrz) [[coffee]] [[sleep]]
+-   [search how people measure it subjectively?](#srchhwpplmsrtsbjctvly) [[sleep]]
+-   [`[2020-01-06]` Processing one-line journal entries for personal tracking (quantified self) : LanguageTechnology](#prcssngnlnjrnlntrsfrprsnltrckngqntfdslflnggtchnlgy) [[qs]] [[exercise]]
+    -   [`[2020-10-12]` although no responses&#x2026;](#lthghnrspnss) 
+-   [hmm, so if sleep temperature/pressure cycle is a thing, can I decide best time to sleep judging by it?](#hmmsfslptmprtrprssrcyclsthngcndcdbsttmtslpjdgngbyt) [[qs]] [[sleep]]
+-   [when I update it, need to set truncate=False and seed](#whnpdttndtsttrnctflsndsd) [[qs]] [[seaborn]]
+-   [HR decay experiment is in *coding/dashboard*](#hrdcyxprmntsncdngdshbrd) [[dashboard]] [[hr]] [[qs]]
+-   [ok, so shoud really do a week of consistent bedtime/waking up to make some final decision on jawbone?](#ksshdrllydwkfcnsstntbdtmwkngptmksmfnldcsnnjwbn) 
+-   [`[2020-05-11]` miguelrochefort/fitness-camera: Fitness Camera](#sgthbcmmglrchfrtftnsscmrmglrchfrtftnsscmrftnsscmr) [[qs]] [[social]]
+-   [breathing slower &#x2013; higher HRV?](#brthngslwrhghrhrv) [[hrv]]
+-   [`[2018-12-07]` Biohacking Services Map https://notunhealthy.com/biohacking-map](#bhckngsrvcsmpsntnhlthycmbhckngmp) [[biohacking]]
+    -   [`[2019-04-29]` eh, only neurofeedback things are somewhat interesting](#hnlynrfdbckthngsrsmwhtntrstng) 
+-   [pulse oximeter?](#plsxmtr) [[qs]] [[gadget]]
+    -   [`[2019-02-21]` measures Sp02? eh, overall looks like most interesting data I can potentially get is how hard I did aerobic exercise? could play with it for a bit, I suppose..](#msrssphvrlllkslkmstntrstnrbcxrcscldplywthtfrbtspps) 
+-   [https://www.freestylelibre.co.uk/libre/products/starter-pack.html](#swwwfrstyllbrcklbrprdctsstrtrpckhtml) [[cgm]]
+-   [subscribe to more news on QS, BCI and gadgets](#sbscrbtmrnwsnqsbcndgdgts) [[qs]]
+-   [figure out HRV](#fgrthrv) [[qs]] [[hrv]]
+    -   [`[2018-08-18]` What is Heart Rate Variability? – Biovotion AG https://biovotion.zendesk.com/hc/en-us/articles/213581885-What-is-Heart-Rate-Variability](#whtshrtrtvrbltybvtngsbvtnmhcnsrtclswhtshrtrtvrblty) 
+    -   [https://blog.ouraring.com/blog/heart-rate-variability-basics/](#sblgrrngcmblghrtrtvrbltybscs) 
+    -   [https://elitehrv.com/what-is-heart-rate-variability](#slthrvcmwhtshrtrtvrblty) 
+-   [Which HRM would you buy? I need your advice! - running](#whchhrmwldybyndyrdvcrnnng) [[buy]] [[running]] [[hr]]
+    -   [SCOSCHE RHYTHM 24 &#x2013; 2018 year](#scschrhythmyr) 
+-   [wearable thermometer?](#wrblthrmmtr) [[qs]]
+    -   [`[2019-01-25]` generally they all seem to suck&#x2026;](#gnrllythyllsmtsck) 
+-   [`[2018-06-15]` qs guide &#x2013; cholesterol and trigs](#qsgdchlstrlndtrgs) [[qs]] [[blood]]
+-   [`[2018-11-07]` ActivityWatch/activitywatch: Log what you do on your computer. Simple (yet powerful), extensible, no third parties.](#ctvtywtchctvtywtchlgwhtydmplytpwrflxtnsblnthrdprts) 
+    -   [`[2019-02-12]`  right, android version is WIP](#rghtndrdvrsnswp) 
+-   [People](#ppl) 
+    -   [`[2018-11-10]` aquilax (Evgeniy Vasilev)](#qlxvgnyvslv) 
+    -   [`[2019-08-19]` quantifiedvagabond (u/quantifiedvagabond) - Reddit](#qntfdvgbndqntfdvgbndrddt) 
+    -   [`[2019-12-18]` ErikBjare (Erik Bjäreholt) / Repositories](#rkbjrrkbjärhltrpstrs) 
+-   [`[2018-11-26]` zenobase comments on Apps for regularly measuring intelligence, psychology, and/or trivia?](#znbscmmntsnppsfrrglrlymsrngntllgncpsychlgyndrtrv) [[mind]] [[qs]]
+-   [`[2019-01-04]` Skulpt Careers, Funding, and Management Team | AngelList](#sklptcrrsfndngndmngmnttmngllst) 
+-   [`[2019-02-05]` ActivityWatch](#ctvtywtch) 
+    -   [`[2019-02-22]` only for desktop?](#nlyfrdsktp) 
+-   [`[2019-02-13]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis](#mrkwkqsldgrqntfdslfprsnldtggrgtrnddtnlyss) 
+-   [`[2019-02-21]` Quantified Self Startups - AngelList](#qntfdslfstrtpsngllst) [[qs]]
+-   [`[2019-02-21]` Quanitified Bob | corticalmetrics](#qntfdbbcrtclmtrcs) [[qs]] [[cognitive]]
+-   [`[2019-05-16]` How I audio-video record my life /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsbtcylfhwdvdrcrdmylfrqntfdslf) 
+-   [`[2019-01-13]` Assessing my Skulpt Aim data with JMP - JMP User Community](#ssssngmysklptmdtwthjmpjmpsrcmmnty) [[qs]]
+-   [`[2019-04-15]` [x-post with Lifelogging] What's your set-up to constantly record audio and/or video? : Digital<sub>Immortality</sub>](#xpstwthlflggngwhtsyrstptcntlyrcrddndrvddgtlmmrtlty) 
+-   [quick show and tell about my post on cognitive testing?](#qckshwndtllbtmypstncgntvtstng) [[self]] [[qs]] [[toblog]]
+-   [I decided to get a Netatmo weather station device.](#dcddtgtnttmwthrsttndvc) [[qs]]
+-   [`[2019-08-21]` Good sleep, good learning, good life](#gdslpgdlrnnggdlf) [[qs]]
+-   [Gadgetbridge](#gdgtbrdg) 
+-   [`[2019-02-11]` Self-Quantification Explained: Tons of Ways Start Measuring Your Performance and Progress - The Bioneer](#slfqntfctnxplndtnsfwysstrrngyrprfrmncndprgrssthbnr) [[qs]]
+-   [`[2019-08-05]` For some, self-tracking means more than self-help](#frsmslftrckngmnsmrthnslfhlp) 
+-   [`[2019-10-06]` Get the latest 23andMe reports - the.dmitrii.g@gmail.com - Gmail](#gtthltstndmrprtsthdmtrggmlcmgml) 
+-   [`[2019-08-17]` Frank T. Hopfgartner on Twitter: "Find the slides of our lifelogging task at NTCIR14 at https://t.co/NM1Lf3BBLN" / Twitter](#frnkthpfgrtnrntwttrfndthstsktntcrtstcnmlfbblntwttr) 
+-   [But their skin conductance (a reliable measure of the stress response)](#btthrskncndctncrlblmsrfthstrssrspns) [[qs]]
+-   [`[2019-12-26]` Sarah Bartlett on Twitter: "@youngs<sub>eye</sub><sub>view</sub> @tableaupublic This is a super interesting, creative, quantified-self take on the theme! I applaud you for tracking your meals for this long too. Thank you for entering another viz! Happy Holidays ☺️" / Twitter](#srhbrtlttntwttryngsyvwtbltrngnthrvzhppyhldys️twttr) [[qs]] [[viz]] [[inspiration]]
+-   [`[2019-09-16]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis](#mrkwkqsldgrqntfdslfprsnldtggrgtrnddtnlyss) [[hpi]]
+    -   [`[2020-05-14]` lastfm could be interesting too I suppose](#lstfmcldbntrstngtspps) 
+-   [`[2019-10-08]` Resting Heart Rate: Year-Over-Year Update – Michael Lustgarten](#rstnghrtrtyrvryrpdtmchllstgrtn) 
+-   [`[2019-11-25]` An Exploration of Mood Tracking: Can We Measure How We Feel? - Mark Koester](#nxplrtnfmdtrckngcnwmsrhwwflmrkkstr) 
+-   [`[2019-12-02]` It is pretty amazing, but in a way, Wolfram is also demonstrating how not to do &#x2026; | Hacker News](#tsprttymzngbtnwywlfrmslsdmnstrtnghwnttdhckrnws) 
+-   [`[2019-12-12]` Quantified Bob Updates: 🌮 Tracking glucose response to foods, 🎁 Holiday gift guide + more](#qntfdbbpdtstrckngglcsrspnstfdshldygftgdmr) 
+-   [`[2020-04-30]` (2) Sergey Stavisky on Twitter: "@alexeyguzey Curious if you exercised during the experiment and noticed an effect there? I find that even with just a couple hours less than my usual (~7.5), cardio exertion feels harder and my running is slower." / Twitter](#stwttrcmsttssrgystvskyntwlshrdrndmyrnnngsslwrtwttr) [[qs]]
+-   [`[2020-01-17]` Julian Lehr (@lehrjulian) / Twitter](#jlnlhrlhrjlntwttr) 
+-   [`[2019-12-11]` LiDAR Camera L515 – Intel® RealSense™ Depth and Tracking Cameras](#ldrcmrlntlrlsnsdpthndtrckngcmrs) 
+-   [Tweet from Neurodynamics Team (@neurodynamicsFR), at Nov 18, 15:31](#twtfrmnrdynmcstmnrdynmcsfrtnv) 
+    -   [`[2019-11-23]` MEG measures the magnetic fields generated outside the head by neural current flow](#mgmsrsthmgntcfldsgnrtdtsdthhdbynrlcrrntflw) 
+-   [`[2019-03-02]` Continuous gps device](#cntnsgpsdvc) 
+-   [Home weather station with temp and co2](#hmwthrsttnwthtmpndc) [[qs]]
+-   [`[2019-03-04]` Quantified Mind Archives - Quantified Self](#qntfdmndrchvsqntfdslf) 
+-   [Think how to evaluate hiit vs long endurance](#thnkhwtvlthtvslngndrnc) [[exercise]] [[qs]]
+-   [`[2019-10-28]` Owning My Step Count · Jamie Tanna | Software (Quality) Engineer](#wnngmystpcntjmtnnsftwrqltyngnr) 
+-   [`[2019-11-02]` Cloud2019](#cld) 
+-   [Hr response depending on power of spinning](#hrrspnsdpndngnpwrfspnnng) [[qs]]
+-   [`[2019-10-28]` The value of tracking data /r/running  (motivation)](#srddtcmrrnnngcmmntsdbgpthqthvlftrckngdtrrnnngmtvtn) 
+-   [`[2019-10-28]` The value of tracking data /r/running](#srddtcmrrnnngcmmntsdbgpthckngdtthvlftrckngdtrrnnng) [[motivation]]
+-   [`[2019-11-14]` What I track and how : QuantifiedSelf](#whttrckndhwqntfdslf) [[toblog]] [[qs]]
+-   [Watts are lower bound due to heat losses. Wonder whats the effeciency of meat engine](#wttsrlwrbnddthtlssswndrwhtsthffcncyfmtngn) [[qs]]
+-   [`[2019-08-03]` One Year (Almost) of Heart Rate Data from Fitbit Charge 2 OC /r/dataisbeautiful](#srddtcmrdtsbtflcmmntszbjntrtdtfrmftbtchrgcrdtsbtfl) 
+-   [Try implementing smart alarm?](#trymplmntngsmrtlrm) [[sleep]] [[qs]]
+-   [semantic location history!!! it actually includes segments!](#smntclctnhstrytctllyncldssgmnts) [[location]] [[takeout]]
+-   [`[2020-03-09]` Pinboard: Bookmark Detail](#pnbrdbkmrkdtl) 
+-   [`[2020-03-24]` OpenTracksApp/OpenTracks: OpenTracks is a sport tracking application that completely respects your privacy.](#pntrckspppntrckspntrckssstnthtcmpltlyrspctsyrprvcy) [[qs]]
+-   [`[2020-04-09]` Science, Art, Beauty: All My Friends Are Dying](#scncrtbtyllmyfrndsrdyng) 
+-   [`[2020-04-15]` Blue Maestro sensor, openHAB or Home Assistant and HomeKit](#jnswllydkblmstrsnsrpnhbndtrsnsrpnhbrhmssstntndhmkt) 
+-   [`[2020-05-14]` various jawbone links from old my package](#vrsjwbnlnksfrmldmypckg) [[qs]] [[jawbone]]
+-   [Blood Pressure Monitors: High blood pressure is a well-known health risk factor, especially when combined with smoking, obesity, or genetic markers. You can get this measured at your doctor’s, a health clinic, or even using an at-home monitor.  Check out my guide to blood pressure tracking](#bldprssrmntrshghbldprssrsrchcktmygdtbldprssrtrckng) 
+-   [Check out my blood test guide, Know Thy Blood or my blood test biomarker directory for an FAQ and information on the best tests.](#chcktmybldtstgdknwthybldrryfrnfqndnfrmtnnthbsttsts) 
+-   [Check out my guide to VO2 Max, including the numbers, my lab test, and how to estimate your VO2 Max.](#chcktmygdtvmxncldngthnmbrsmylbtstndhwtstmtyrvmx) 
+-   [Temp running correlation](#tmprnnngcrrltn) [[qs]]
+-   [`[2020-07-29]` hyfen.net/memex/updates/fifteen-years-of-conversations/](#shyfnntmmxpdtsfftnyrsfcnvntmmxpdtsfftnyrsfcnvrstns) 
+-   [Binge days weighting poop](#bngdyswghtngpp) [[qs]]
+-   [Need to implement lan capture, maybe?](#ndtmplmntlncptrmyb) [[qs]] [[emfit]]
+-   [right. bluemaestro seems to duplicate data&#x2026; with weird timestamps.](#rghtblmstrsmstdplctdtwthwrdtmstmps) [[bluemaestro]]
+-   [ok, at least data from google is sort of a lower bound&#x2026;](#ktlstdtfrmgglssrtflwrbnd) [[location]] [[qs]]
+-   [ok, I guess runs were tracked on endomondo so it's not that big of a problem. would be interesting to cross-match them with endomondo data](#kgssrnswrtrckdnndmndstsnttngtcrssmtchthmwthndmnddt) [[location]] [[qs]]
+-   [`[2019-03-06]` UbiBot WiFi Wireless Thermometer, Remote Temperature, Humidity, Light Monitor, Environment Sensor, Mobile App Alerts, Compatible with IFTTT(2.4GHz WiFi only): Amazon.co.uk: DIY & Tools](#bbtwfwrlssthrmmtrrmttmprtwthftttghzwfnlymznckdytls) [[qs]]
+-   [`[2019-05-21]` All in one](#llnn) [[inspiration]] [[qs]]
+-   [back track quanitifiedmind after exercise](#bcktrckqntfdmndftrxrcs) [[qs]] [[timeline]]
+    -   [`[2019-11-09]` unlikely to impact anything I guess because it's unclear what data quantifiedmind reports](#nlklytmpctnythnggssbcstsnclrwhtdtqntfdmndrprts) 
+-   [`[2018-06-30]` wger Workout Manager - Features](#wgrwrktmngrftrs) [[exercise]]
+-   [bristol stool scale](#brstlstlscl) [[health]]
+-   [experiment with modafinil https://www.gwern.net/Modafinil](#xprmntwthmdfnlswwwgwrnntmdfnl) 
+-   [track body temperature?](#trckbdytmprtr) [[qs]]
+-   [computing average as opposed to mean would be pretty stupid](#cmptngvrgsppsdtmnwldbprttystpd) [[quantifiedmind]]
+-   [Tracking Life: Mark Krynsky - Quantified Self](#trcknglfmrkkrynskyqntfdslf) 
+-   [measure some responses? https://www.humanbenchmark.com/dashboard](#msrsmrspnssswwwhmnbnchmrkcmdshbrd) [[cognitive]]
+-   [`[2018-11-10]` aquilax/hranoprovod-cli: Command line quantified self tool](#qlxhrnprvdclcmmndlnqntfdslftl) 
+-   [correlate that with nutrino and alcolog. Ideally, social log as well?](#crrltthtwthntrnndlclgdllyscllgswll) [[qs]] [[alcolog]]
+-   [`[2019-02-14]` Be Better at Sleep - Dreem](#bbttrtslpdrm) 
+-   [right, suunto API is NOT for personal use, so I guess not really worth considering&#x2026;](#rghtsntpsntfrprsnlssgssntrllywrthcnsdrng) 
+-   [`[2019-02-19]` Step 4: Learn To Use Your Body](#stplrntsyrbdy) 
+-   [`[2019-05-16]` Best nutrition tracking apps for advanced QS /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsbppckngppsfrdvncdqsrqntfdslf) 
+-   [`[2019-05-18]` Best nutrition tracking apps for advanced QS /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsbppckngppsfrdvncdqsrqntfdslf) 
+-   [`[2019-06-11]` The Beginner’s Guide to Quantified Self | Hacker News](#thbgnnrsgdtqntfdslfhckrnws) 
+-   [learn to draw venouous blood?](#lrntdrwvnsbld) [[qs]] [[health]]
+-   [`[2019-06-15]` AncestryDNA vs 23andMe vs MyHeritage: Which One is Best?](#ncstrydnvsndmvsmyhrtgwhchnsbst) 
+-   [`[2019-08-03]` Is an HRM accurate for calculating calories? /r/running](#srddtcmrrnnngcmmntslqbsnhrmccrtfrclcltngclrsrrnnng) [[endomondo]]
+-   [track in python, but make a commit hook?](#trcknpythnbtmkcmmthk) [[exercise]]
+-   [`[2020-03-09]` Pinboard: Bookmark Detail](#pnbrdbkmrkdtl) 
+-   [plot some diagram for amount of my done/archived tasks?](#pltsmdgrmfrmntfmydnrchvdtsks) [[org]] [[self]] [[qs]]
+-   [https://elitehrv.com/](#slthrvcm) 
+    -   [`[2019-02-21]` ok, gonna try to measure for a bit and maybe compare with emfit](#kgnntrytmsrfrbtndmybcmprwthmft) 
+-   [https://www.gwern.net/DNB-FAQ](#swwwgwrnntdnbfq) [[qs]] [[mind]] [[gwern]]
+    -   [working memory is important, helps to grasp the structure of something](#wrkngmmrysmprtnthlpstgrspthstrctrfsmthng) 
+    -   [brain workshop?](#brnwrkshp) 
+    -   [n-back is kinda like weight lifting: N should be such that you can barely manage it](#nbckskndlkwghtlftngnshldbschthtycnbrlymngt) 
+    -   [studies that claim n-back impacts working memory](#stdsthtclmnbckmpctswrkngmmry) 
+    -   [there are few android apps listed](#thrrfwndrdppslstd) 
+-   [https://dcgross.com/how-to-level-up/](#sdcgrsscmhwtlvlp) [[qs]]
+    -   ["I can use my water weight (as measured in day to day fluctuation) as a quasi-proxy for salt intake."](#cnsmywtrwghtsmsrdndytdyflcttnsqsprxyfrsltntk) 
+    -   [HRV?](#hrv) 
+    -   [minutes in Z4??](#mntsnz) 
+    -   [muscle and bone mass? DEXA scan](#msclndbnmssdxscn) 
+    -   [bloodwork &#x2013; good point. I'd rather skip couple of fancy dinner to have critical knowledge about my body](#bldwrkgdpntdrthrskpcplffndnnrthvcrtclknwldgbtmybdy) 
+    -   [seat an reach test](#stnrchtst) 
+    -   [MRI well, interesting..](#mrwllntrstng) 
+    -   [Build a dashboard for your life so that you orient in the right direction. If done correctly, this is a motivational and fun hobby that can help level you up.](#blddshbrdfryrlfsthtyrntntvtnlndfnhbbythtcnhlplvlyp) 
+    -   [eh, really should do that within hypothesis?](#hrllyshlddthtwthnhypthss) 
+-   [All-in-one daily tracking: Blood Pressure, Oxygen Saturation, Heart Rate, Temperature, ECG and Blood Glucose data - Quantified Self / Apps & Tools - Quantified Self Forum](#llnndlytrckngbldprssrxygnqntfdslfppstlsqntfdslffrm) [[qs]]
+-   [https://eric.jain.name/2018/11/25/tracking-blood-sugar/](#srcjnnmtrckngbldsgr) 
+-   [`[2019-02-12]` ActivityWatch/aw-android: ActivityWatch for Android, using aw-server-rust as backend.](#ctvtywtchwndrdctvtywtchfrndrdsngwsrvrrstsbcknd) [[qs]]
+-   [apparently it's very hard to measure hrv consistentently (let alone during exercise). most guides recommend few minutes of measuring in the same position in the morning](#pprntlytsvryhrdtmsrhrvcnstsfmsrngnthsmpstnnthmrnng) [[qs]] [[hrv]]
+-   [`[2019-03-24]` Shtetl-Optimized » Blog Archive » You down with SPP?](#shttlptmzdblgrchvydwnwthspp) [[dna]]
+-   [before I buy emg and eeg devices I guess I should really think how to utilize and display hr data I already have in a nice way](#bfrbymgndgdvcsgssshldrllytlznddsplyhrdtlrdyhvnncwy) [[think]] [[qs]]
+-   [`[2018-12-30]` Building a device to track sexual pleasure. What should I add next? /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsgtjplsrwhtshldddnxtrqntfdslf) 
+-   [`[2019-01-20]` What do you use for HRV tracking? /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsfhbhtdysfrhrvtrckngrqntfdslf) 
+-   [`[2019-01-23]` Looking for people willing to share their experiences with sleep tracking /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsgkhrncswthslptrckngrqntfdslf) [[sleep]] [[qs]]
+-   [`[2019-02-21]` I bought the Vielight 810 Infrared and will review it over time /r/Biohackers](#srddtcmrbhckrscmmntsqkvhbnfrrdndwllrvwtvrtmrbhckrs) 
+-   [GPS trackers?](#gpstrckrs) [[gps]]
+    -   [Qstarz](#qstrz) [[gps]]
+        -   [`[2019-05-04]` homepage/index.md at 3ef4c6b82c414d84d247ecdefcb0231df8100bdf · tbm/homepage](#hmpgndxmdtfcbcddcdfcbdfbdftbmhmpg) [[gps]] [[qs]]
+    -   [`[2019-05-04]` Qstarz BT-Q1000XT Travel Recorder/GPS Tracker/Bluetooth GeoTagging: Amazon.co.uk: Amazon.co.uk:](#qstrzbtqxttrvlrcrdrgpstrckrbltthgtggngmznckmznck) 
+    -   [`[2019-05-04]` Qstarz BT-Q1000XT Travel Recorder/GPS Tracker/Bluetooth GeoTagging: Amazon.co.uk: Amazon.co.uk:](#qstrzbtqxttrvlrcrdrgpstrckrbltthgtggngmznckmznck) 
+    -   [`[2019-05-04]` Is Qstarz GPS compatible with Windows 10? » CanadaGPS Knowledge Base & Tech Support Blog](#sqstrzgpscmptblwthwndwscndgpsknwldgbstchspprtblg) 
+    -   [`[2019-05-04]` Qstarz BT-Q1000XT 5Hz 66 Ch Bluetooth GPS Receiver Data Tracker Travel Recorder | eBay](#qstrzbtqxthzchbltthgpsrcvrdttrckrtrvlrcrdrby) [[gps]]
+    -   [`[2019-05-04]` rzzzwilson/pyQ1300ST: Python code to configure and read a QStarz BT-Q1300ST GPS logger](#rzzzwlsnpyqstpythncdtcnfgrndrdqstrzbtqstgpslggr) 
+    -   [`[2019-05-04]` Spy Tec STI GL300 Mini Portable Real Time Personal and: Amazon.co.uk: Amazon.co.uk:](#spytcstglmnprtblrltmprsnlndmznckmznck) 
+    -   [`[2019-05-04]` Spy Tec STI GL300 Mini Portable Real Time Personal and: Amazon.co.uk: Amazon.co.uk:](#spytcstglmnprtblrltmprsnlndmznckmznck) 
+    -   [`[2019-05-04]` Search Results for gps - SparkFun Electronics](#srchrsltsfrgpssprkfnlctrncs) 
+    -   [`[2019-05-04]` GT-750 Blueooth GPS Data Logger | Conrad.com](#gtblthgpsdtlggrcnrdcm) 
+    -   [`[2019-05-04]` GT-730FL USB GPS Receiver Dongle with Logger Function / up to 256,000 way points record / New SiRF IV chipset and CanWay software/ A-GPS support: Amazon.co.uk: Amazon.co.uk:](#gtflsbgpsrcvrdnglwthlggrfwysftwrgpsspprtmznckmznck) [[gps]]
+    -   [`[2019-05-04]` GT-730FL-S GPS Data Logger: Amazon.co.uk: Amazon.co.uk:](#gtflsgpsdtlggrmznckmznck) 
+    -   [`[2019-05-04]` SleuthGear iTrail GPS Logger With Magnetic Case: Amazon.co.uk: Amazon.co.uk:](#slthgrtrlgpslggrwthmgntccsmznckmznck) 
+-   [`[2019-05-04]` ContinuumBridge/tempo<sub>adaptor</sub>: App for Bluemaestro Tempo.](#cntnmbrdgtmpdptrppfrblmstrtmp) [[bluemaestro]]
+-   [`[2019-04-19]` Why People Self-Track: Research on the Motivations Behind the Quantified Self and Self-Trackers - Minding the Borderlands (motivation)](#whypplslftrckrsrchnthmtvtrckrsmndngthbrdrlndsmtvtn) [[qs]]
+-   [`[2019-04-19]` A Day in a Life Well-Tracked: A Quantified Self Narrative - Minding the Borderlands](#dynlfwlltrckdqntfdslfnrrtvmndngthbrdrlnds) 
+-   [`[2019-04-19]` Finding My VO2 Max: Running and the Pursuit of Measuring Improvement - Minding the Borderlands](#fndngmyvmxrnnngndthprstfmrngmprvmntmndngthbrdrlnds) [[vo2]] [[self]] [[qs]]
+-   [`[2019-04-19]` An Exploration of Mood Tracking: Can We Measure How We Feel? - Minding the Borderlands](#nxplrtnfmdtrckngcnwmsrhwwflmndngthbrdrlnds) [[mood]] [[qs]]
+-   [outliers could be indicated on plots as arrows on the edge or something](#tlrscldbndctdnpltssrrwsnthdgrsmthng) [[viz]]
+-   [`[2019-11-04]` Ugh. I just don't really feel sleepy, what the fuck. Wish I could try a 30 hour day or something. Unlikely to do much good though](#ghjstdntrllyflslpywhtthfcdyrsmthngnlklytdmchgdthgh) [[sleep]]
+-   [`[2019-07-29]` Российский биохакинг. - Elena Akm - Medium](#российскийбиохакингlnkmmdm) [[qs]] [[biohacking]]
+-   [Skulpt Aim](#sklptm) [[qs]] [[gadget]]
+    -   [`[2019-01-13]` amazon reviews are pretty bad too..](#mznrvwsrprttybdt) 
+-   [how to measure anything](#hwtmsrnythng) [[qs]] [[read]]
+-   [process ongoing-eeg in pinboard](#prcssngnggnpnbrd) [[eeg]]
+    -   [NeuroTechX](#nrtchx) 
+    -   [finally order something from neurosky? ECG/EEG biosensors](#fnllyrdrsmthngfrmnrskycggbsnsrs) 
+    -   [check regularly? https://github.com/NeuroTechX/awesome-bci](#chckrglrlysgthbcmnrtchxwsmbc) 
+    -   [openeeg &#x2013; unclear how good is it. look up on reddit http://openeeg.sourceforge.net/doc/](#pngnclrhwgdstlkpnrddtpngsrcfrgntdc) 
+-   [`[2020-02-21]` Jan König on Twitter: "Next up: @lehrjulian about building a digital copy of himself. If you've seen his blog, you know it's not an exaggeration. https://t.co/5gzg2U0NJK" / Twitter](#jnköngntwttrnxtplhrjlnbtbtsntnxggrtnstcgzgnjktwttr) [[qs]]
+-   [`[2020-06-30]` Alexey Pakhomov](#swwwlxybtlxypkhmv) [[qs]]
+-   [what's the relation between elliptical power/speed and HR?](#whtsthrltnbtwnllptclpwrspdndhr) [[qs]]
+-   [hmm I wonder if I ever had a stitch on a treadmill??](#hmmwndrfvrhdsttchntrdmll) [[running]]
+-   [`[2020-09-10]` Visualizing 10+ Years of My Body Composition Data](#swwwqntfdbbcmbdycmpstndtvtnvslzngyrsfmybdycmpstndt) [[bodyfat]] [[qs]]
+-   [`[2020-09-11]` MbientLab – Wearable Bluetooth 9-axis IMUs & environmental Sensors](#smbntlbcmmbntlbwrblbltthxsmsnvrnmntlsnsrs) 
+-   [`[2020-09-11]` MTR – MetaTracker – MbientLab](#smbntlbcmstrmttrckrmtrmttrckrmbntlb) 
+-   [`[2020-09-11]` ejain/body-temperature](#sgthbcmjnbdytmprtrjnbdytmprtr) 
+-   [`[2019-05-04]` Lightest setup to get a GPS track of a thruhike? /r/Ultralight](#srddtcmrltrlghtcmmntsyclgptgtgpstrckfthrhkrltrlght) [[gps]]
+-   [`[2019-05-04]` GPS Logging (and possibly navigation) /r/Ultralight](#srddtcmrltrlghtcmmntsfyxgggngndpssblynvgtnrltrlght) [[gps]]
+-   [`[2019-05-04]` GPS data logger that has a battery life of many days? /r/CampingandHiking](#srddtcmrcmpngndhkngcmmntsttrylffmnydysrcmpngndhkng) [[gps]]
+-   [`[2020-09-11]` Exercise sample types – Polar Accesslink API](#swwwplrcmccsslnkpxrcssmplpsxrcssmpltypsplrccsslnkp) 
+-   [`[2020-09-11]` Get FIT (beta) – Polar Accesslink API](#swwwplrcmccsslnkpgtftbtgtftbtplrccsslnkp) 
+-   [`[2020-09-11]` Session analysis - Polar Flow](#sflwplrcmtrnngnlysssssnnlyssplrflw) 
+-   [`[2020-09-11]` roessland/polarbeer: Polar Accesslink API Client](#sgthbcmrsslndplrbrrsslndplrbrplrccsslnkpclnt) 
+-   [`[2020-09-16]` What Next For Quantified Self? - Quantified Self Forum](#sfrmqntfdslfcmtwhtnxtfrqntnxtfrqntfdslfqntfdslffrm) 
+-   [`[2020-09-17]` NeuroTechX/eeg-notebooks: A collection of classic EEG experiments implemented with Python and Jupyter notebooks](#sgthbcmnrtchxgntbksnrtchxlmntdwthpythnndjpytrntbks) 
+-   [`[2020-09-23]` Relationships between HRV, sleep and physical activity in personal data - hermandevries.nl](#shrmndvrsnlrltnshpsbtwnhrclctvtynprsnldthrmndvrsnl) 
+-   [`[2020-09-23]` Relationships between HRV, sleep and physical activity in personal Oura ring data - Quantified Self / General Health - Quantified Self Forum](#sfrmqntfdslfcmtrltnshpsbttfdslfgnrlhlthqntfdslffrm) 
+-   [`[2020-09-30]` What Passive Trackers do you use? - Quantified Self / Apps & Tools - Quantified Self Forum](#sfrmqntfdslfcmtwhtpssvtrcqntfdslfppstlsqntfdslffrm) 
+-   [`[2020-09-30]` What Passive Trackers do you use? - Quantified Self / Apps & Tools - Quantified Self Forum](#sfrmqntfdslfcmtwhtpssvtrcqntfdslfppstlsqntfdslffrm) 
+-   [need something to plot track from phone; and compare it with google timeline. looks like generally there is less points](#ndsmthngtplttrckfrmphnndcmlnlkslkgnrllythrslsspnts) [[gps]]
+-   [hmm this android gps logger thing is a bit shit. perhaps I should really use pixel for that in continuous sync mode&#x2026;](#hmmthsndrdgpslggrthngsbtsrllyspxlfrthtncntnssyncmd) [[gps]]
+-   [`[2019-04-04]` Best handheld GPS for a week long backpacking trip? /r/backpacking](#srddtcmrbckpckngcmmntszkhwklngbckpckngtrprbckpckng) [[gps]]
+-   [`[2018-12-08]` Self-hosted location tracking? (alternative to Google Location)](#slfhstdlctntrckngltrntvtggllctn) [[qs]] [[location]]
+-   [`[2019-05-04]` Self-hosted location tracking? (alternative to Google Location) /r/selfhosted](#srddtcmrslfhstdcmmntsznpskngltrntvtggllctnrslfhstd) 
+-   [finally figure out deep sleep vs rem?](#fnllyfgrtdpslpvsrm) [[sleep]] [[qs]]
+-   [I wonder if correlation of volume - avg hr is because I mostrly run on fridays? and that's when HR is the highest anyway?](#wndrfcrrltnfvlmvghrsbcsmsysndthtswhnhrsthhghstnywy) [[qs]]
+-   [offline workouts](#fflnwrkts) [[qs]] [[wahoo]]
+-   [`[2020-10-04]` Relationships between HRV, sleep and physical activity in personal data - hermandevries.nl](#shrmndvrsnlrltnshpsbtwnhrclctvtynprsnldthrmndvrsnl) [[read]] [[qs]]
+-   [`[2020-10-05]` How Accurate Are Oura's Heart Rate & HRV Measurements? - The Pulse Blog](#sblgrrngcmhwccrtsrhwccrtrrshrtrthrvmsrmntsthplsblg) 
+-   [`[2020-10-05]` Emfit QS vs. Oura Ring - which is more accurate? - Quantified Self / Sleep - Quantified Self Forum](#sfrmqntfdslfcmtmftqsvsrrncrtqntfdslfslpqntfdslffrm) 
+-   [`[2020-10-05]` Emfit QS vs. Oura Ring - which is more accurate? - Quantified Self / Sleep - Quantified Self Forum](#sfrmqntfdslfcmtmftqsvsrrncrtqntfdslfslpqntfdslffrm) 
+-   [`[2020-10-06]` Freeyourgadget/Gadgetbridge: A free and cloudless replacement for your gadget vendors' closed source Android applications. See the list for supported devices. - Gadgetbridge - Codeberg.org](#scdbrgrgfryrgdgtgdgtbrdgfspprtddvcsgdgtbrdgcdbrgrg) 
+-   [`[2020-10-06]` Freeyourgadget/Gadgetbridge: A free and cloudless replacement for your gadget vendors' closed source Android applications. See the list for supported devices. - Gadgetbridge - Codeberg.org](#scdbrgrgfryrgdgtgdgtbrdgfspprtddvcsgdgtbrdgcdbrgrg) 
+-   [`[2020-10-06]` tmcw/running-for-nerds: like running, but for nerds](#sgthbcmtmcwrnnngfrnrdstmcnnngfrnrdslkrnnngbtfrnrds) 
+-   [`[2020-10-06]` tmcw/running-for-nerds: like running, but for nerds](#sgthbcmtmcwrnnngfrnrdstmcnnngfrnrdslkrnnngbtfrnrds) 
+-   [`[2020-10-06]` cyberjunky/python-garminconnect: Python 3 API wrapper for Garmin Connect to get activity statistics](#sgthbcmcybrjnkypythngrmncrgrmncnncttgtctvtysttstcs) 
+-   [`[2020-10-06]` tcgoetz/GarminDB: Download and parse data from Garmin Connect or a Garmin watch, FitBit CSV, and MS Health CSV files into and analyze data in Sqlite serverless databases.](#sgthbcmtcgtzgrmndbtcgtzgrndnlyzdtnsqltsrvrlssdtbss) 
+    -   [`[2020-11-28]` 'Copy daily monitoring and/or activities Fit files from a USB connected Garmin device.' &#x2013; not sure?](#cpydlymntrngndrctvtsftflsfrmsbcnnctdgrmndvcntsr) 
+-   [`[2020-10-12]` Garmin Connect](#scnnctgrmncmmdrnslpgrmncnnct) 
+-   [`[2020-10-08]` Fenix 6 and Wahoo Kickr - fēnix 6 series - Wearables - Garmin Forums](#sfrmsgrmncmtdrrcrtntdrrcrhkckrfēnxsrswrblsgrmnfrms) [[garmin]]
+-   [`[2020-10-10]` Analyzing accuracy of power reported by stationary bike | beepb00p](#sbpbpxyzxrcsbkmdlhtmlnlyzcyfpwrrprtdbysttnrybkbpbp) 
+-   [`[2020-10-12]` Test HRV | Garmin Connect IQ](#sppsgrmncmnsppsbdcbcfdtsthrvgrmncnnctq) [[garmin]]
+-   [`[2020-10-12]` Garmin Connect](#scnnctgrmncmmdrnctvtygrmncnnct) [[dashboard]] [[qs]] [[inspiration]]
+-   [`[2020-10-13]` Left/right wrist: impact on optical HR sensor accuracy? - fēnix 5 series - Wearables - Garmin Forums](#sfrmsgrmncmtdrrcrtntdrrcrccrcyfēnxsrswrblsgrmnfrms) 
+-   [`[2020-10-16]` Garmin fēnix 6X Pro, Ultimate Multisport GPS Watch, Features Mapping, Music, Grade-Adjusted Pace Monitoring and Pulse Ox Sensors, Black with Black Band: Amazon.co.uk: Electronics](#swwwmznckdpbvyvbdgrfppxpplckwthblckbndmzncklctrncs) [[garmin]]
+-   [`[2020-10-16]` Garmin Fenix 6 In-Depth Review For Hiking & Outdoors - HikingGuy.com](#shknggycmhknggrgrmnfnxxprdpthrvwfrhkngtdrshknggycm) 
+-   [`[2020-10-16]` fēnix 6 Pro Series - Battery Information](#swwwgrmncmmnlswbhlpfnxsxpfhtmlfēnxprsrsbttrynfrmtn) 
+-   [`[2020-08-21]` What are the most actionable insights you got from self-tracking? /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsdmfsygtfrmslftrckngrqntfdslf) 
+    -   [`[2020-10-24]` hmm, detect seasonality in bed movement?](#hmmdtctssnltynbdmvmnt) [[sleep]] [[qs]] [[dashboard]]
+-   [compute distances between nearest rems and plot?](#cmptdstncsbtwnnrstrmsndplt) [[emfit]]
+-   [takeout .fit file &#x2013; converted to gpx and the tracks look completely insane?? wtf??](#tktftflcnvrtdtgpxndthtrckslkcmpltlynsnwtf) [[garmin]]
+-   [basically sleep detection in garmin is completely wrong](#bscllyslpdtctnngrmnscmpltlywrng) [[garmin]]
+-   [ok, sleep oximetry even has confidence values? def need to export raw data&#x2026;](#kslpxmtryvnhscnfdncvlsdfndtxprtrwdt) [[garmin]]
+-   [Tweet from @altini<sub>marco</sub>](#twtfrmltnmrc) [[qs]] [[sleep]]
+-   [Comparison between emfit and Garmin?](#cmprsnbtwnmftndgrmn) [[emfit]] [[garmin]] [[toblog]]
+-   [`[2020-10-17]` Wow, hr after eating pizza is still 80 after almost 2 hours? Check previous week too](#wwhrftrtngpzzsstllftrlmsthrschckprvswkt) [[qs]]
+-   [`[2020-09-01]` "What I Learned from the Freestyle Libre Glucose Monitor", Josh Mitteldorf (metformin blunts his mealtime blood glucose spikes) /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntskrvsmltmbldglcsspksrqntfdslf) 
+    -   [`[2020-10-24]` interesting data, but people are commenting that it's meaningless without glucose sensitivity?](#ntrstngdtbtpplrcmmntngthttsmnnglsswthtglcssnstvty) 
+-   [`[2020-10-24]` Heart rate - Wikipedia](#snwkpdrgwkhrtrtmxmmhrtrthrtrtwkpd) [[qs]] [[hr]]
+-   [`[2020-10-24]` Measure Your Heart Rate Recovery Time](#swwwzmcmblgftnsswhtdshrtsrcsrcvrymsryrhrtrtrcvrytm) 
+-   [`[2020-10-27]` The Heart Rate Sensor on My Watch Is Not Accurate | Garmin Support](#sspprtgrmncmnsfqxqwjqjzwbsrnmywtchsntccrtgrmnspprt) [[garmin]]
+-   [`[2020-10-27]` Endomondo](#swwwndmndcmsrswrktsndmnd) [[garmin]]
+-   [`[2020-11-22]` Garmin Connect](#scnnctgrmncmmdrnslpgrmncnnct) 
+-   [`[2020-11-10]` Marco Altini on Twitter: "🥁 here is some data\* Contrary to expectations (see poll below), resting heart rate decreased during the lockdown and remained lower in the first 6 months of the year cc @jamesheathers \*these are HRV4Training users, so the data is only representative of this sample, obviously https://t.co/A7L58M0Oje" / Twitter](#stwttrcmltnmrcsttsmrcltnnvfthssmplbvslystclmjtwttr) [[qs]] [[hr]]
+-   [`[2020-10-22]` IPython Cookbook - 10.1. Analyzing the frequency components of a signal with a Fast Fourier Transform](#spythnbksgthbnlyzngthfrqnnntsfsgnlwthfstfrrtrnsfrm) 
+-   [`[2020-10-22]` Psd Demo — Matplotlib 3.1.2 documentation](#smtpltlbrggllrylnsbrsndmrsddmpypsddmmtpltlbdcmnttn) 
+-   [`[2020-10-22]` analog to digital - comparison between Fourier transform and autocorrelation function - Signal Processing Stack Exchange](#sdspstckxchngcmqstnscmprsfnctnsgnlprcssngstckxchng) 
+-   [`[2020-10-22]` psdtheory.dvi - psdtheory.pdf](#swwwmftfrmgpdfpsdthrypdfpsdthrydvpsdthrypdf) 
+-   [`[2020-10-22]` python - How to find period of signal (autocorrelation vs fast fourier transform vs power spectral density)? - Stack Overflow](#sstckvrflwcmqstnshwtfndprvspwrspctrldnstystckvrflw) 
+-   [wonder if running in the beginning of week is better? hmm](#wndrfrnnngnthbgnnngfwksbttrhmm) [[qs]] [[running]]
+    -   [`[2020-12-03]` although I used to run on saturday/sundary and it was ok so not sure](#lthghsdtrnnstrdysndryndtwsksntsr) 
+-   [`[2020-05-09]` (2) D ␣ a ␣ n ␣ P ␣ i ␣ p ␣ o ␣ n ␣ i on Twitter: "@cartazio The blue is my running speed. I expect that a leaky capacitor model is a good first order approximation. From an engineering perspective, I think it corresponds to a PI controller https://t.co/BJfxSG0o3Q" / Twitter](#stwttrcmsgfpsttsdnppnntwtstpcntrllrstcbjfxsgqtwttr) [[qs]]
+-   [`[2020-09-09]` QS Forum: What Continuous Glucose Monitors (CGM) allow automated export of the data "out-of-the-box"?](#qsfrmwhtcntnsglcsmntrscgmllwtmtdxprtfthdttfthbx) 
+-   [`[2020-09-20]` A Syntax for Self-Tracking](#swwwgbnydsyntxfrslftrckngsyntxfrslftrckng) 
+-   [figure out HRV correlations with other things](#fgrthrvcrrltnswththrthngs) [[qs]] [[emfit]]
+-   [approximate sleep in periods when I was missing it via rescuetime/arbtt stats&#x2026; also compute the discrepancies](#pprxmtslpnprdswhnwsmssngtmrbttsttslscmptthdscrpncs) [[rescuetime]] [[arbtt]] [[sleep]]
+-   [apps for tracking `[2018-01-06]`](#ppsfrtrckng) 
+    -   [Tap log looks OK](#tplglksk) 
+        -   [- can only track individual items, would be hard to input different beer percentage](#cnnlytrckndvdltmswldbhrdtnptdffrntbrprcntg) 
+        -   [+ has widget!](#hswdgt) 
+        -   [+ notes and GPS](#ntsndgps) 
+        -   [ok, but for weight could work I guess?](#kbtfrwghtcldwrkgss) 
+        -   [- no free backups](#nfrbckps) 
+    -   [Trackthisforme: weird, too complicated MEH](#trckthsfrmwrdtcmplctdmh) 
+    -   [Keeptrack: too simple MEH](#kptrcktsmplmh) 
+    -   [atimelogger? http://www.atimelogger.com/](#tmlggrwwwtmlggrcm) 
+        -   [looks allright, but oversimplified, I know when i'm doing sports or work or shopping anyway](#lksllrghtbtvrsmplfdknwwhnmdngsprtsrwrkrshppngnywy) 
+    -   [A Time Tracker? f-droid,  open source](#tmtrckrfdrdpnsrc) 
+-   [`[2018-05-31]` time tracking apps](#tmtrckngpps) [[qs]] [[productivity]]
+    -   [Quality time](#qltytm) 
+    -   [Rescue time](#rsctm) 
+-   [`[2017-10-30]` fitness apps](#ftnsspps) [[exercise]] [[qs]]
+    -   [HR monitoring](#hrmntrng) [[hr]]
+        -   [heart trace app: weird, doesn't seem to work](#hrttrcppwrddsntsmtwrk) 
+        -   [polar h10 seems not to work with google fit for some reasong&#x2026;](#plrhsmsnttwrkwthgglftfrsmrsng) 
+        -   [polar beat: not necessary for the sensor..](#plrbtntncssryfrthsnsr) 
+    -   [pull ups](#pllps) 
+        -   [NorthPark.Android  обязательно нужно подтягиваться с девайсом](#nrthprkndrdобязательнонужноподтягиватьсясдевайсом) 
+        -   [rittr labs плохой дизайн](#rttrlbsплохойдизайн) 
+-   [quantified body podcast &#x2013; not bad](#qntfdbdypdcstntbd) [[podcast]]
+    -   [`[2017-11-15]` episode 22 | Quantified Bob https://thequantifiedbody.net/n1-experiments-bob-troia/](#psdqntfdbbsthqntfdbdyntnxprmntsbbtr) 
+    -   [`[2017-11-16]` episode 33 | quantified mind guy https://thequantifiedbody.net/mental-performance-tracking-tool-yoni-donner/](#psdqntfdmndgysthqntfdbdynmntlprfrmnctrckngtlyndnnr) 
+-   [`[2018-03-01]` https://www.vox.com/dear-julia/2015/9/18/9349813/fitness-tracker-accuracy](#swwwvxcmdrjlftnsstrckrccrcy) [[exercise]] [[qs]]
+    -   [online trackers: crap, quite obviously](#nlntrckrscrpqtbvsly) 
+    -   [wearables: use HR to estimate oxygen consumption. but the algos doing that are oversimplified. typically, error is about 20%.](#wrblsshrtstmtxygncnsmptnbthtrvrsmplfdtypcllyrrrsbt) 
+    -   [to measure really accurately, you put people in a multi-million dollar chamber&#x2026;](#tmsrrllyccrtlyyptpplnmltmllndllrchmbr) 
+-   [Fitness tracker](#ftnsstrckr) 
+    -   [fitbit](#ftbt) 
+-   [https://www.quantifiedbob.com/self-tracking-tools-and-resources](#swwwqntfdbbcmslftrckngtlsndrsrcs) 
+    -   [urine and saliva acidity?](#rnndslvcdty) 
+    -   [glucose meter?](#glcsmtr) 
+    -   [pulse](#pls) 
+    -   [HR monitor](#hrmntr) 
+-   [`[2018-08-27]` Mobile apps for cognitive testing](#mblppsfrcgntvtstng) [[cognitive]]
+    -   [Train your brain: meh](#trnyrbrnmh) 
+    -   [Cognition trainer: meh](#cgntntrnrmh) 
+    -   [Brainexer2: has some scores&#x2026; But not sure if tracks and keeps scores](#brnxrhssmscrsbtntsrftrcksndkpsscrs) 
+        -   [`[2018-08-27]` doesn't look like it's keeping raw data either (tried in cheatdroid) . ugh](#dsntlklktskpngrwdtthrtrdnchtdrdgh) 
+-   [`[2020-06-08]` My Quantified Self Setup « julian.digital](#sjlndgtlmyqntfdslfstpmyqntfdslfstpjlndgtl) [[qs]]
+-   [`[2018-05-01]` conducting blind experiments](#cndctngblndxprmnts) [[qs]]
+-   [`[2019-02-17]` Psychology Tools](#psychlgytls) [[qs]] [[cognitive]]
+-   [`[2019-04-29]` How to track multi-day hikes? Best GPS watch / unit with longest battery life? /r/CampingGear](#srddtcmrcmpnggrcmmntswyhwntwthlngstbttrylfrcmpnggr) [[qs]] [[gps]]
+-   [`[2019-02-04]` oliexdev/openScale: Open-source weight and body metrics tracker, with support for Bluetooth scales](#lxdvpnsclpnsrcwghtndbdymtstrckrwthspprtfrbltthscls) [[qs]]
+-   [`[2019-05-21]` How To Build A Smart Home Sensor | Popular Science](#hwtbldsmrthmsnsrpplrscnc) [[qs]]
+-   [`[2019-02-13]` Get raw data from commercial activity trackers | okinesio](#gtrwdtfrmcmmrclctvtytrckrskns) [[qs]]
+-   [`[2020-03-26]` Ask HN: Best sleep trackers?](#snwsycmbntrcmtmdskhnbstslptrckrs) [[sleep]]
+    -   [`[2020-08-16]` not much interesting for me, but probably good summary of what are people using (in comments)](#ntmchntrstngfrmbtprbblygdsmmryfwhtrpplsngncmmnts) 
+-   [`[2017-09-07]` https://www.humanbenchmark.com/dashboard](#swwwhmnbnchmrkcmdshbrd) [[qs]] [[cognitive]]
+-   [n-back](#nbck) [[nback]] [[cognitive]]
+-   [`[2019-04-21]` I tracked everything I ate for the last year, along with my exercise, sleep, vitals, and sense of well-being. I'm just starting to analyze the 500,000+ data points, but here are 10 quick blink reactions: /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsbfqthrrqckblnkrctnsrqntfdslf) [[qs]] [[inspiration]]
+    -   [`[2020-10-24]` apparently he's good at subjective scores, wonder if he did any proper data analysis at all](#pprntlyhsgdtsbjctvscrswndrfhddnyprprdtnlysstll) 
+-   [`[2020-01-22]` How I log (almost) EVERYTHING to AIRTABLE with iOS Shortcuts, Integromat, Pushcut, NFC tags and Timing app from my mind, Fitbit, Oura, Withings, EliteHRV, Yazio, Calm, Clue, Social media accounts, Photos and other sources. (A long thread I wrote to Automators forum, you can read it without sign-in ) /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntssbprmycnrdtwthtsgnnrqntfdslf) [[toblog]] [[qs]] [[lifelogging]]
+-   [`[2019-06-20]` Quantified Self Books? : QuantifiedSelf](#qntfdslfbksqntfdslf) [[qs]]
+-   [`[2019-02-23]` Bob Troia | Minimum effective quantification - YouTube](#bbtrmnmmffctvqntfctnytb) [[qs]]
+-   [`[2019-01-13]` Ted Chiang gives lecture on lifelogging – The Scarlet](#tdchnggvslctrnlflggngthscrlt) [[tedchiang]] [[lifelogging]]
+-   [`[2020-06-26]` TICKR X Heart Rate Monitor & Workout Tracker | Wahoo Fitness UK](#skwhftnsscmdvcshrtrtmntrsrtrtmntrwrkttrckrwhftnssk) [[wahoo]]
+-   [`[2019-02-11]` Self-Quantification Explained: Tons of Ways Start Measuring Your Performance and Progress - The Bioneer](#slfqntfctnxplndtnsfwysstrrngyrprfrmncndprgrssthbnr) [[qs]]
+-   [`[2018-10-01]` Happiness and Life Satisfaction - Our World in Data](#hppnssndlfstsfctnrwrldndt) [[qs]]
+-   [`[2018-08-25]` Pho<sub>Rheels</sub> comments on Finally received my Gen 2 Oura Ring, with some early feedback. Anyone else?](#phrhlscmmntsnfnllyrcvdmygnrrngwthsmrlyfdbcknynls) [[hr]]
+-   [`[2019-01-20]` Smart Temporal Thermometer | Thermo - Withings](#smrttmprlthrmmtrthrmwthngs) [[qs]] [[temperature]]
+-   [`[2019-03-20]` How I'm Tracking Everything I Consume (Podcasts, Videos, Articles, Books). All in One Place. /r/QuantifiedSelf](#srddtcmrqntfdslfcmmntsbvmsrtclsbksllnnplcrqntfdslf) [[lifelogging]]
+-   [`[2020-01-22]` How I track my life with Integromat, Airtable, Shortcuts and Timing (et al) - Web - Automators Talk](#hwtrckmylfwthntgrmtrtblshrtctsndtmngtlwbtmtrstlk) [[qs]]
+-   [`[2020-11-30]` 1000 days with Oura ring – My revelations with HRV – Addicted to optimization](#slmstrmbrgcmdyswthrrngdysyrvltnswthhrvddctdtptmztn) [[hrv]] [[qs]]
+-   [`[2020-09-13]` Analyzing accuracy of power reported by stationary bike | beepb00p](#sbpbpxyzxrcsbkmdlhtmlnlyzcyfpwrrprtdbysttnrybkbpbp) 
+-   [sleep measuring &#x2013; show the 'mental state' variable](#slpmsrngshwthmntlsttvrbl) [[toblog]] [[qs]]
+-   [https://naked-science.ru/article/biology/poterya-vsego-16-minut-sna-mozhet fuck this study! Self reporting on the scale from 0 to 4 for 8 days &#x2013; what the hell is that??](#snkdscncrrtclblgyptryvsgmhsclfrmtfrdyswhtthhllstht) [[qs]]
+-   [map of europe with some pins and photos?](#mpfrpwthsmpnsndphts) [[travel]] [[toblog]] [[lifelogging]]
+-   [Public photo gallery?](#pblcphtgllry) [[self]] [[qs]] [[lifelogging]]
+    -   [`[2019-05-26]` post some photos; referred dynamically by file names? defensive so warn if photos could not be found](#pstsmphtsrfrrddynmcllybyfmsdfnsvswrnfphtscldntbfnd) 
+    -   [`[2019-05-26]` If I want to do it in org mode, wonder if just easier to render via my own parser&#x2026;](#fwnttdtnrgmdwndrfjstsrtrndrvmywnprsr) 
+    -   [`[2021-01-24]` I guess it should be fine to explicitly link to the public ones, no one needs all photos there](#gsstshldbfntxplctlylnktthpblcnsnnndsllphtsthr) 
+-   [quantifiedmind post: build an automatic graph for model? So I could reason about placebo etc](#qntfdmndpstbldntmtcgrphfrmdlscldrsnbtplcbtc) [[qs]] [[toblog]]
+-   [`[2020-09-13]` Analyzing accuracy of power reported by stationary bike | beepb00p](#sbpbpxyzxrcsbkmdlhtmlnlyzcyfpwrrprtdbysttnrybkbpbp) [[qs]] [[toblog]]
+-   [about autocorrelation analysis of sleep HR](#bttcrrltnnlyssfslphr) [[qs]] [[hr]] [[toblog]]
+-   [`[2021-02-08]` Quantifying the self - Why I track 80 metrics about my life every day](#sdlyvscmpstsqntfdslfwhytrlfwhytrckmtrcsbtmylfvrydy) 
+-   [`[2020-01-29]` Ian Forrester | @cubicgarden@mastodon.cloud on Twitter: "Dropping @Rescuetime for the privacy first @ActivityWatchIt https://t.co/NDVP2EtbbH https://t.co/ocanwujpSm" / Twitter](#nfrrstrcbcgrdnmstdncldntwtcndvptbbhstccnwjpsmtwttr) 
+
+
+
+
+
+# `[2020-02-17]` [My 12-year journey to logging my life!](https://reddit.com/r/QuantifiedSelf/comments/f5by1t/my_12year_journey_to_logging_my_life/) /r/QuantifiedSelf
+
+
+
+
+# `[2020-01-13]` [What do you all do with your data?](https://reddit.com/r/QuantifiedSelf/comments/cokt4f/what_do_you_all_do_with_your_data/feaf5ub/) /r/QuantifiedSelf
+
+    Yep, python and libraries around it like matplotlib/plotly/seaborn/pandas.
+
+
+
+
+# `[2019-12-09]` [I Logged 2,000 Nights of Sleep (6 years) OC](https://reddit.com/r/dataisbeautiful/comments/e83t5y/i_logged_2000_nights_of_sleep_6_years_oc/) /r/dataisbeautiful
+
+
+
+
+# `[2019-12-02]` Beyond the “Quantified Self” | Ian Cackett
+
+<https://web.archive.org/web/20131221225841/http://iancackett.wordpress.com:80/2013/08/02/beyond-the-quantified-self>  
+
+
+
+
+# track alarm stats: set up, dismissed etc      [[qs]] [[sleep]]
+
+
+
+
+# cross correlation &#x2013; dependency of correlation on shift      [[qs]]
+
+
+
+
+# figure out a better way of recording HR data, not requiring endomondo?      [[qs]]
+
+
+
+
+# `[2019-02-24]` The Quantified Brain of a Self-Tracking Neuroscientist - MIT Technology Review
+
+<https://www.technologyreview.com/s/514886/the-quantified-brain-of-a-self-tracking-neuroscientist/>  
+
+
+
+
+## `[2019-08-09]` <https://news.stanford.edu/2015/12/09/brain-study-poldrack-120915/> followup
+
+
+
+
+# `[2019-02-24]` QS Resource Guide
+
+<http://experimentable.com/qs-guide/#tools-analysis>  
+wow, the coming soon thing is interesitng..  
+
+
+
+
+# `[2019-03-13]` [What’s the best sleep tracking device? Who’s actually looked into the science of how it works?](https://reddit.com/r/Biohackers/comments/ayu1ji/whats_the_best_sleep_tracking_device_whos/ei4hzs2/) /r/Biohackers
+
+    I’m a big Biostrap user. Easily the most comprehensive sleep tracking I’ve found yet. They even track leg movement, snoring and have a pretty neat report.
+
+
+
+
+# `[2019-03-13]` [What’s the best sleep tracking device? Who’s actually looked into the science of how it works?](https://reddit.com/r/Biohackers/comments/ayu1ji/whats_the_best_sleep_tracking_device_whos/ei3esa7/) /r/Biohackers
+
+    The EEG headbands are the most accurate by far. Dreem and Phillips Smartsleep. All the wristband actigraphy stuff has pretty poor correlations with actual lab results. They're good for knowing how long you slept and HRV but the error margins on individual sleep phases are pretty bad.
+
+
+
+
+# `[2019-09-30]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis      [[dashboard]]
+
+<https://github.com/markwk/qs_ledger>  
+
+    To get started, we recommend downloading and using the Anaconda Distribution.
+
+wonder if I need/could use conda for promnesia to easily integrate with my. package and stuff?  
+
+
+
+
+# `[2019-11-16]` [Best way to quantify/rank subjective attributes?](https://reddit.com/r/QuantifiedSelf/comments/dwvnlc/best_way_to_quantifyrank_subjective_attributes/f7myltm/) /r/QuantifiedSelf      [[dashboard]] [[hpi]]
+
+    > Also, what do you want to use these sorted elements for? It's great if it's just for the sake of it too! But wondering if you're trying to find some cool correlations or something :)
+
+    Its a recurring problem in my project ideas where the dataset involves subjective attributes.
+
+    For example, one my ideas is creating a software that collects data about your personal day(hours slept, food eaten, medication taken, physical exercise, etc etc) and success metrics(money earned, how productive you are being, fat loss/muscle gain, etc etc) and give the user the correlations between the success metrics and the data describing the days, so the user have a 100% empirical and domain-blind feedback on what works for them. Kinda like what [this](https://medium.com/@mikebechtel/i-tracked-every-single-thing-i-ate-for-a-full-year-here-are-10-quick-a-has-2c259dd2f57b) guy did, but nicely packaged into a single software.
+
+    Then theres a lot of attributes that are too subjective(specially some of the success metrics), so having a consistent and methodical way of collecting this data would be useful. Also I have no idea if someone is working on something similar, would love to read some papers/articles about it so I can mature my ideas, see what works and what doesn't.
+
+
+
+
+# `[2020-04-06]` [Ask HN: Tools or mental model for answering subjective questions quantitatively?](https://news.ycombinator.com/item?id=22793702)      [[qs]]
+
+<https://news.ycombinator.com/item?id=22793702>  
+
+
+
+
+# Tweet from @ilyaraz2      [[coffee]] [[sleep]]
+
+    https://twitter.com/ilyaraz2/status/1294999170936221696
+    @ilyaraz2: Nothing containing caffeine during 95%+ of the days. After a decade of abusing coffee, I learned again to wake up and actually feel happy and energized. Before I seriously thought that only kids can experience that. (1/2) twitter.com/roydanroy/status/1...
+
+
+
+
+# search how people measure it subjectively?      [[sleep]]
+
+figure out something mine?  
+
+-   mouth taste
+-   'eye sleepiness'
+-   weird stomach sensations
+-   weird head pulsations?
+
+
+
+
+# `[2020-01-06]` Processing one-line journal entries for personal tracking (quantified self) : LanguageTechnology      [[qs]] [[exercise]]
+
+<https://www.reddit.com/r/LanguageTechnology/comments/ekz9ii/processing_oneline_journal_entries_for_personal/>  
+huh, quite similar to my workout processing parser..  
+
+
+
+
+## `[2020-10-12]` although no responses&#x2026;
+
+
+
+
+# hmm, so if sleep temperature/pressure cycle is a thing, can I decide best time to sleep judging by it?      [[qs]] [[sleep]]
+
+
+
+
+# when I update it, need to set truncate=False and seed      [[qs]] [[seaborn]]
+
+<https://github.com/mwaskom/seaborn/pull/1926>  
+
+
+
+
+# HR decay experiment is in *coding/dashboard*      [[dashboard]] [[hr]] [[qs]]
+
+
+
+
+# ok, so shoud really do a week of consistent bedtime/waking up to make some final decision on jawbone?
+
+
+
+
+# `[2020-05-11]` [miguelrochefort/fitness-camera: Fitness Camera](https://github.com/miguelrochefort/fitness-camera)      [[qs]] [[social]]
+
+damn, fascinating, the guy committed to rexport and now I notice him in the pinoreer hackathon videos  
+
+
+
+
+# breathing slower &#x2013; higher HRV?      [[hrv]]
+
+
+
+
+# `[2018-12-07]` Biohacking Services Map <https://notunhealthy.com/biohacking-map>      [[biohacking]]
+
+
+
+
+
+## `[2019-04-29]` eh, only neurofeedback things are somewhat interesting
+
+
+
+
+# pulse oximeter?      [[qs]] [[gadget]]
+
+-   State "STRT"      from "TODO"       `[2019-02-21]`
+
+<https://en.wikipedia.org/wiki/Pulse_oximetry>  
+sleep for android can connect to it apparently?  
+
+hmm, acceptable ranges are from 95 to 99%, so I won;t see much difference?  
+
+maybe i'll find smth to measure v02 though?  
+
+
+
+
+## `[2019-02-21]` measures Sp02? eh, overall looks like most interesting data I can potentially get is how hard I did aerobic exercise? could play with it for a bit, I suppose..
+
+
+
+
+# <https://www.freestylelibre.co.uk/libre/products/starter-pack.html>       [[cgm]]
+
+
+
+
+# subscribe to more news on QS, BCI and gadgets      [[qs]]
+
+eh. before bci, way higher priority is voice control.  
+
+
+
+
+# figure out HRV      [[qs]] [[hrv]]
+
+<https://www.quantifiedbob.com/2014/12/visualizing-interstellar-viewing-experience/>  
+TLDR normal HR is averaged; HRV is looking at the distribution  
+
+
+
+
+## `[2018-08-18]` What is Heart Rate Variability? – Biovotion AG <https://biovotion.zendesk.com/hc/en-us/articles/213581885-What-is-Heart-Rate-Variability>
+
+
+
+
+## <https://blog.ouraring.com/blog/heart-rate-variability-basics/> 
+
+-   When you start regular cardiovascular training, one of the fastest positive adaptations of your body is increased blood plasma volume, and subsequently increased stroke volume
+
+huh, kinda makes sense!  
+
+-   you should concentrate on your own HRV and its trends.
+
+
+
+
+## <https://elitehrv.com/what-is-heart-rate-variability> 
+
+high HRV: corrrelates with increased fitnress, better health, willpower etc  
+low  HRV: reduced fitnress, poor health, negative emotions, could also be temporary due to bad sleep or hard workout  
+
+
+
+
+# Which HRM would you buy? I need your advice! - running      [[buy]] [[running]] [[hr]]
+
+<https://www.reddit.com/r/running/comments/4dvj3g/comment/d1uvilk>  
+<http://gadgetsandwearables.com/2018/06/04/best-heart-rate-chest-straps/>  
+
+
+
+
+## SCOSCHE RHYTHM 24 &#x2013; 2018 year
+
+<https://www.dcrainmaker.com/product-comparison-calculator?comparison=yes&ids=31138,31145,47557,31133,31143,40557,31137,31146,78623,31172,82885,31144,31136,82697,31142,38269>  
+ok, this armband is quite accurate <https://www.dcrainmaker.com/2018/01/scosches-rhythm-24-optical-hr-sensor.html>  
+
+
+
+
+# wearable thermometer?      [[qs]]
+
+
+
+
+
+## `[2019-01-25]` generally they all seem to suck&#x2026;
+
+
+
+
+# `[2018-06-15]` qs guide &#x2013; cholesterol and trigs      [[qs]] [[blood]]
+
+<http://quantifiedself.com/2017/11/quantified-self-guide-tracking-cholesterol-hdl-triglycerides/>  
+devices cost about 500-1000$, some even 2K, each test is 15$.  
+
+
+
+
+# `[2018-11-07]` ActivityWatch/activitywatch: Log what you do on your computer. Simple (yet powerful), extensible, no third parties.
+
+<https://github.com/ActivityWatch/activitywatch>  
+
+
+
+
+## `[2019-02-12]`  right, android version is WIP
+
+
+
+
+# People 
+
+
+
+
+
+## `[2018-11-10]` aquilax (Evgeniy Vasilev)
+
+<https://github.com/aquilax>  
+
+
+
+
+## `[2019-08-19]` quantifiedvagabond (u/quantifiedvagabond) - Reddit
+
+<https://www.reddit.com/user/quantifiedvagabond/>  
+
+    This is great! Excellent work!
+
+
+
+
+## `[2019-12-18]` ErikBjare (Erik Bjäreholt) / Repositories
+
+<https://github.com/ErikBjare?tab=repositories>  
+activitywatch guy  
+
+
+
+
+# `[2018-11-26]` zenobase comments on Apps for regularly measuring intelligence, psychology, and/or trivia?      [[mind]] [[qs]]
+
+<https://www.reddit.com/r/QuantifiedSelf/comments/9oyr73/apps_for_regularly_measuring_intelligence/e80h0xj/>  
+
+    There are quite a few very nicely done "brain training" apps (e.g. Lumosity and Elevate), but they want to show how you are improving by using their apps, rather than just giving you an assessment of your current state. Exporting results is another issue with these apps... Here are a few services that may be more suitable for doing regular measurements:
+
+    Cambridge Brain Sciences
+    Neurotrack
+    Braincheck
+
+
+
+
+# `[2019-01-04]` Skulpt Careers, Funding, and Management Team | AngelList
+
+<https://angel.co/skulpt>  
+
+    The world's first and only product that actually measures the quality of individual muscles and provides the advice and guidance tailored to the user’s unique physique and performance goals, all in an effort to improve muscle quality, address imbalances and weaknesses, and allowing for tracking true progress in the pursuit of achieving performance goals.
+
+
+
+
+# `[2019-02-05]` ActivityWatch
+
+<https://activitywatch.net/>  
+
+
+
+
+## `[2019-02-22]` only for desktop?
+
+
+
+
+# `[2019-02-13]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis
+
+<https://github.com/markwk/qs_ledger>  
+
+
+
+
+# `[2019-02-21]` Quantified Self Startups - AngelList      [[qs]]
+
+<https://angel.co/quantified-self>  
+
+
+
+
+# `[2019-02-21]` Quanitified Bob | corticalmetrics      [[qs]] [[cognitive]]
+
+<https://www.corticalmetrics.com/quantifiedbob>  
+
+
+
+
+# `[2019-05-16]` [How I audio-video record my life](https://reddit.com/r/QuantifiedSelf/comments/botu4c/how_i_audiovideo_record_my_life/) /r/QuantifiedSelf
+
+
+
+
+# `[2019-01-13]` Assessing my Skulpt Aim data with JMP - JMP User Community      [[qs]]
+
+<https://community.jmp.com/t5/JMP-Blog/Assessing-my-Skulpt-Aim-data-with-JMP/ba-p/30634>  
+not very conclusive, no clear trends  
+
+
+
+
+# `[2019-04-15]` [x-post with Lifelogging] What's your set-up to constantly record audio and/or video? : Digital<sub>Immortality</sub>
+
+<https://www.reddit.com/r/Digital_Immortality/comments/b5g7xw/xpost_with_lifelogging_whats_your_setup_to/>  
+
+
+
+
+# quick show and tell about my post on cognitive testing?      [[self]] [[qs]] [[toblog]]
+
+
+
+
+# I decided to get a Netatmo weather station device.      [[qs]]
+
+<https://hyp.is/FG8Mci3-EemEMi8BZcadow/www.gwern.net/zeo/CO2>  
+
+
+
+
+# `[2019-08-21]` Good sleep, good learning, good life      [[qs]]
+
+<http://super-memory.com/articles/sleep.htm>  
+
+    Circadian graph and brainwork
+
+some graphs and factors that impact sleep, I could look at them too&#x2026;  
+
+
+
+
+# Gadgetbridge 
+
+    Gadgetbridge (Communicate with Pebble/Mi Band/Amazfit Bip/Hplus devices and more) - https://f-droid.org/app/nodomain.freeyourgadget.gadgetbridge
+
+
+
+
+# `[2019-02-11]` Self-Quantification Explained: Tons of Ways Start Measuring Your Performance and Progress - The Bioneer      [[qs]]
+
+<http://www.thebioneer.com/self-quantification-explained-tons-ways-start-measuring-performance-progress/>  
+
+    Likewise measuring strength in a particular area is often just a matter of testing your 1RPM (1 rep max) on a particular exercise. Testing 1RPM without a spotter is a good way to crush yourself to death, so see how much you can lift for eight reps then add 20% for a rough estimate.
+    Note that muscle endurance is a separate thing from muscle strength. Likewise it’s sometimes useful to identify the specific muscles that are letting you down in particular movements. And note that the best way to train for muscle size is not necessarily the best way to train for muscle power.
+
+
+
+
+# `[2019-08-05]` For some, self-tracking means more than self-help
+
+<http://theconversation.com/for-some-self-tracking-means-more-than-self-help-118235>  
+
+
+
+
+# `[2019-10-06]` Get the latest 23andMe reports - the.dmitrii.g@gmail.com - Gmail
+
+    Get the latest
+    23andMe experience
+    with the V5 chip
+
+
+
+
+# `[2019-08-17]` Frank T. Hopfgartner on Twitter: "Find the slides of our lifelogging task at NTCIR14 at <https://t.co/NM1Lf3BBLN>" / Twitter
+
+<https://twitter.com/FTHopf/status/1138339813839462402>  
+hmm. they are saying galvanic skin response captures skin conductivity as correlate of stress levels?  
+
+
+
+
+# But their skin conductance (a reliable measure of the stress response)      [[qs]]
+
+Todo  
+from Come as You Are by Emily Nagoski  
+
+
+
+
+# `[2019-12-26]` Sarah Bartlett on Twitter: "@youngs<sub>eye</sub><sub>view</sub> @tableaupublic This is a super interesting, creative, quantified-self take on the theme! I applaud you for tracking your meals for this long too. Thank you for entering another viz! Happy Holidays ☺️" / Twitter      [[qs]] [[viz]] [[inspiration]]
+
+<https://twitter.com/sarahlovesdata/status/1209815315670093824>  
+
+    New tableau viz: My solitary culinary journey as a PhD student over past eight months.  The third IronQuest submission. Merry Christmas and have an awesome 2020 datafam. @sarahlovesdata
+     @tableaupublic
+
+
+
+
+# `[2019-09-16]` markwk/qs<sub>ledger</sub>: Quantified Self Personal Data Aggregator and Data Analysis      [[hpi]]
+
+<https://github.com/markwk/qs_ledger>  
+
+    Pocket: articles read and read count from Pocket.
+
+
+
+
+## `[2020-05-14]` lastfm could be interesting too I suppose
+
+
+
+
+# `[2019-10-08]` Resting Heart Rate: Year-Over-Year Update – Michael Lustgarten
+
+<https://michaellustgarten.com/2019/10/08/resting-heart-rate-year-over-year-update/>  
+looks like a pretty quantified blog..  
+
+
+
+
+# `[2019-11-25]` An Exploration of Mood Tracking: Can We Measure How We Feel? - Mark Koester
+
+<http://www.markwk.com/2018/01/limits-to-mood-tracking.html>  
+
+
+
+
+# `[2019-12-02]` It is pretty amazing, but in a way, Wolfram is also demonstrating how not to do &#x2026; | Hacker News
+
+<https://news.ycombinator.com/item?id=3680735>  
+
+    gwern on Mar 8, 2012 | parent | favorite | on: Learning from 20 years of personal analytics
+    It is pretty amazing, but in a way, Wolfram is also demonstrating how not to do Quantified Self: the point is not stamp-collecting, but data-collecting + experimentation + analysis. Right now, Wolfram has maybe #1 and #3, but he doesn't have any of #2, and he doesn't seem to really appreciate this:
+
+
+
+
+# `[2019-12-12]` Quantified Bob Updates: 🌮 Tracking glucose response to foods, 🎁 Holiday gift guide + more
+
+<https://mailchi.mp/5ece1f538885/quantified-bob-updates-hacking-jet-lag-holiday-wellness-tech-deals-more-2487133?e=458b1c350e>  
+
+
+
+
+# `[2020-04-30]` [(2) Sergey Stavisky on Twitter: "@alexeyguzey Curious if you exercised during the experiment and noticed an effect there? I find that even with just a couple hours less than my usual (~7.5), cardio exertion feels harder and my running is slower." / Twitter](https://twitter.com/i/status/1255933142571065346)      [[qs]]
+
+    Curious if you exercised during the experiment and noticed an effect there? I find that even with just a couple hours less than my usual (~7.5), cardio exertion feels harder and my running is slower.
+
+
+
+
+# `[2020-01-17]` Julian Lehr (@lehrjulian) / Twitter
+
+<https://twitter.com/lehrjulian>  
+right, interesting qs guy posting on HN  
+
+
+
+
+# `[2019-12-11]` LiDAR Camera L515 – Intel® RealSense™ Depth and Tracking Cameras
+
+<https://www.intelrealsense.com/lidar-camera-l515/>  
+
+    Intel® RealSense™ LiDAR camera L515
+    
+    Introducing the world's smallest high‑resolution LiDAR depth camera.
+    Preorder now
+
+
+
+
+# Tweet from Neurodynamics Team (@neurodynamicsFR), at Nov 18, 15:31
+
+    The new generation of wearable magnetoencephalography (MEG) technology will certainly  revolutionise electrophysiological measures of brain activity. ⁦@NatureComms⁩  https://t.co/7w8Hz5Tf9b
+    https://twitter.com/neurodynamicsFR/status/1195459427039694849
+
+
+
+
+## `[2019-11-23]` MEG measures the magnetic fields generated outside the head by neural current flow
+
+    and in this way offers measures of brain electrophysiology with high spatiotemporal precision5. Traditional (superconducting) MEG sensors require cooling inside a large cryogenic dewar, meaning systems cannot adapt to head shape/size and require participants to keep still during data acquisition. However, recently developed optically pumped magnetometers8,9,10,11 (OPMs) offer a means to measure the small magnetic fields generated by the brain12,
+
+
+
+
+# `[2019-03-02]` Continuous gps device
+
+
+
+
+# Home weather station with temp and co2      [[qs]]
+
+
+
+
+# `[2019-03-04]` Quantified Mind Archives - Quantified Self
+
+<http://quantifiedself.com/quantified-mind/>  
+
+    here was no single formula but one principle that comes up a lot is to change the difficulty of the test dynamically based on the user’s accuracy, to reach a steady state of some fixed accuracy, and apply Bayesian estimation to the parameters of interest. For example, in Digit Span we estimate the level in which the user would get exactly 50% of the trials correct. The reason that our verbal learning test doesn’t use a fixed number of items is that some people would find 10 items too hard and others would find 30 too easy, so any fixed number would waste a lot of their time testing them at an inappropriate level.
+
+
+
+
+# Think how to evaluate hiit vs long endurance      [[exercise]] [[qs]]
+
+
+
+
+# `[2019-10-28]` Owning My Step Count · Jamie Tanna | Software (Quality) Engineer
+
+<https://www.jvt.me/posts/2019/10/27/owning-step-count/>  
+
+    In the spirit of own your data, as well as get a bit more visibility for myself on how much I walk and maybe even add some accountability for days I don't walk as much, I thought I'd publish this data to my site.
+
+hmm, indieweb thing  
+
+
+
+
+# `[2019-11-02]` Cloud2019
+
+<https://cloud.bluemaestro.com/logs>  
+ok, can enable 'show log records' online..  
+
+
+
+
+# Hr response depending on power of spinning      [[qs]]
+
+    That doesn't take second order effects into account
+
+
+
+
+# `[2019-10-28]` [The value of tracking data](https://reddit.com/r/running/comments/dobg9p/the_value_of_tracking_data/f5lq16q/) /r/running  (motivation)
+
+    I love data. I love technology.  I love running.  I've got a crap ton of available data on virtually everything having to do with my running/health.  I have a high end Garmin watch, I run with my heart rate strap w/ Garmin Run Dynamics, I have a Stryd power meter, i used to track my HRV every morning, etc.
+    
+    And it's almost all useless.  The more I've run, the more I've realized how little of it really matters.  Sure you can track your progress any number of ways.  My favorite, RE ratio (basically the amount of running power required for a given pace) very cleanly shows how much my efficiency has improved over long periods of time, but I can also look at long run pace for a given HR, resting HR, implied VO2Max, etc. etc. etc.  Or I could just look at old fashioned race times and see how they compare.
+    
+    Almost all of this data is descriptive (and sometimes it isn't even meaningful) and it's almost never prescriptive.  The value of descriptive stats is minimal, beyond perhaps for some ongoing motivation to see improvement at regular intervals in the absence of races.  I really think tracking your mileage, pace, perceived exertion, and interval/workout details (when relevant) to be the key factors that are necessary.  It really doesn't take much to collect and track those.
+    
+    So much of the data collected has false precision (just because a number is being spit out, doesn't mean it has inherent meaning or is accurate), and even more of it is useless without very detailed context.  Heart rate is the best example of this: the temperature, humidity, wind, your fatigue, whether you're sick, what you're wearing, if you had caffeine, if you ate before running, if you had a few beers the day before, etc. will all massively impact your HR on a given run.  Not to mention that people really need to know their max hr, min hr, vo2max hr, and lactate threshold hr for zones to have any meaning... and almost no one knows these numbers.
+    
+    I have my training plan, and nothing really changes what i'm going to be running on a given day beyond how my body subjectively feels.
+
+
+
+
+# `[2019-10-28]` [The value of tracking data](https://reddit.com/r/running/comments/dobg9p/the_value_of_tracking_data/) /r/running      [[motivation]]
+
+    I'm interested in the process of quantified self and gathering information of your body with the help of wearable technology. It'd be interesting to hear from the community, what got you into quantified self and what for you is the value you get from it? What keeps you motivated to gather information or what made you stop?
+
+    At the moment I track my running pace and recovery times. I use the information to set a goal for each workout and plan them according to my energy levels. One of my friends is very organized in this sense and has tracked nearly all his runs this year. I've learned a great deal from him but I'd like to know more and understand what other ways there are to make use of the data that's out there.
+
+
+
+
+# `[2019-11-14]` What I track and how : QuantifiedSelf      [[toblog]] [[qs]]
+
+<https://www.reddit.com/r/QuantifiedSelf/comments/7jdhph/what_i_track_and_how/>  
+could create similar post? people seems to like that one..  
+
+
+
+
+# Watts are lower bound due to heat losses. Wonder whats the effeciency of meat engine      [[qs]]
+
+
+
+
+# `[2019-08-03]` [One Year (Almost) of Heart Rate Data from Fitbit Charge 2 OC](https://reddit.com/r/dataisbeautiful/comments/9zubj5/one_year_almost_of_heart_rate_data_from_fitbit/) /r/dataisbeautiful
+
+
+
+
+# Try implementing smart alarm?      [[sleep]] [[qs]]
+
+
+
+
+# semantic location history!!! it actually includes segments!      [[location]] [[takeout]]
+
+
+
+
+# `[2020-03-09]` Pinboard: Bookmark Detail
+
+<https://pinboard.in/u:mjochems/b:28abb0b17ee5>  
+
+    The Future of Quantified Self Devices - Aaron Parecki
+
+
+
+
+# `[2020-03-24]` OpenTracksApp/OpenTracks: OpenTracks is a sport tracking application that completely respects your privacy.      [[qs]]
+
+<https://github.com/OpenTracksApp/OpenTracks>  
+use this instead of endomondo?  
+
+
+
+
+# `[2020-04-09]` Science, Art, Beauty: All My Friends Are Dying
+
+<http://www.josiahzayner.com/2020/04/all-my-friends-are-dying.html>  
+
+    I order blood tests online and draw my own blood.
+
+
+
+
+# `[2020-04-15]` [Blue Maestro sensor, openHAB or Home Assistant and HomeKit](http://jenswilly.dk/2019/06/blue-maestro-sensor-openhab-and-homekit/)
+
+
+
+
+# `[2020-05-14]` various jawbone links from old my package      [[qs]] [[jawbone]]
+
+[crowoy/Health-Analysis: Tool for visualising and analysing personal fitness data.](https://github.com/crowoy/Health-Analysis)  
+
+-   <https://github.com/joytafty-work/SleepModel>
+-   <https://github.com/search?l=Jupyter+Notebook&q=s_awakenings&type=Code&utf8=%E2%9C%93>
+-   <https://github.com/oshev/colifer/blob/592cc6b4d1ac9005c52fccdfb4e207513812baaa/colifer.py>
+-   <https://github.com/oshev/colifer/blob/592cc6b4d1ac9005c52fccdfb4e207513812baaa/reportextenders/jawbone/jawbone_sleep.py>
+-   <https://github.com/GlenCrawford/ruby_jawbone>
+-   <https://nyquist212.wordpress.com/2015/06/22/visualizing-jawbone-up-data-with-d3-js/>
+
+
+
+
+# Blood Pressure Monitors: High blood pressure is a well-known health risk factor, especially when combined with smoking, obesity, or genetic markers. You can get this measured at your doctor’s, a health clinic, or even using an at-home monitor.  Check out my guide to blood pressure tracking
+
+None  
+[Data-Driven Health Trackers: An Actionable List - Mark Koester](http://www.markwk.com/health-trackers.html)  
+[in context](https://hyp.is/Oyzi7A-CEeqx8cv0_BT-bA/www.markwk.com/health-trackers.html)  
+
+
+
+
+# Check out my blood test guide, Know Thy Blood or my blood test biomarker directory for an FAQ and information on the best tests.
+
+None  
+[Data-Driven Health Trackers: An Actionable List - Mark Koester](http://www.markwk.com/health-trackers.html)  
+[in context](https://hyp.is/QkXPHA-CEeqbWy_TMW69Hg/www.markwk.com/health-trackers.html)  
+
+
+
+
+# Check out my guide to VO2 Max, including the numbers, my lab test, and how to estimate your VO2 Max.
+
+None  
+[Data-Driven Health Trackers: An Actionable List - Mark Koester](http://www.markwk.com/health-trackers.html)  
+[in context](https://hyp.is/k4_rFA-CEeqovEc2ERkjyA/www.markwk.com/health-trackers.html)  
+
+
+
+
+# Temp running correlation      [[qs]]
+
+
+
+
+# `[2020-07-29]` [hyfen.net/memex/updates/fifteen-years-of-conversations/](https://hyfen.net/memex/updates/fifteen-years-of-conversations)
+
+    I’m going to be more intentional about taking screenshots of interesting moments or clips of things on my screen and I’ve set up an importer to automatically watch for new screenshot image files to import automatically.
+
+
+
+
+# Binge days weighting poop      [[qs]]
+
+    This was a big thing with Tim Ferris when he was making an argument for "cheat days". Personally, I also found cheat days to be effective when on a restrictive diet. I think he ended up actually weighing his poop to prove the point.
+    I did notice that I couldn't breakthrough some key weight loss levels without both cheat days and intermittent fasting, with the cheat days seeming counter-intuitive to me.
+
+
+
+
+# Need to implement lan capture, maybe?      [[qs]] [[emfit]]
+
+
+
+
+# right. bluemaestro seems to duplicate data&#x2026; with weird timestamps.      [[bluemaestro]]
+
+Like, here timestamps vary across almost the whole hour??? the fuck is this?? seriously  
+I guess it's still sort of useful even with such resultion. but FUCK  
+
+    dt	temp
+    2020-07-20T23:51:34.444000	21.0
+    2020-07-20T23:46:14.536000	21.3
+    2020-07-20T23:39:01.012000	21.3
+    2020-07-20T23:30:30.643000	21.3
+    2020-07-20T23:29:38.622000	21.3
+    2020-07-20T23:29:18.286000	21.3
+    2020-07-20T23:25:02.555000	21.3
+    2020-07-20T23:20:49.602000	21.3
+    2020-07-20T23:17:48.530000	21.3
+    2020-07-20T23:15:52.118000	21.3
+    2020-07-20T23:08:14.417000	21.3
+    2020-07-20T23:04:57.706000	21.3
+    2020-07-20T22:57:24.860000	21.3
+    2020-07-20T22:56:32.268000	21.3
+    2020-07-20T22:53:23.638000	21.3
+    2020-07-20T22:51:34.444000	21.3
+    2020-07-20T22:46:14.536000	21.8
+    2020-07-20T22:39:01.012000	21.8
+    2020-07-20T22:30:30.643000	21.8
+    2020-07-20T22:29:38.622000	21.8
+    2020-07-20T22:29:18.286000	21.8
+    2020-07-20T22:25:02.555000	21.8
+    2020-07-20T22:20:49.602000	21.8
+    2020-07-20T22:17:48.530000	21.8
+    2020-07-20T22:15:52.118000	21.8
+    2020-07-20T22:08:14.417000	21.8
+    2020-07-20T22:04:57.706000	21.8
+    2020-07-20T21:57:24.860000	21.8
+    2020-07-20T21:56:32.268000	21.8
+    2020-07-20T21:53:23.638000	21.8
+    2020-07-20T21:51:34.444000	21.8
+    2020-07-20T21:46:14.536000	22.3
+
+FUCK. I should really cross check new data sources quicker before investing time in them. Fuck.  
+
+
+
+
+# ok, at least data from google is sort of a lower bound&#x2026;      [[location]] [[qs]]
+
+
+
+
+# ok, I guess runs were tracked on endomondo so it's not that big of a problem. would be interesting to cross-match them with endomondo data      [[location]] [[qs]]
+
+
+
+
+# `[2019-03-06]` UbiBot WiFi Wireless Thermometer, Remote Temperature, Humidity, Light Monitor, Environment Sensor, Mobile App Alerts, Compatible with IFTTT(2.4GHz WiFi only): Amazon.co.uk: DIY & Tools      [[qs]]
+
+<https://www.amazon.co.uk/UbiBot-Wireless-Thermometer-Temperature-Environment/dp/B071HVDDFB/ref=sr_1_1?ie=UTF8&qid=1551887603&sr=8-1&keywords=environment+sensor>  
+
+
+
+
+# `[2019-05-21]` All in one      [[inspiration]] [[qs]]
+
+<http://ilbonte.github.io/rescuetime-again/>  
+
+
+
+
+# back track quanitifiedmind after exercise      [[qs]] [[timeline]]
+
+
+
+
+
+## `[2019-11-09]` unlikely to impact anything I guess because it's unclear what data quantifiedmind reports
+
+
+
+
+# `[2018-06-30]` wger Workout Manager - Features      [[exercise]]
+
+<https://wger.de/en/software/features>  
+
+
+
+
+# bristol stool scale      [[health]]
+
+<https://en.wikipedia.org/wiki/Bristol_stool_scale>  
+
+
+
+
+# experiment with modafinil <https://www.gwern.net/Modafinil>
+
+
+
+
+# track body temperature?      [[qs]]
+
+    Synching/Exporting Body Temperature Data - Quantified Self / Apps & Tools - Quantified Self Forum
+
+<https://forum.quantifiedself.com/t/synching-exporting-body-temperature-data/4514/2>  
+
+
+
+
+# computing average as opposed to mean would be pretty stupid      [[quantifiedmind]]
+
+
+
+
+# Tracking Life: Mark Krynsky - Quantified Self
+
+<http://quantifiedself.com/2018/07/tracking-life-mark-krynsky/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+QuantifiedSelf+%28The+Quantified+Self%29>  
+
+
+
+
+# measure some responses? <https://www.humanbenchmark.com/dashboard>      [[cognitive]]
+
+
+
+
+# `[2018-11-10]` aquilax/hranoprovod-cli: Command line quantified self tool
+
+<https://github.com/aquilax/hranoprovod-cli>  
+
+
+
+
+# correlate that with nutrino and alcolog. Ideally, social log as well?      [[qs]] [[alcolog]]
+
+
+
+
+# `[2019-02-14]` Be Better at Sleep - Dreem
+
+<https://shop.dreem.com/europe/>  
+
+
+
+
+# right, suunto API is NOT for personal use, so I guess not really worth considering&#x2026;
+
+<https://apizone.suunto.com/>  
+
+    Restrictions
+    
+    The API will be provided to companies, organisations who are providing tools / apps / services for public audience. We currently don't offer the API access for personal use. We are reviewing the applicants based on for example the fit to our brand, interest from our customers and illustration of the innovation mindset We do not charge from the use of the API.
+
+
+
+
+# `[2019-02-19]` Step 4: Learn To Use Your Body
+
+<https://blog.bulletproof.com/step-4-learn-to-use-your-body/>  
+
+    Mobility Supplement 1: Hydrolyzed Collagen Peptides
+    This is a special tool I’ve been using for years to hack my flexibility. It’s helped me get to the level of flexibility I have now.
+    
+    Collagen is the main building block of connective tissue.  When the collagen in your body begins to dry out and age, you lose flexibility.  Hydrolyzation is the process of breaking protein molecules into smaller ones.  This makes them more bioavailable and better absorbed into your joints and connective tissue.  Studies have shown this to be far more effective than other supplements such as glucosamine chondroitin and MSM.  I take 1-2 tablespoons a day before bed with extra small peptides that make it more effective.
+
+
+
+
+# `[2019-05-16]` [Best nutrition tracking apps for advanced QS](https://reddit.com/r/QuantifiedSelf/comments/bp0prn/best_nutrition_tracking_apps_for_advanced_qs/) /r/QuantifiedSelf
+
+    Most food tracking apps have the ability to retrieve nutritional info via text search, barcode scan or recent favorites. Barcode search never works offline but typing search and 'favorites' do in some apps. Only a handful of apps have time stamping. I have three options:
+    Write code over OFF or USDA database using Automate, IFTTT or Waistline. The database may be out of date but it will never cease to exist, require internet or spy on user. Unfortunately this will require lots of work. Waistline just added a few useful features.
+    Pay 40$ per year for mfp. Chronometer without offline logging is useless in too many cases. I would be willing to pay 40$ for this product but not 'per year' partly because its guaranteed to change or even die at some point. So no, not really.
+    Or just use bitesnap. This would be the easy choice, but OFF database is way more detailed and I am afraid of Terminator models with better food identification algorithms.
+    'y' means Yes, has feature. 'n' means does not. ' ' is same as 'n'. 'p' means feature requires membership. 'w' means the feature exists but is not as good as a 'y'. '?' means I do not know.
+    name; search fave/recent barcode ; offline ; quantity timestamp notes export ; detailnutrition serv.choiceselect customfood ; addwater
+    
+    SparklePeople; y y y ; ; y n n p ; y n y ; y
+    \------looseit; y y y ;y; y n n y ; w n ? ; p
+    \----fooducate; y y y ; ; y n n p ; y n y ; n
+    \---cronometer; y y y ; ; y p - p ; y y y ; n
+    \----fatsecret; y y w ; ; y n n ? ; y y n ; w
+    \-myfitnesspal; y y y ;w; y p - w ; y y y ; y
+    \---eathismuch; w y w ; ; y n ? ? ; w y y ; n
+    \---mynetdairy; y y y ;y; y n n ? ; y y y ; w
+    \-----bitesnap; w y y ;y; y y y y ; y y n ; w
+    glucose buddy; w y y ; ; ? y n n ; y y n ; n
+    my diet diary; w y n ;w; y n n ? ; y y y ; y
+    \------MyPlate; y y y ;w; y n n ? ; w n y ; ?
+    \---smartplate; y y y ; ; n n n ? ; n n ? ; ?
+    
+    openfoodfacts;  y y y ; ; n n n y ; y y y ; n most detailed database
+    has "share" option maybe just export to txt editor and automatically timestamp?
+    [https://ndb.nal.usda.gov/ndb/](https://ndb.nal.usda.gov/ndb/)
+    waistline calorie tracker FOSS. Exports. unfortunately no timestamp and reduced nutrition details. faves offline.
+    YAZIO Lifesum nutritionixTrack no timestamp and I am tired. Feels like most of these apps are clones. I guess shuffling the data through 3rd part apps could eventually get it into a csv but researching that is too hard. Apps could queue entries offline then later search.
+    webmd no longer tracks food?
+    [https://www.choosemyplate.gov/tools-supertracker](https://www.choosemyplate.gov/tools-supertracker) discontinued
+    I think I got every single app available on android.
+    oops. HealthWatch 360 no timestamps.
+    People at openfoodfacts suggested cc calorie counter but CC does not have timestamps nor does it have much nutritional detail or exporting. Also nutrition by curlybrace and [https://github.com/vrublack/TacoShell](https://github.com/vrublack/TacoShell).
+    prettier list
+    [https://alternativeto.net/list/9624/food-and-nutrition-tracking-apps-for-quantified-self](https://alternativeto.net/list/9624/food-and-nutrition-tracking-apps-for-quantified-self)
+
+
+
+
+# `[2019-05-18]` [Best nutrition tracking apps for advanced QS](https://reddit.com/r/QuantifiedSelf/comments/bp0prn/best_nutrition_tracking_apps_for_advanced_qs/ense0i6/) /r/QuantifiedSelf
+
+    >openfoodfacts
+    is the database you want.
+     Waistline   the open source app based on OFF database may get enough features.
+    Until then there is Bitesnap.
+
+
+
+
+# `[2019-06-11]` The Beginner’s Guide to Quantified Self | Hacker News
+
+<https://news.ycombinator.com/item?id=5588967>  
+
+    Far* more worrisome than QS's failure to run t-tests and ritually chant 'we calculate a p-value of <0.05 therefore we reject the null hypothesis of no difference' is the pervasive publication bias (who reports failed experiments?), the absence of blinding even where quite easy leading to severe placebo effects (many supplements), tiny sample sizes, and dodgy data collection (selection bias).
+
+
+
+
+# learn to draw venouous blood?      [[qs]] [[health]]
+
+
+
+
+# `[2019-06-15]` AncestryDNA vs 23andMe vs MyHeritage: Which One is Best?
+
+<https://www.bestonlinereviews.com/dna-testing/ancestry-dna-test-vs-23andme-vs-myheritage/>  
+
+    The most extensive by far, testing X chromosome, Y chromosome, Autosomal, and Mitochondrial DNA as well. 23andMe offer additional angel on you DNA – DNA testing for health. Those genetic markers are not covered on the DNA Ancestry DNA test. 23andMe health DNA test is one of the leading products in that niche. If you wish to read more about on that topic, we strongly advise you to read our comparison review of the two leading health DNA tests: 23andMe vs Futura Genetica.
+
+    With 23andMe, you will probably get the most comprehensive DNA analysis results.
+
+
+
+
+# `[2019-08-03]` [Is an HRM accurate for calculating calories?](https://reddit.com/r/running/comments/3lu4qb/is_an_hrm_accurate_for_calculating_calories/cv9d5w8/) /r/running      [[endomondo]]
+
+    Endomondo uses an equation that is a curve fit from data found in the paper "Prediction of energy expenditure from heart rate monitoring during submaximal exercise."  If you read the paper, they use heart rate, gender, age, and weight to calculate energy expenditure, and the correlation coefficients are...OK.
+    Make sure that your weight, age and gender are accurate.  That should eliminate any vast variability in the equation.  At that point, if your HR is still way off what you would think is normal, it could be that you are one of the outlying points in their curve fit and that it'll never be that accurate.  100 ca/mile is a pretty solid average for easy exercise.  If you are running super hard, it could be more.
+    If you can upload your data to a Garmin account, they use 'FirstBeat' which DCRainmaker claims is accurate within about 10%, and you may be able to get a more accurate approximation there.
+
+
+
+
+# track in python, but make a commit hook?      [[exercise]]
+
+
+
+
+# `[2020-03-09]` Pinboard: Bookmark Detail
+
+<https://pinboard.in/u:nhaliday/b:51addc9d5f81>  
+
+    Fitness trackers accurately measure heart rate but not calories burned
+
+
+
+
+# plot some diagram for amount of my done/archived tasks?      [[org]] [[self]] [[qs]]
+
+
+
+
+# <https://elitehrv.com/> 
+
+-   State "STRT"      from "TODO"       `[2019-02-21]`
+
+
+
+
+## `[2019-02-21]` ok, gonna try to measure for a bit and maybe compare with emfit
+
+
+
+
+# <https://www.gwern.net/DNB-FAQ>       [[qs]] [[mind]] [[gwern]]
+
+
+
+
+
+## working memory is important, helps to grasp the structure of something
+
+
+
+
+## brain workshop?
+
+
+
+
+## n-back is kinda like weight lifting: N should be such that you can barely manage it
+
+
+
+
+## studies that claim n-back impacts working memory
+
+
+
+
+## there are few android apps listed
+
+
+
+
+# <https://dcgross.com/how-to-level-up/>       [[qs]]
+
+
+
+
+
+## "I can use my water weight (as measured in day to day fluctuation) as a quasi-proxy for salt intake."
+
+how?? it also depends on carbs etc.  
+
+
+
+
+## HRV? 
+
+
+
+
+## minutes in Z4??
+
+
+
+
+## muscle and bone mass? DEXA scan
+
+use impedance scale? you're not looking for absolute accuracy, just directional  
+
+
+
+
+## bloodwork &#x2013; good point. I'd rather skip couple of fancy dinner to have critical knowledge about my body
+
+
+
+
+## seat an reach test
+
+he does that quaterly, but wonder if you can measure it once in a quater reliably. depends on whether you did excercise, etc..  
+
+
+
+
+## MRI well, interesting..
+
+
+
+
+## Build a dashboard for your life so that you orient in the right direction. If done correctly, this is a motivational and fun hobby that can help level you up.
+
+
+
+
+## eh, really should do that within hypothesis?
+
+
+
+
+# All-in-one daily tracking: Blood Pressure, Oxygen Saturation, Heart Rate, Temperature, ECG and Blood Glucose data - Quantified Self / Apps & Tools - Quantified Self Forum      [[qs]]
+
+<https://forum.quantifiedself.com/t/all-in-one-daily-tracking-blood-pressure-oxygen-saturation-heart-rate-temperature-ecg-and-blood-glucose-data/4113>  
+eh, apparently something won competition, but not a production grade  
+
+
+
+
+# <https://eric.jain.name/2018/11/25/tracking-blood-sugar/> 
+
+
+
+
+# `[2019-02-12]` ActivityWatch/aw-android: ActivityWatch for Android, using aw-server-rust as backend.      [[qs]]
+
+<https://github.com/ActivityWatch/aw-android>  
+
+
+
+
+# apparently it's very hard to measure hrv consistentently (let alone during exercise). most guides recommend few minutes of measuring in the same position in the morning      [[qs]] [[hrv]]
+
+
+
+
+# `[2019-03-24]` Shtetl-Optimized » Blog Archive » You down with SPP?      [[dna]]
+
+<https://www.scottaaronson.com/blog/?p=249#comment-6885>  
+
+
+
+
+# before I buy emg and eeg devices I guess I should really think how to utilize and display hr data I already have in a nice way      [[think]] [[qs]]
+
+
+
+
+# `[2018-12-30]` [Building a device to track sexual pleasure. What should I add next?](https://reddit.com/r/QuantifiedSelf/comments/a9gtjr/building_a_device_to_track_sexual_pleasure_what/eckg15m/) /r/QuantifiedSelf
+
+    Apparently (cant remember the exact paper), but the woman orgasm caisea the brain to partially shut down amd reset. I wonder if an EEG node could give some extra data.
+    With other quantified self experiments I overlay multiple sensors and tests.
+    Eg subjectively grading orgasms then working back to check that HR and other tests actually correlate.
+    There is a pedo test which is a cock ring that sits at the base of a flassid cock. They are shown different pics and can see the change in temp and bloodflow. Some weird other sensors could also work eg if wrist blood low drops maybe that is cause it is going somewhere else.
+    Temp would be interesting and an IR external cam may pick that up as measurable.
+    Breath rhythm, depth and tempo is probably a sign of a good one coming.
+    Quivering thighs is usually a good sign.
+    I also suspect blood pressure could be relevant also.
+
+
+
+
+# `[2019-01-20]` [What do you use for HRV tracking?](https://reddit.com/r/QuantifiedSelf/comments/88ifhb/what_do_you_use_for_hrv_tracking/dwl0o1k/) /r/QuantifiedSelf
+
+    I purchased the Heartmath Emwave2, and I love it.  It sells for $200; I bought it from eBay for $100.  It's pretty convenient because of the ear clip and finger sensor, and you can use it without any app.   There is no app, but the online dashboard is useful though.  It is not designed for all day use, just for HRV training and balancing out your mood.
+    I also bout the Lief from Lief Therapeutics, Getlief.com, and only used it a couple of times. It is a wearable that sticks under your chest and tracks your HRV all day long.  When it senses your stressed it will vibrate to notify you; then it will vibrate in a pattern to breathe in and out to relax.  It's a pretty cool device but costly at $280.
+    I also pre-ordered the Oura ring, this to will track your hrv all day long.  I don't have any experience with it, but I'm excited to see something called the readiness score.  This score will tell you when your system has recovered from exertion.  I am 35 years old and play basketball; my body doesn't heal like it used to.  I'll be using this recovery score to know when I can go back on the court.
+
+
+
+
+# `[2019-01-23]` [Looking for people willing to share their experiences with sleep tracking](https://reddit.com/r/QuantifiedSelf/comments/agk5h8/looking_for_people_willing_to_share_their/ee7t3wl/) /r/QuantifiedSelf      [[sleep]] [[qs]]
+
+    Have you checked openhumans.org? You can submit your project to get sleep data from users that agree to it. It also has builtin jupyter notebooks to do data exploration.
+
+
+
+
+# `[2019-02-21]` [I bought the Vielight 810 Infrared and will review it over time](https://reddit.com/r/Biohackers/comments/aqkvh1/i_bought_the_vielight_810_infrared_and_will/) /r/Biohackers
+
+    I was reading [this](https://www.reddit.com/r/Biohackers/comments/aocnp3/i_need_help_improving_iq_for_med_school/) post about a fellow drug user who got into law school and needed help 'getting smart' and it was very relatable for me. I just got into law school with a massive scholarship, in which I need to do very well to continuously receive. This is good news, but I have been smoking weed nearly every day for 8-10 years at this point (and a lot of other related experimenting) and it can be hard to focus, and I sometimes have very bad brain fog. I was able to get my BA and MA through studying what I am genuinely interested in and being really good at writing, but law school is different and I won't be able to BS it the same.
+    In that post, u/toomuchbasalganglia mentioned the Vie Light which looked cool, and after some research, I decided why not. I got the most expensive [intranasal light device](https://vielight.com/product/vielight-810-infrared-brain/) that they offer for $500 and I don't see any detailed reviews of the product so I figured I'd give it a go. Not everybody can afford that price tag so I figure I should give back to the community. I'm using a throwaway not because I'm a corporate advertising agency but because my main hobby is arguing with people on reddit (mostly alt-right/lite people) and I don't want them to have any personal info of mine, even minor stuff such as me being a pothead.
+    I don't fully understand the science behind it because I'm not so familiar with the terms, but it seems legit. From what I figured out, it shoots a laser up your nose. That laser gives your brain nutrients much the same way that the sun gives us nutrients through our skin. That said, I will be focusing on the effects that I notice on myself, not on the device. I remember reading somewhere (amazon review?) that 20% of the people that try it don't notice anything, so I hope I'm not part of that, or that the placebo is strong enough. I will also be making some changes in my lifestyle, which will hopefully act in tandem with the vie light.
+    It should be coming tomorrow night and I'll keep ya'll posted.
+
+
+
+
+# GPS trackers?      [[gps]]
+
+
+
+
+
+## Qstarz       [[gps]]
+
+
+
+
+
+### `[2019-05-04]` homepage/index.md at 3ef4c6b82c414d84d247ecdefcb0231df8100bdf · tbm/homepage      [[gps]] [[qs]]
+
+<https://github.com/tbm/homepage/blob/3ef4c6b82c414d84d247ecdefcb0231df8100bdf/pages/debian/gps/bt-q1000x/index.md>  
+ok, that's not bad. I guess worth trying  
+
+
+
+
+## `[2019-05-04]` Qstarz BT-Q1000XT Travel Recorder/GPS Tracker/Bluetooth GeoTagging: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/BT-Q1000XT-Recorder-Tracker-Bluetooth-GeoTagging/dp/B004OOBMM8/ref=sr_1_2?keywords=Q1000XT&qid=1556995637&s=gateway&sr=8-2>  
+
+    Don't know because I've always used USB and GPSBabel to connect to a Linux Mint machine.
+
+
+
+
+## `[2019-05-04]` Qstarz BT-Q1000XT Travel Recorder/GPS Tracker/Bluetooth GeoTagging: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/BT-Q1000XT-Recorder-Tracker-Bluetooth-GeoTagging/dp/B004OOBMM8/ref=sr_1_2?keywords=Q1000XT&qid=1556995637&s=gateway&sr=8-2>  
+
+    BT-Q1000XT adopts the latest GPS chip-set MTK II bringing you the highest performance and longest 42 hour battery life for your special commercial requirements. Lower the cost and improve efficiency. Ideal for fleet management, Asset tracking, Sports and recreation, Geographic surveying. BT-Q1000XT GPS tracker can record and saves your geographic coordinates based on information received from GPS satellites 5 times a seconds. Once the tracking is complete you can simply copy the tracking information to your PC. Comes QTravel PC application that lets you synchronise the photos you have taken along the route with the unit. Then the photos can be displayed on a map, like Google Maps or Google Earth. With built in wireless Bluetooth feature. It makes it possible to use the device as a GPS receiver for a mobile phone or PC. In addition, you have to download a navigation app to your phone or PC in order to have a working GPS system. The Qstarz BT-Q1000XT can do all that and a few other things. For instance, the Q1000XT can alert you on speeding. You can set a speed limit to the device and when you exceed it, the device will beep. Another new feature on the product is automatic track logger. You can set a time or times when the device automatically switches itself on and starts recording its whereabouts.
+
+
+
+
+## `[2019-05-04]` Is Qstarz GPS compatible with Windows 10? » CanadaGPS Knowledge Base & Tech Support Blog
+
+<http://canadagps.com/blog/2015/10/03/is-qstarz-gps-compatible-with-windows-10/>  
+
+    03 Oct 15 Is Qstarz GPS compatible with Windows 10?
+    The answer is yes.
+    Qstarz GPS, including the BT-Q818XT, BT-Q1000XT, BT-Q1000XTM, BT-Q1300ST & BT-Q1000eX, their drivers & application software are compatible with Windows 10.
+
+However, we aware that some PCs/laptops don’t detect the driver automatically. But the users can just install the driver from the files provided for Windows 8. The driver should be fine for Windows 10.  
+
+
+
+
+## `[2019-05-04]` Qstarz BT-Q1000XT 5Hz 66 Ch Bluetooth GPS Receiver Data Tracker Travel Recorder | eBay      [[gps]]
+
+<https://www.ebay.co.uk/itm/Qstarz-BT-Q1000XT-5Hz-66-Ch-Bluetooth-GPS-Receiver-Data-Tracker-Travel-Recorder/333129593540?epid=7030889859&hash=item4d901232c4:g:Vi4AAOSw6JNcme-i>  
+ok, buy this if phone sucks for recording  
+
+
+
+
+## `[2019-05-04]` rzzzwilson/pyQ1300ST: Python code to configure and read a QStarz BT-Q1300ST GPS logger
+
+<https://github.com/rzzzwilson/pyQ1300ST>  
+
+
+
+
+## `[2019-05-04]` Spy Tec STI GL300 Mini Portable Real Time Personal and: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/Spy-Tec-Portable-Personal-Vehicle/dp/B00JG8KCLO/ref=sr_1_6?crid=1EA1C0B74I3C9&keywords=gps+logger&qid=1556994655&s=gateway&sprefix=gps+logg%2Caps%2C122&sr=8-6>  
+
+    And since the STI_GL300 provides location updates as often as every 5 seconds, you can easily track fast-moving people, assets and vehicles.
+
+
+
+
+## `[2019-05-04]` Spy Tec STI GL300 Mini Portable Real Time Personal and: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/Spy-Tec-Portable-Personal-Vehicle/dp/B00JG8KCLO/ref=sr_1_6?crid=1EA1C0B74I3C9&keywords=gps+logger&qid=1556994655&s=gateway&sprefix=gps+logg%2Caps%2C122&sr=8-6>  
+
+    It is a 2G device and is therefore able to work in areas with 2G reception. However, if you will be located in an area with limited or no cellular signal coverage, it will most likely affect your GPS coverage.
+
+
+
+
+## `[2019-05-04]` Search Results for gps - SparkFun Electronics
+
+<https://www.sparkfun.com/search/results?term=gps>  
+
+
+
+
+## `[2019-05-04]` GT-750 Blueooth GPS Data Logger | Conrad.com
+
+<https://www.conrad.com/p/gt-750-blueooth-gps-data-logger-372738>  
+
+    GPS Logger GT-750
+    Lightweight, wireless GPS Logger with Bluetooth® transmission technology and manifold usage possibilities. It can be used with your tablet, smartphone and notebook. You can bring it also along on your hiking tour and can pursue and/or document the route covered once again at home on the computer. The battery lasts up to approx. 13 hours.
+    
+    Highlights & Details
+    Routes can be reproduced via Google Earth™
+    Stores distance, time, altitude, and speed
+    Data storage of up to 256,000 waypoints
+
+hmm, that's pretty nice but only 13 hours though..  
+
+
+
+
+## `[2019-05-04]` GT-730FL USB GPS Receiver Dongle with Logger Function / up to 256,000 way points record / New SiRF IV chipset and CanWay software/ A-GPS support: Amazon.co.uk: Amazon.co.uk:      [[gps]]
+
+httks://www.amazon.co.uk/GT-730FL-Receiver-Function-chipset-software/dp/B00I4Z1SQS/ref=sr<sub>1</sub><sub>3</sub>?keywords=Data+Logger+GPS&qid=1556995238&s=gateway&sr=8-3  
+
+    This isn't much of a problem though because as I said it's got a good battery life, around 15-16 hours when set to 5-second recording intervals and only takes about an hour to fully charge it.
+
+GT-730L  
+
+
+
+
+## `[2019-05-04]` GT-730FL-S GPS Data Logger: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/Renkforce-RF-1121058-GT-730FL-S-Data-Logger/dp/B005OJUKAW/ref=sr_1_10?keywords=Data+Logger+GPS&qid=1556995238&s=gateway&sr=8-10>  
+
+    Without a power source, it will be restricted to it's rechargeable battery life of up to 18 hours.
+
+
+
+
+## `[2019-05-04]` SleuthGear iTrail GPS Logger With Magnetic Case: Amazon.co.uk: Amazon.co.uk:
+
+<https://www.amazon.co.uk/SleuthGear-iTrail-Logger-Magnetic-Case/dp/B005VRVPF6/ref=sr_1_1?keywords=itrail+gps+logger&qid=1556995836&s=gateway&sr=8-1-spell>  
+
+    Terrible results, commonly loses a complete leg(route) of a trip. I tried clearing the device and resetting the device, same results.
+    I am not happy with this product. Don't waste your money on this product. As expensive as it is, it should have better hardware/software, and its help files are minimal. I am sure there are cheaper and better products than this, and probably do a better job at recording your data.
+
+
+
+
+# `[2019-05-04]` ContinuumBridge/tempo<sub>adaptor</sub>: App for Bluemaestro Tempo.      [[bluemaestro]]
+
+<https://github.com/ContinuumBridge/tempo_adaptor>  
+
+
+
+
+# `[2019-04-19]` Why People Self-Track: Research on the Motivations Behind the Quantified Self and Self-Trackers - Minding the Borderlands (motivation)      [[qs]]
+
+<http://www.markwk.com/why-people-self-track.html>  
+
+
+
+
+# `[2019-04-19]` A Day in a Life Well-Tracked: A Quantified Self Narrative - Minding the Borderlands
+
+<http://www.markwk.com/day-well-tracked.html>  
+well, lots of it is quite manual, not sure what he's getting from it  
+
+
+
+
+# `[2019-04-19]` Finding My VO2 Max: Running and the Pursuit of Measuring Improvement - Minding the Borderlands      [[vo2]] [[self]] [[qs]]
+
+<http://www.markwk.com/2017/07/finding-my-vo2-max.html>  
+
+    At the end of the test, I would be asked to identify my Perceived Effort or Relative Perceived Exertion.
+
+shit, no way I would be able to evaluate it from 0 to 20  
+
+
+
+
+# `[2019-04-19]` An Exploration of Mood Tracking: Can We Measure How We Feel? - Minding the Borderlands      [[mood]] [[qs]]
+
+<http://www.markwk.com/2018/01/limits-to-mood-tracking.html>  
+
+
+
+
+# outliers could be indicated on plots as arrows on the edge or something      [[viz]]
+
+
+
+
+# `[2019-11-04]` Ugh. I just don't really feel sleepy, what the fuck. Wish I could try a 30 hour day or something. Unlikely to do much good though      [[sleep]]
+
+
+
+
+# `[2019-07-29]` Российский биохакинг. - Elena Akm - Medium      [[qs]] [[biohacking]]
+
+<https://medium.com/@elenaakm/%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9-%D0%B1%D0%B8%D0%BE%D1%85%D0%B0%D0%BA%D0%B8%D0%BD%D0%B3-659cf11be6f0>  
+
+
+
+
+# Skulpt Aim      [[qs]] [[gadget]]
+
+<http://gadgetsandwearables.com/2015/09/14/skulpt-aim-review-hand-held-body-fat-monitor/>  
+
+reddit claims it's close to dexa scan, but android app is clunky  
+
+apparently there is also chisel, but it looks worse  
+
+all the reddit references are about 2 year old..  
+
+
+
+
+## `[2019-01-13]` amazon reviews are pretty bad too..
+
+
+
+
+# how to measure anything      [[qs]] [[read]]
+
+<http://lesswrong.com/lw/i8n/how_to_measure_anything/>  
+
+    Your problem is not as unique as you think.
+    You have more data than you think. You need less data than you think.
+    An adequate amount of new data is more accessible than you think.
+
+overall unclear how to map to a real life problem  
+read the comments though, example (how to measure programmer productivity)  
+
+
+
+
+# process ongoing-eeg in pinboard      [[eeg]]
+
+
+
+
+
+## NeuroTechX 
+
+unclear what they do exactly <http://neurotechx.com/>  
+
+nice github though&#x2026; lots of stuff <https://github.com/NeuroTechX/>  
+
+
+
+
+## finally order something from neurosky? ECG/EEG biosensors
+
+-   this could be useful <https://gobot.io/documentation/platforms/neurosky/>
+-   <https://github.com/robintibor/python-mindwave-mobile>
+-   <https://github.com/BarkleyUS/mindwave-python>
+
+
+
+
+## check regularly? <https://github.com/NeuroTechX/awesome-bci>
+
+
+
+
+## openeeg &#x2013; unclear how good is it. look up on reddit <http://openeeg.sourceforge.net/doc/>
+
+
+
+
+# `[2020-02-21]` Jan König on Twitter: "Next up: @lehrjulian about building a digital copy of himself. If you've seen his blog, you know it's not an exaggeration. <https://t.co/5gzg2U0NJK>" / Twitter      [[qs]]
+
+    Next up: @lehrjulian
+     about building a digital copy of himself.
+    
+    If you've seen his blog, you know it's not an exaggeration.
+
+
+
+
+# `[2020-06-30]` [Alexey Pakhomov](https://www.alexey.io/about)      [[qs]]
+
+    I constantly experiment with various tracking tools to find the best balance of 1) accuracy, 2) battery life, 3) ease-of-use, and 4) real-time data.
+    
+    Data is aggreggated from multiple sources and merged based on the quality of each data set. When possible, data is gathered and processed in real-time, depending on the capabilities of each tracker.
+
+
+
+
+# what's the relation between elliptical power/speed and HR?      [[qs]]
+
+
+
+
+# hmm I wonder if I ever had a stitch on a treadmill??      [[running]]
+
+
+
+
+# `[2020-09-10]` [Visualizing 10+ Years of My Body Composition Data](https://www.quantifiedbob.com/body-composition-data-visualization/)      [[bodyfat]] [[qs]]
+
+eh, looks like withings is completely all over the place.  
+omron slightly better, but still quite big oscillations even within the same year on plot? maybe taking several measurements a day would make up for it?  
+
+
+
+
+# `[2020-09-11]` [MbientLab – Wearable Bluetooth 9-axis IMUs & environmental Sensors](https://mbientlab.com/)
+
+    Wearables For Motion Tracking +
+    Wireless Environment Monitoring
+
+
+
+
+# `[2020-09-11]` [MTR – MetaTracker – MbientLab](https://mbientlab.com/store/metatracker/)
+
+    The MTR sensing solution is a mountable device that includes the following sensors:
+    
+    BMI160 6-axis Accelerometer + Gyroscope
+    BME280 Barometer/Pressure/Altimeter
+    BME280 Humidity
+    BME280 Temperature
+    LTR-329ALS Luminosity/Ambient Light
+    NCP15XH103F03RC Thermistor
+    4MB Memory
+    CR2450 Coin-cell Battery
+    and also Bluetooth Low Energy, Battery, CPU, button, LED, and GPIOs
+
+shit, this looks awesome!!  
+
+
+
+
+# `[2020-09-11]` [ejain/body-temperature](https://github.com/ejain/body-temperature)
+
+
+
+
+# `[2019-05-04]` [Lightest setup to get a GPS track of a thruhike?](https://reddit.com/r/Ultralight/comments/9oyco4/lightest_setup_to_get_a_gps_track_of_a_thruhike/e7xmf7f/) /r/Ultralight      [[gps]]
+
+    I tracked my hike this year with my Garmin Fenix 3.so I really can only talk about my experience of this male and model. (We even confirmed this with my girlfriends Garmin Fenix 3 too)
+    I used UltraTrack mode.
+    What I found out is that even this watch was super inaccurate! It did track the GPS and it looks good on the map. But the distance was always off. ALWAYS. It didn’t matter which tracking mode I used or option for GPS or Glonass (I hear the new watches have some new type of GPS type connection which may improve results.
+    When I say the distance was off you would suspect maybe due to the tree density and the being obscured from direct line of sight would lower the stats but I found it was the opposite. From day one to the last it always made the distance over what I actually did.
+    Some was due to when you’d stop for water and forget to pause and the GPS would ‘wonder’ within a radius. This would happen again if you stopped to take off a jacket or break for a rest. Now I hear you say, put on an auto pause feature. Now this works while running and cycling etc where there is an obvious difference in speed. But walking, at times can be painfully slow! Sometimes miles take a while, especially when it’s rocky and steep or muddy etc etc. It’s almost impossible for that feature to work.
+    Now I used my battery pack that I carried with my stuff anyway to charge (roughly every 2 days) so that side never bothered me. I’d typically charge it when I got to camp and take it off charge by bed time. It charges super quickly so even if I forgot I could charge it at lunch.
+    Now to be fair, other than it over estimating the mileage. It tracked my steps, my time walking, my time sleeping, I would have it set to give me a warning to eat and drink every hour or two. It would tell me my altitude and elevation gain and loss and predict weather patterns based on barometric changes. Its waterproof to more than anything even the Appalachian river can throw at it and more rugged than anything. Etc etc etc.
+    You have to remember to start and stop it every day! I’m anal and so in my whole time it ran out of battery once while walking. Forgot to be stopped at the end of the day a few times.
+    If I could change anything I would have liked to have tested it out before in similar conditions but I have used that watch for everything else from triathlons to snowboarding so thought it would be accurate as there.
+    I would have also liked to have something like the Fenix 3HR or the new Fenix 5 with the new satellite options and HR monitor built in. Purely so I could track that and see my heart rate to know if I was pushing to hard but mainly I’m a stats geek!
+    As for your other options I would say it would eat through your phone battery faster than you can eat 3 snickers bars. Don’t bother with a solar panel. So many of the people I knew with them sent them home.
+    I have my stuff on Strava if you would like to see.
+    Edited to add more information!
+
+
+
+
+# `[2019-05-04]` [GPS Logging (and possibly navigation)](https://reddit.com/r/Ultralight/comments/7f1yx5/gps_logging_and_possibly_navigation/dq926ps/) /r/Ultralight      [[gps]]
+
+    I think a watch like the Suunto Ambit 3 peak or traverse would work really well for you. It fits all your criteria and more.
+
+    I have an Ambit 3 and use it on every single hike and find it invaluable. It can be setup last 200 hours, you can plot routes, mark coordinates, it has an altimeter and a bunch of other functions.
+
+    Check it out  - https://www.outdoorgearlab.com/reviews/camping-and-hiking/altimeter-watch/suunto-ambit3-peak
+
+
+
+
+# `[2019-05-04]` [GPS data logger that has a battery life of many days?](https://reddit.com/r/CampingandHiking/comments/6dc3q5/gps_data_logger_that_has_a_battery_life_of_many/di1j0ye/) /r/CampingandHiking      [[gps]]
+
+    I have an older version of this
+    http://www.qstarz.com/Products/GPS%20Products/BT-Q1000XT-F.htm
+    and it's great. Strangely the current version has been out for several years with no upgrades and with the price only going up (rivaling smartphone prices now), but it's a perfect recorder. This version is supposed to have a 42-hr battery life and you can get an extra battery for a couple of bucks (it's a super common Nokia BL-5C compatible).
+
+    Alternatively (and even more expensive), the Suunto Ambit3 Peak watch claims 200 hours of battery life with 1-minute track accuracy recording interval.
+
+
+
+
+# `[2020-09-11]` [Exercise sample types – Polar Accesslink API](https://www.polar.com/accesslink-api/#exercise-sample-types)
+
+
+
+
+# `[2020-09-11]` [Get FIT (beta) – Polar Accesslink API](https://www.polar.com/accesslink-api/#get-fit-beta)
+
+    Get GPX
+
+
+
+
+# `[2020-09-11]` [Session analysis - Polar Flow](https://flow.polar.com/training/analysis/1820321914)
+
+
+
+
+# `[2020-09-11]` [roessland/polarbeer: Polar Accesslink API Client](https://github.com/roessland/polarbeer)
+
+
+
+
+# `[2020-09-16]` [What Next For Quantified Self? - Quantified Self Forum](https://forum.quantifiedself.com/t/what-next-for-quantified-self/7190)
+
+
+
+
+# `[2020-09-17]` [NeuroTechX/eeg-notebooks: A collection of classic EEG experiments implemented with Python and Jupyter notebooks](https://github.com/NeuroTechX/eeg-notebooks)
+
+
+
+
+# `[2020-09-23]` [Relationships between HRV, sleep and physical activity in personal data - hermandevries.nl](https://hermandevries.nl/2020/09/23/relationships-between-hrv-sleep-and-physical-activity-in-personal-data/)
+
+    In the Quantified Self community, structuring your talk based on the three questions “What did I do?”, “How did I do it?” and “What did I learn?”
+
+
+
+
+# `[2020-09-23]` [Relationships between HRV, sleep and physical activity in personal Oura ring data - Quantified Self / General Health - Quantified Self Forum](https://forum.quantifiedself.com/t/relationships-between-hrv-sleep-and-physical-activity-in-personal-oura-ring-data/8524)
+
+
+
+
+# `[2020-09-30]` [What Passive Trackers do you use? - Quantified Self / Apps & Tools - Quantified Self Forum](https://forum.quantifiedself.com/t/what-passive-trackers-do-you-use/5447/12)
+
+    At the risk of deviating too much from the original question, it’s good to consider the physical requirements to track HRV. Tracking intervals between heartbeats requires a significantly higher sampling frequency than tracking regular heart rate (typically over 250hz!). This is a significant drain on battery.
+    
+    The battery drain is why most consumer wearable devices opt for tracking HR instead of HRV. And the ones which track HRV typically track it in a limited fashion (only occasionally at night, only on-demand, etc.)
+
+
+
+
+# `[2020-09-30]` [What Passive Trackers do you use? - Quantified Self / Apps & Tools - Quantified Self Forum](https://forum.quantifiedself.com/t/what-passive-trackers-do-you-use/5447/12)
+
+    love my Oura but I’m extremely skeptical of its HRV tracking due to the tiny battery. I put more trust in the Emfit QS with a dedicated power source. Or even the Scosche Rhythm which is basically one giant battery.
+
+
+
+
+# need something to plot track from phone; and compare it with google timeline. looks like generally there is less points      [[gps]]
+
+
+
+
+# hmm this android gps logger thing is a bit shit. perhaps I should really use pixel for that in continuous sync mode&#x2026;      [[gps]]
+
+
+
+
+# `[2019-04-04]` [Best handheld GPS for a week long backpacking trip?](https://reddit.com/r/backpacking/comments/5zkhdu/best_handheld_gps_for_a_week_long_backpacking_trip/deyt5y1/) /r/backpacking      [[gps]]
+
+    Before you spend a lot of money, check to see if this is something that your smartphone can handle.  GaiaGPS is available for both Android and Apple products, and for the $20 it can make your average phone do most of (but not all) of the things that a handheld GPS can do.  You'll get the benefit of a large screen, an easy to use interface, loads of free maps that you can set up in layers, and an active user community that can help you out.  Depending upon your phone, you may have battery life issues, issues with water resistance, issues with durability, and so on.  I use my MotoX Pure for casual day hiking and shorter trips, but not for longer trips for reason I'll explain below.
+    
+    If all you're interested in is creating a GPS track (and not navigation) then your phone plus any one of the many free GPS tracking tools out there will do the job too.
+    
+    If you are still interested in a dedicated handheld GPS I would suggest Garmin brand products.  I've been using an eTrex 30 for 4 years now for longer trips (over 2 days) along with the free  maps from [GPSFiledepot](http://www.gpsfiledepot.com).  I went with the eTrex over the more expensive Garmin units mainly because of size-it weighs around 4 oz.  By using Energizer lithium AA's I can get up to 35~40 hours continuous runtime, which is good for 3~4 days of hiking.  This includes not only making a track but also using it for navigation too.  The big downside to the eTrex units is the small screen.  Good points besides the exceptional battery life is ruggedness combined with being totally waterproof-I can (and have) used it all day long in the rain and can't count how many times I've dropped it.  The eTrex 30 has been replaced with an upgraded model but mine still works fine and I can't see any reason to replace it yet.
+
+
+
+
+# `[2018-12-08]` Self-hosted location tracking? (alternative to Google Location)      [[qs]] [[location]]
+
+<https://www.reddit.com/r/selfhosted/comments/9zn0p4/selfhosted_location_tracking_alternative_to/>  
+
+
+
+
+# `[2019-05-04]` [Self-hosted location tracking? (alternative to Google Location)](https://reddit.com/r/selfhosted/comments/9zn0p4/selfhosted_location_tracking_alternative_to/eaagm02/) /r/selfhosted
+
+    Try Traccar. It's open source, and it's android client is on F-Droid.
+
+
+
+
+# finally figure out deep sleep vs rem?      [[sleep]] [[qs]]
+
+
+
+
+# I wonder if correlation of volume - avg hr is because I mostrly run on fridays? and that's when HR is the highest anyway?      [[qs]]
+
+
+
+
+# offline workouts      [[qs]] [[wahoo]]
+
+right, so seems they have to be synced manually and it kept last 3 months? need to pull to refresh for them to show up  
+
+-   it starts logging right from when you put the tracker on&#x2026; so would be harder to tell when I started/stopped running
+-   some random weird 1-2 minute workouts? maybe when I pressed on the sensor by accident??
+-   no way to see the data online? wonder if could sniff on the API..
+
+
+
+
+# `[2020-10-04]` [Relationships between HRV, sleep and physical activity in personal data - hermandevries.nl](https://hermandevries.nl/2020/09/23/relationships-between-hrv-sleep-and-physical-activity-in-personal-data/)      [[read]] [[qs]]
+
+
+
+
+# `[2020-10-05]` [How Accurate Are Oura's Heart Rate & HRV Measurements? - The Pulse Blog](https://blog.ouraring.com/how-accurate-is-oura/)
+
+    The Oura ring performed near-perfect for resting heart rate (r² = 0.996) and extremely high for heart rate variability (r² = 0.980) when compared to a medical-grade ECG device.
+
+
+
+
+# `[2020-10-05]` [Emfit QS vs. Oura Ring - which is more accurate? - Quantified Self / Sleep - Quantified Self Forum](https://forum.quantifiedself.com/t/emfit-qs-vs-oura-ring-which-is-more-accurate/4421/7)
+
+
+
+
+# `[2020-10-05]` [Emfit QS vs. Oura Ring - which is more accurate? - Quantified Self / Sleep - Quantified Self Forum](https://forum.quantifiedself.com/t/emfit-qs-vs-oura-ring-which-is-more-accurate/4421/12)
+
+    alcohol reduces sleep quality (duh); but not always… some Sangria at dinner knocked my deep sleep to 23 minutes, while a few glasses of white wine + 2 gin&tonics + 1 beer were followed by 52 minutes of deep sleep. Offset by club dancing that night? Who knows.
+    being sick (cold or stomach flu) reduces sleep quality
+    sleeping on couches sucks
+    just sleeping more tends to result in more deep sleep and higher readiness (duh), but again, not always
+
+
+
+
+# `[2020-10-06]` [Freeyourgadget/Gadgetbridge: A free and cloudless replacement for your gadget vendors' closed source Android applications. See the list for supported devices. - Gadgetbridge - Codeberg.org](https://codeberg.org/Freeyourgadget/Gadgetbridge)
+
+
+
+
+# `[2020-10-06]` [Freeyourgadget/Gadgetbridge: A free and cloudless replacement for your gadget vendors' closed source Android applications. See the list for supported devices. - Gadgetbridge - Codeberg.org](https://codeberg.org/Freeyourgadget/Gadgetbridge)
+
+
+
+
+# `[2020-10-06]` [tmcw/running-for-nerds: like running, but for nerds](https://github.com/tmcw/running-for-nerds)
+
+
+
+
+# `[2020-10-06]` [tmcw/running-for-nerds: like running, but for nerds](https://github.com/tmcw/running-for-nerds)
+
+ask about polar, also add suunto and garmin?  
+
+
+
+
+# `[2020-10-06]` [cyberjunky/python-garminconnect: Python 3 API wrapper for Garmin Connect to get activity statistics](https://github.com/cyberjunky/python-garminconnect)
+
+hmm maybe it's not that bad?  
+
+
+
+
+# `[2020-10-06]` [tcgoetz/GarminDB: Download and parse data from Garmin Connect or a Garmin watch, FitBit CSV, and MS Health CSV files into and analyze data in Sqlite serverless databases.](https://github.com/tcgoetz/GarminDB)
+
+
+
+
+
+## `[2020-11-28]` 'Copy daily monitoring and/or activities Fit files from a USB connected Garmin device.' &#x2013; not sure?
+
+should do maybe?  
+
+
+
+
+# `[2020-10-12]` [Garmin Connect](https://connect.garmin.com/modern/sleep/2020-10-12)
+
+    If you sleep with your arm pinned under your body or positioned in another manner that compromises blood flow, it could cause abnormally low sleep-time SpO₂ readings.
+
+
+
+
+# `[2020-10-08]` [Fenix 6 and Wahoo Kickr - fēnix 6 series - Wearables - Garmin Forums](https://forums.garmin.com/outdoor-recreation/outdoor-recreation/f/fenix-6-series/222738/fenix-6-and-wahoo-kickr)      [[garmin]]
+
+    Garmin F6 does not support ANT+ FE-C (or the Bluetooth equivalent)
+
+
+
+
+# `[2020-10-10]` [Analyzing accuracy of power reported by stationary bike | beepb00p](https://beepb00p.xyz/exercise-bike-model.html)
+
+    Hi, I took your data at resistance of 8 and (linear) regressed power against rpm^2. The R^2 for the regression was 0.996. The regression was:
+    (resistance 8) Power = 0.023 * rpm * rpm +14.7.
+    The number of observations at level 4 was much smaller, so the regression had a poor R^2 = 0.971.
+    (resistance 4) Power = 0.0066 * rpm * rpm + 10.6
+    So the coefficient for Rpm^2 does not scale properly with the nominal resistance value.
+
+
+
+
+# `[2020-10-12]` [Test HRV | Garmin Connect IQ](https://apps.garmin.com/en-US/apps/0bdc0e75-9baa-417a-8c9f-e976662a5d2e)      [[garmin]]
+
+    A Garmin app that measures HRV(Heart Rate Variability) in a 3 minute test.
+
+
+
+
+# `[2020-10-12]` [Garmin Connect](https://connect.garmin.com/modern/activity/5668706069)      [[dashboard]] [[qs]] [[inspiration]]
+
+nice track visualization&#x2026; ideally I'd have this for the whole day  
+
+
+
+
+# `[2020-10-13]` [Left/right wrist: impact on optical HR sensor accuracy? - fēnix 5 series - Wearables - Garmin Forums](https://forums.garmin.com/outdoor-recreation/outdoor-recreation/f/fenix-5-series/132129/left-right-wrist-impact-on-optical-hr-sensor-accuracy)
+
+    Settings> User Profile> Wrist will allow you to change to left or right wrist (this affects gesture and which way the watch should expect movement in terms of step counting).
+
+
+
+
+# `[2020-10-16]` [Garmin fēnix 6X Pro, Ultimate Multisport GPS Watch, Features Mapping, Music, Grade-Adjusted Pace Monitoring and Pulse Ox Sensors, Black with Black Band: Amazon.co.uk: Electronics](https://www.amazon.co.uk/dp/B07VYV7BDG?ref=ppx_pop_dt_b_product_details&th=1)      [[garmin]]
+
+    After extensive correspondence, and provision of data on tracked runs, Garmin eventually agreed that it was faulty but only offered a refurbished model - disgraceful!! Shame on you Garmin! Amazon on the other hand did not question my return of a faulty product. Lesson learned - don’t buy direct from Garmin! 
+
+
+
+
+# `[2020-10-16]` [Garmin Fenix 6 In-Depth Review For Hiking & Outdoors - HikingGuy.com](https://hikingguy.com/hiking-gear/garmin-fenix-6x-pro-solar-in-depth-review/)
+
+    The pulse oximeter is not great. When compared to measurements with a professional fingertip pulse ox meter, the Fenix 6 is always lower. 
+
+
+
+
+# `[2020-10-16]` [fēnix 6 Pro Series - Battery Information](https://www8.garmin.com/manuals/webhelp/fenix66s6xpro/EN-US/GUID-694C4E14-D875-479F-AFB1-2A6A582FF506.html)
+
+    Max. battery GPS mode
+    Up to 50 hr./64 hr. with solar8
+    Up to 72 hr./93 hr. with solar9
+    Up to 120 hr./148 hr. with solar10
+
+
+
+
+# `[2020-08-21]` [What are the most actionable insights you got from self-tracking?](https://reddit.com/r/QuantifiedSelf/comments/idmfry/what_are_the_most_actionable_insights_you_got/g2a1rw2/) /r/QuantifiedSelf
+
+    I basically did my own sleep studies (infrared cameras and such). Discovered that light really affects my sleep because I was more restless on clear full-moons. I blacked out my bedroom and it started feeling like I was getting much more sleep even though I wasn't. Faster to get to sleep and more rested when I wake up.
+    Bigger and firmer pillows also helped me.
+    I also felt like I toss and turn a lot in my sleep and always worried that I would disturb my girlfriend. Turns out I only toss in the last 30 minutes before I wake up on my own. I don't worry about it now, which probably helps me sleep some more.
+
+
+
+
+## `[2020-10-24]` hmm, detect seasonality in bed movement?      [[sleep]] [[qs]] [[dashboard]]
+
+
+
+
+# compute distances between nearest rems and plot?      [[emfit]]
+
+
+
+
+# takeout .fit file &#x2013; converted to gpx and the tracks look completely insane?? wtf??      [[garmin]]
+
+
+
+
+# basically sleep detection in garmin is completely wrong      [[garmin]]
+
+
+
+
+# ok, sleep oximetry even has confidence values? def need to export raw data&#x2026;      [[garmin]]
+
+
+
+
+# Tweet from @altini<sub>marco</sub>      [[qs]] [[sleep]]
+
+<https://twitter.com/altini_marco/status/1319191871281897472>  
+
+    @altini_marco: Some interesting data on the relationship between HRV (rMSSD), age, gender, BMI and physical activity level
+    N > 30 000
+    Higher levels of physical activity seem associated with better HRV regardless of gender, age and BMI
+    cc @dsquintana: dug a bit deeper, inspired by your paper pic.twitter.com/CtB7hm...
+
+
+
+
+# Comparison between emfit and Garmin?      [[emfit]] [[garmin]] [[toblog]]
+
+
+
+
+# `[2020-10-17]` Wow, hr after eating pizza is still 80 after almost 2 hours? Check previous week too      [[qs]]
+
+
+
+
+# `[2020-09-01]` ["What I Learned from the Freestyle Libre Glucose Monitor", Josh Mitteldorf (metformin blunts his mealtime blood glucose spikes)](https://reddit.com/r/QuantifiedSelf/comments/ikrv0a/what_i_learned_from_the_freestyle_libre_glucose/) /r/QuantifiedSelf
+
+
+
+
+
+## `[2020-10-24]` interesting data, but people are commenting that it's meaningless without glucose sensitivity?
+
+
+
+
+# `[2020-10-24]` [Heart rate - Wikipedia](https://en.wikipedia.org/wiki/Heart_rate#Maximum_heart_rate)      [[qs]] [[hr]]
+
+    Heart rate recovery
+
+
+
+
+# `[2020-10-24]` [Measure Your Heart Rate Recovery Time](https://www.azumio.com/blog/fitness/what-does-heart-say-about-exercise-recovery)
+
+    Subtract your 2-minute heart rate from the heart rate you took immediately after exercising. The faster your heart rate recovers (or slows down) the fitter and healthier your heart.
+
+hmm, nice from a quick glance, mine is 50-60? But would be nice to do a proper analysis  
+
+
+
+
+# `[2020-10-27]` [The Heart Rate Sensor on My Watch Is Not Accurate | Garmin Support](https://support.garmin.com/en-US/?faq=xQwjQjzUew4BF1GYcusE59)      [[garmin]]
+
+    In the following example, the watch initially detected and locked onto the runner's pulse, but  around 20 minutes in it locked to their running cadence:
+
+jesus!  
+
+
+
+
+# `[2020-10-27]` [Endomondo](https://www.endomondo.com/users/9377563/workouts/1637903746)      [[garmin]]
+
+hmm. maybe actually it's not badly wrong  
+seems that endomondo is reporting avg HR, so it's lower because of buildup and stops  
+
+
+
+
+# `[2020-11-22]` [Garmin Connect](https://connect.garmin.com/modern/sleep/2020-11-22)
+
+it detected sleep while I was still awake and reading?? what the actual fuck???  
+
+
+
+
+# `[2020-11-10]` [Marco Altini on Twitter: "🥁 here is some data\* Contrary to expectations (see poll below), resting heart rate decreased during the lockdown and remained lower in the first 6 months of the year cc @jamesheathers \*these are HRV4Training users, so the data is only representative of this sample, obviously https://t.co/A7L58M0Oje" / Twitter](https://twitter.com/altini_marco/status/1326141603497521158)      [[qs]] [[hr]]
+
+    Contrary to expectations (see poll below), resting heart rate decreased during the lockdown and remained lower in the first 6 months of the year
+
+
+
+
+# `[2020-10-22]` [IPython Cookbook - 10.1. Analyzing the frequency components of a signal with a Fast Fourier Transform](https://ipython-books.github.io/101-analyzing-the-frequency-components-of-a-signal-with-a-fast-fourier-transform/)
+
+    We get a smoothed version of the signal, because the fast variations have been lost when we have removed the high frequencies in the Fourier transform.
+
+
+
+
+# `[2020-10-22]` [Psd Demo — Matplotlib 3.1.2 documentation](https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/psd_demo.html#sphx-glr-gallery-lines-bars-and-markers-psd-demo-py)
+
+
+
+
+# `[2020-10-22]` [analog to digital - comparison between Fourier transform and autocorrelation function - Signal Processing Stack Exchange](https://dsp.stackexchange.com/questions/45943/comparison-between-fourier-transform-and-autocorrelation-function)
+
+    Therefore for random signals, the Fourier transform will not exist and their spectral density cannot be computed that way. Nevertheless, for such signals an indirect description, based on an autocorrelation measure, can also be defined, whose advantage being that the Fourier transform of it may exist. Therefore the PSD of a random process is defined as the Fourier transform of its ACF.
+
+
+
+
+# `[2020-10-22]` [psdtheory.dvi - psdtheory.pdf](https://www.imft.fr/IMG/pdf/psdtheory.pdf)
+
+
+
+
+# `[2020-10-22]` [python - How to find period of signal (autocorrelation vs fast fourier transform vs power spectral density)? - Stack Overflow](https://stackoverflow.com/questions/59265603/how-to-find-period-of-signal-autocorrelation-vs-fast-fourier-transform-vs-power)
+
+    I wouldn't say the autocorrelation is particularly sensitive to noise, but it is sensitive to other frequency components. If you have multiple superimposed signals, this time-domain analysis becomes unreliable. That's where Fourier analysis shines, as it separates out the individual frequency components.
+
+
+
+
+# wonder if running in the beginning of week is better? hmm      [[qs]] [[running]]
+
+
+
+
+
+## `[2020-12-03]` although I used to run on saturday/sundary and it was ok so not sure
+
+
+
+
+# `[2020-05-09]` [(2) D ␣ a ␣ n ␣ P ␣ i ␣ p ␣ o ␣ n ␣ i on Twitter: "@cartazio The blue is my running speed. I expect that a leaky capacitor model is a good first order approximation. From an engineering perspective, I think it corresponds to a PI controller https://t.co/BJfxSG0o3Q" / Twitter](https://twitter.com/sigfpe/status/1259163550435512321)      [[qs]]
+
+    The blue is my running speed. I expect that a leaky capacitor model is a good first order approximation. From an engineering perspective, I think it corresponds to a PI controller https://en.wikipedia.org/wiki/PID_contr
+
+
+
+
+# `[2020-09-09]` QS Forum: What Continuous Glucose Monitors (CGM) allow automated export of the data "out-of-the-box"?
+
+    [QS Forum] What Continuous Glucose Monitors (CGM) allow automated export of the data "out-of-the-box"?
+
+
+
+
+# `[2020-09-20]` [A Syntax for Self-Tracking](https://www.gibney.de/a_syntax_for_self-tracking)
+
+
+
+
+# figure out HRV correlations with other things      [[qs]] [[emfit]]
+
+
+
+
+# approximate sleep in periods when I was missing it via rescuetime/arbtt stats&#x2026; also compute the discrepancies      [[rescuetime]] [[arbtt]] [[sleep]]
+
+
+
+
+# apps for tracking `[2018-01-06]`
+
+
+
+
+
+## Tap log looks OK
+
+
+
+
+
+### - can only track individual items, would be hard to input different beer percentage
+
+
+
+
+### + has widget!
+
+
+
+
+### + notes and GPS
+
+
+
+
+### ok, but for weight could work I guess?
+
+
+
+
+### - no free backups
+
+
+-   + but managed to backup database using root
+
+
+
+
+## Trackthisforme: weird, too complicated MEH
+
+none of them have widget  
+
+
+
+
+## Keeptrack: too simple MEH
+
+
+
+
+## atimelogger? <http://www.atimelogger.com/>
+
+
+
+
+
+### looks allright, but oversimplified, I know when i'm doing sports or work or shopping anyway
+
+
+
+
+## A Time Tracker? f-droid,  open source
+
+
+
+
+# `[2018-05-31]` time tracking apps      [[qs]] [[productivity]]
+
+
+
+
+
+## Quality time
+
+-   doesn't seem to have export
+-   not very precise, tracked 9 hours of weekly usage for alarm clock xtreme for some reason..
+
+
+
+
+## Rescue time
+
+-   more configurable than quality time
+-   has api for export? <https://gist.github.com/DanNixon/33e96f51fef0d5e7c1df>
+
+? csv exports are premium only? <http://blog.rescuetime.com/getting-the-most-out-of-rescuetime-for-your-quantified-self-projects/>  
+  whatever, json is fine  
+
+
+
+
+# `[2017-10-30]` fitness apps      [[exercise]] [[qs]]
+
+
+
+
+
+## HR monitoring      [[hr]]
+
+
+
+
+
+### heart trace app: weird, doesn't seem to work
+
+
+
+
+### polar h10 seems not to work with google fit for some reasong&#x2026;
+
+
+
+
+### polar beat: not necessary for the sensor..
+
+
+
+
+## pull ups
+
+
+
+
+
+### NorthPark.Android  обязательно нужно подтягиваться с девайсом
+
+
+
+
+### rittr labs плохой дизайн
+
+
+
+
+# quantified body podcast &#x2013; not bad      [[podcast]]
+
+
+
+
+
+## `[2017-11-15]` episode 22 | Quantified Bob <https://thequantifiedbody.net/n1-experiments-bob-troia/>
+
+Test for glucose?  
+
+
+
+
+## `[2017-11-16]` episode 33 | quantified mind guy <https://thequantifiedbody.net/mental-performance-tracking-tool-yoni-donner/>
+
+some comments on lumosity 17:00  
+He says even most promising studies show very little effect of brain training  
+
+
+
+
+# `[2018-03-01]` <https://www.vox.com/dear-julia/2015/9/18/9349813/fitness-tracker-accuracy>      [[exercise]] [[qs]]
+
+fitness tracker accuracy  
+
+
+
+
+## online trackers: crap, quite obviously
+
+
+
+
+## wearables: use HR to estimate oxygen consumption. but the algos doing that are oversimplified. typically, error is about 20%.
+
+
+
+
+## to measure really accurately, you put people in a multi-million dollar chamber&#x2026;
+
+
+
+
+# Fitness tracker
+
+<https://www.reddit.com/r/bodyweightfitness/comments/5o3gdz/recommended_fitness_tracker/dcgqku7/>  
+
+    Garmin VivoSmart HR+ here! I had the first VivoSmart and wore it to death so an upgrade to the new HR+ was made! I asolutely love it! Has everything I need as a keen runner! Heart rate, and GPS seem very accurate and it never fails to record data or connect to my phone, unlike my SO's fitbit, which she finds a nightmare! She is considering the purchase of Garmin after seeing mine.
+    My two kids have Garmin's too, the VivoFit Jr for my 6yo son and the VivoActive for my 10yo daughter. Both just as reliable and as fun as mine! Have fun!!
+
+
+
+
+## fitbit 
+
+-   doesn't really detect HR consistently.
+-   doesn't detect that you stopped weering it and flashes with green light
+-   sometimes woudn't record sleeps
+-   sleep phases are weird
+
+
+
+
+# <https://www.quantifiedbob.com/self-tracking-tools-and-resources> 
+
+
+
+
+
+## urine and saliva acidity?
+
+
+
+
+## glucose meter?
+
+<https://medium.com/@justin_d_lawler/improving-my-sleep-with-a-glucose-monitor-72d6677bea08>  
+
+
+
+
+## pulse 
+
+
+
+
+## HR monitor
+
+zim:hr-monitor.org  
+ android: instant heard rate app  
+
+
+
+
+# `[2018-08-27]` Mobile apps for cognitive testing      [[cognitive]]
+
+
+
+
+
+## Train your brain: meh
+
+no progress training. At least, gives you some sort of score  
+
+
+
+
+## Cognition trainer: meh
+
+no scores, just levels  
+
+
+
+
+## Brainexer2: has some scores&#x2026; But not sure if tracks and keeps scores
+
+
+
+
+
+### `[2018-08-27]` doesn't look like it's keeping raw data either (tried in cheatdroid) . ugh
+
+
+
+
+# `[2020-06-08]` [My Quantified Self Setup « julian.digital](https://julian.digital/2020/02/23/my-quantified-self-setup/)      [[qs]]
+
+lots of interesting subjective/percieved stats  
+
+
+
+
+# `[2018-05-01]` conducting blind experiments      [[qs]]
+
+<https://www.gwern.net/Nootropics#blinding-yourself>  
+<https://www.gwern.net/Nootropics#modalert-blind-day-trial>  
+
+
+
+
+# `[2019-02-17]` Psychology Tools      [[qs]] [[cognitive]]
+
+<https://psychology-tools.com/>  
+
+
+
+
+# `[2019-04-29]` [How to track multi-day hikes? Best GPS watch / unit with longest battery life?](https://reddit.com/r/CampingGear/comments/9ewy7u/how_to_track_multiday_hikes_best_gps_watch_unit/e5s3x66/) /r/CampingGear      [[qs]] [[gps]]
+
+    I really like GPS Logger on Android. It's really simple, highly configurable, and open source. Plus, it's not like I'm using my phone anyway. Setting it at 10-30 second intervals in airplane mode will last me a couple days. I haven't found a watch that won't break the bank that can do that.
+    
+    https://play.google.com/store/apps/details?id=com.mendhak.gpslogger
+    
+    It's just GPS points though. If you want to see them on map, you'll have to open it in a map program. I use GPX Viewer, but I don't think it's anything extra special. I also upload them automatically when I get internet again to Google Drive and Dropbox.
+    
+    I pretty much have used my phone for everything since smart phones have been a thing. They are the ultimate multipurpose devices. I've never really felt the need or been able to justify things like smart watches, E-Readers, Cameras (once smartphones hit 5mp or so).
+
+
+
+
+# `[2019-02-04]` oliexdev/openScale: Open-source weight and body metrics tracker, with support for Bluetooth scales      [[qs]]
+
+<https://github.com/oliexdev/openScale>  
+
+
+
+
+# `[2019-05-21]` How To Build A Smart Home Sensor | Popular Science      [[qs]]
+
+<https://www.popsci.com/how-build-home-sensor>  
+
+
+
+
+# `[2019-02-13]` Get raw data from commercial activity trackers | okinesio      [[qs]]
+
+<http://okinesio.org/development/how-to-get-raw-data-from-commercial-activity-trackers>  
+
+
+
+
+# `[2020-03-26]` [Ask HN: Best sleep trackers?](https://news.ycombinator.com/item?id=22685537)      [[sleep]]
+
+<https://news.ycombinator.com/item?id=22685537>  
+
+
+
+
+## `[2020-08-16]` not much interesting for me, but probably good summary of what are people using (in comments)
+
+
+
+
+# `[2017-09-07]` <https://www.humanbenchmark.com/dashboard>      [[qs]] [[cognitive]]
+
+
+
+
+# n-back       [[nback]] [[cognitive]]
+
+the question of whether n-back training produces real-world improvements to working memory remains controversial.  
+
+
+
+
+# `[2019-04-21]` [I tracked everything I ate for the last year, along with my exercise, sleep, vitals, and sense of well-being. I'm just starting to analyze the 500,000+ data points, but here are 10 quick blink reactions:](https://reddit.com/r/QuantifiedSelf/comments/bf73ql/i_tracked_everything_i_ate_for_the_last_year/) /r/QuantifiedSelf      [[qs]] [[inspiration]]
+
+    I tracked everything I ate for the last year, along with my exercise, sleep, vitals, and sense of well-being. I'm just starting to analyze the 500,000+ data points, but here are 10 quick blink reactions:
+    Full Article Here:
+    [https://medium.com/@mikebechtel/i-tracked-every-single-thing-i-ate-for-a-full-year-here-are-10-quick-a-has-2c259dd2f57b?source=friends\_link&sk=ed6113272876d866eeaa23ec05415495](https://medium.com/@mikebechtel/i-tracked-every-single-thing-i-ate-for-a-full-year-here-are-10-quick-a-has-2c259dd2f57b?source=friends_link&sk=ed6113272876d866eeaa23ec05415495)
+
+    tl/dr here:
+
+    1. Exercise is a Heckuva Anti-Depressant.
+    2. Sugar & Salt hangovers: Nearly as bad as alcohol hangovers.
+    3. Two Days of Bad Sleep in a Row Will Mess. You. Up.
+    4. Weight Loss != Fat Loss
+    5. Carbs aren't evil. But they're... sneaky.
+    6. 15% body fat (for a guy) is doable with tasty food. 10% requires you to eat fewer tasty things. 5% requires you to forgo taste (and friends) entirely.
+    7. Muscles recover strongest 2-3 days after a workout, and stay stronger-than-baseline for about 2-3 days after that. Beyond that, wimpy-ness resumes and you atrophy. (Which is why consistency is key.)
+    8. Food Scales are your Friend. Casseroles, stews, and buffets are your Enemy.
+    9. Processed foods are easiest to track (because they have SKU's) but not as good for you. Whole Foods vs. Whole Data.
+    10. Standard McDonald's Cheeseburgers are, as far as I can tell, the most nutritionally complete food on a macronutrient-per-dollar basis.
+
+
+
+
+## `[2020-10-24]` apparently he's good at subjective scores, wonder if he did any proper data analysis at all
+
+
+
+
+# `[2020-01-22]` [How I log (almost) EVERYTHING to AIRTABLE with iOS Shortcuts, Integromat, Pushcut, NFC tags and Timing app from my mind, Fitbit, Oura, Withings, EliteHRV, Yazio, Calm, Clue, Social media accounts, Photos and other sources. (A long thread I wrote to Automators forum, you can read it without sign-in )](https://reddit.com/r/QuantifiedSelf/comments/esbp0e/how_i_log_almost_everything_to_airtable_with_ios/) /r/QuantifiedSelf      [[toblog]] [[qs]] [[lifelogging]]
+
+
+
+
+# `[2019-06-20]` Quantified Self Books? : QuantifiedSelf      [[qs]]
+
+<https://www.reddit.com/r/QuantifiedSelf/comments/43dd10/quantified_self_books/>  
+
+    Trackers by Richard MacManus and Your Life, Uploaded by Gordon Bell are two great books on QS, but neither have a practical focus.
+
+
+
+
+# `[2019-02-23]` Bob Troia | Minimum effective quantification - YouTube      [[qs]]
+
+<https://www.youtube.com/watch?v=1SDNainePw8&list=WL&index=73>  
+nothing new really.. just measures glucose, hrv and air quality. He's not even using anything really too special  
+
+
+
+
+# `[2019-01-13]` Ted Chiang gives lecture on lifelogging – The Scarlet      [[tedchiang]] [[lifelogging]]
+
+<https://thescarlet.org/10883/category_news/ted-chiang-gives-lecture-on-lifelogging/>  
+huh, interesting..  
+
+
+
+
+# `[2020-06-26]` [TICKR X Heart Rate Monitor & Workout Tracker | Wahoo Fitness UK](https://uk.wahoofitness.com/devices/heart-rate-monitors/tickr-x/buy)      [[wahoo]]
+
+    Includes a coin cell battery that can last for over 500 hours of workouts.
+
+
+
+
+# `[2019-02-11]` Self-Quantification Explained: Tons of Ways Start Measuring Your Performance and Progress - The Bioneer      [[qs]]
+
+<http://www.thebioneer.com/self-quantification-explained-tons-ways-start-measuring-performance-progress/>  
+ok, it's all pretty obvious to me, but could be useful for other people  
+
+
+
+
+# `[2018-10-01]` Happiness and Life Satisfaction - Our World in Data      [[qs]]
+
+ <https://ourworldindata.org/happiness-and-life-satisfaction>  
+pretty interesting, a lot of data (with csv sources) on correlation of happiness with other things  
+
+
+
+
+# `[2018-08-25]` Pho<sub>Rheels</sub> comments on Finally received my Gen 2 Oura Ring, with some early feedback. Anyone else?      [[hr]]
+
+<https://www.reddit.com/r/Biohackers/comments/9780qa/finally_received_my_gen_2_oura_ring_with_some/e46dqtd/>   
+
+     Received my ring last Friday. Had the 1st gen but returned it due to inaccurate sleep readings. Unfortunately, the new ring seems to be inaccurate for me as well. Both rings read that I was asleep when I was meditating, laying awake in bed, or even making coffee. Since the Readiness score is based in part on the Sleep score that’s inaccurate, too. I contacted customer service last night, no word back yet.
+    The new material of the 2nd gen ring feels cheap and plasticky, although a better size and weight than the 1st gen. Overall, so far, not impressed. Especially after waiting over 9 months. But I look forward to my initial impressions changing for the better with continued use. Would love to hear from other Ōura users as well.
+
+
+
+
+# `[2019-01-20]` Smart Temporal Thermometer | Thermo - Withings      [[qs]] [[temperature]]
+
+<https://www.withings.com/uk/en/thermo>  
+
+-   `[2019-02-16]` meh, it's not continuous measurement
+
+
+
+
+# `[2019-03-20]` [How I'm Tracking Everything I Consume (Podcasts, Videos, Articles, Books). All in One Place.](https://reddit.com/r/QuantifiedSelf/comments/b2vmr8/how_im_tracking_everything_i_consume_podcasts/) /r/QuantifiedSelf      [[lifelogging]]
+
+    I created a system for tracking these things through Airtable. 
+    Here it is, along with a little guide: https://airtable.com/universe/expJ6uvPux8mgLoYV/track-everything-you-consume
+    Just thought you guys might appreciate it. Any feedback is welcome. I am new to self tracking.
+
+-   `[2019-04-11]` eh, they are doing it pretty manually&#x2026;
+
+
+
+
+# `[2020-01-22]` How I track my life with Integromat, Airtable, Shortcuts and Timing (et al) - Web - Automators Talk      [[qs]]
+
+<https://talk.automators.fm/t/how-i-track-my-life-with-integromat-airtable-shortcuts-and-timing-et-al/5507/27>  
+
+
+
+
+# `[2020-11-30]` [1000 days with Oura ring – My revelations with HRV – Addicted to optimization](https://ilmostromberg.com/1000-days-with-oura-ring/)      [[hrv]] [[qs]]
+
+
+
+
+# `[2020-09-13]` [Analyzing accuracy of power reported by stationary bike | beepb00p](https://beepb00p.xyz/exercise-bike-model.html)
+
+    hey, I looked at same thing for tunturi e35. A much cheaper bike. The problem is this not a linear function. In magnetic resistance bikes, torque increases as linear function of RPM.
+
+
+
+
+# sleep measuring &#x2013; show the 'mental state' variable      [[toblog]] [[qs]]
+
+
+
+
+# <https://naked-science.ru/article/biology/poterya-vsego-16-minut-sna-mozhet> fuck this study! Self reporting on the scale from 0 to 4 for 8 days &#x2013; what the hell is that??      [[qs]]
+
+
+
+
+# map of europe with some pins and photos?      [[travel]] [[toblog]] [[lifelogging]]
+
+
+
+
+# Public photo gallery?      [[self]] [[qs]] [[lifelogging]]
+
+
+
+
+
+## `[2019-05-26]` post some photos; referred dynamically by file names? defensive so warn if photos could not be found
+
+
+
+
+## `[2019-05-26]` If I want to do it in org mode, wonder if just easier to render via my own parser&#x2026;
+
+
+
+
+## `[2021-01-24]` I guess it should be fine to explicitly link to the public ones, no one needs all photos there
+
+
+
+
+# quantifiedmind post: build an automatic graph for model? So I could reason about placebo etc      [[qs]] [[toblog]]
+
+-   `[2019-11-16]` not sure what I meant here, but would be cool to make notebooks completely interactive so people could plug in their models?j
+
+
+
+
+# `[2020-09-13]` [Analyzing accuracy of power reported by stationary bike | beepb00p](https://beepb00p.xyz/exercise-bike-model.html)      [[qs]] [[toblog]]
+
+    make the free coefficient positive.
+
+eh, maybe just use "intercept" with a link to wikipedia? not sure if free variable is a common language  
+
+
+
+
+# about autocorrelation analysis of sleep HR      [[qs]] [[hr]] [[toblog]]
+
+highlight  
+
+-   how easy it is to import data (demonstrate lru<sub>cache</sub>?)
+-   plot the data
+-   want to find out the correlation with other things
+-   autocorrelation + fft analysis then
+
+
+
+
+# `[2021-02-08]` [Quantifying the self - Why I track 80 metrics about my life every day](https://dailyvis.com/posts/quantified-self-why-i-track-my-life-in-data/)
+
+
+
+
+# `[2020-01-29]` Ian Forrester | @cubicgarden@mastodon.cloud on Twitter: "Dropping @Rescuetime for the privacy first @ActivityWatchIt <https://t.co/NDVP2EtbbH> <https://t.co/ocanwujpSm>" / Twitter
+
+<https://twitter.com/cubicgarden/status/1222447798223802369>  
+
+    Ian Forrester | @cubicgarden@mastodon.cloud
+    @cubicgarden
+    Dropping @Rescuetime
+     for the privacy first @ActivityWatchIt
+

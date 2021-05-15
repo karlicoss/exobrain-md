@@ -1,0 +1,111 @@
+
+# Table of Contents
+
+-   [`[2019-02-19]` Калибровочная инвариантность — Википедия](#калибровочнаяинвариантностьвикипедия) 
+    -   [`[2019-05-06]` so, gauge invariance preserves charge](#sggnvrncprsrvschrg) 
+-   [`[2019-01-17]` Gauge Symmetry](#ggsymmtry) 
+    -   [Oftentimes, the notion "gauge group" is used a bit sloppy. Perturbative effects only depend on the local structure of the group and hence only on the Lie algebra. There are many groups with the same Lie algebra and in many situations it is not clear which group is the "correct" group that describes the physics. From experiments, we only learn something about the Lie algebra. (This is, for example, mentioned in Physics and Geometry by EDWARD WITTEN).](#ftntmsthntngggrpssdbtslppdnphyscsndgmtrybydwrdwttn) 
+    -   [gauge symmetries aren’t real symmetries: they are merely redundancies in our description of the system.](#ggsymmtrsrntrlsymmtrsthyryrdndncsnrdscrptnfthsystm) 
+-   [`[2019-03-17]` Shubhendu Trivedi on Twitter: "This post by Terence Tao is absolutely brilliant https://t.co/QSMU5fmA62 no jargon, no attempt to "formalize" and get lost in the details. Favourite expressions: when you "fix" a gauge you "spend the symmetry", once you normalize later to restore invariance you "buy it back"."](#shbhndtrvdntwttrthspstbytnrmlzltrtrstrnvrncybytbck) 
+    -   [`[2019-05-06]` ok, pretty good summary with examples of various rigorosity](#kprttygdsmmrywthxmplsfvrsrgrsty) 
+-   [Maldacena economics analogy gauge theory](#mldcncnmcsnlgyggthry) 
+    -   [`[2019-02-20]` Appendix<sub>2.pdf</sub>](#ppndxpdf) 
+    -   [`[2019-02-20]` Appendix<sub>2.pdf</sub>](#ppndxpdf) 
+    -   [`[2019-02-20]` Appendix<sub>2.pdf</sub>](#ppndxpdf) 
+-   [`[2018-11-10]` hmm, schrodinger equation is not gauge symmetric (phase?) https://www.youtube.com/watch?v=iTTa9YcTe1k](#hmmschrdngrqtnsntggsymmtrcphsswwwytbcmwtchvttyctk) [[physics]] [[quantum]]
+-   [`[2018-11-10]` gauge symmetry &#x2013; Weyl made it up, origin from rail track symmetries](#ggsymmtrywylmdtprgnfrmrltrcksymmtrs) [[physics]]
+
+
+
+
+
+# `[2019-02-19]` Калибровочная инвариантность — Википедия
+
+<https://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D0%B8%D0%BD%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D0%BD%D0%BE%D1%81%D1%82%D1%8C>  
+
+    Можно ли восстановить инвариантность? Да, можно. Однако для этого надо ввести новое физическое поле, которое «чувствует» то внутреннее пространство, в котором мы производим фазовые вращения. В результате, при локальных фазовых вращениях у нас преобразуются как волновые функции, так и новое поле, причём так, что изменения в уравнениях за счёт них компенсируют, «калибруют» друг друга. То есть квантовая механика с дополнительным новым полем стала калибровочно инвариантна.
+    
+    Если теперь изучить свойства нового поля, то оно будет напоминать электромагнитное поле, которое мы наблюдаем в нашем мире. В частности, взаимодействие этого поля с веществом как раз совпадает с электромагнитным. Поэтому вполне естественно при построении теории отождествить эти два поля.
+
+
+
+
+## `[2019-05-06]` so, gauge invariance preserves charge
+
+
+
+
+# `[2019-01-17]` Gauge Symmetry
+
+<https://physicstravelguide.com/advanced_tools/gauge_symmetry#tab__faq>  
+
+
+
+
+## Oftentimes, the notion "gauge group" is used a bit sloppy. Perturbative effects only depend on the local structure of the group and hence only on the Lie algebra. There are many groups with the same Lie algebra and in many situations it is not clear which group is the "correct" group that describes the physics. From experiments, we only learn something about the Lie algebra. (This is, for example, mentioned in Physics and Geometry by EDWARD WITTEN).
+
+For example, there are thirteen groups with the same Lie algebra as the famous  
+SU(3)×SU(2)×U(1) gauge symmetry of the standard model. In addition, there are good reasons to believe that the correct gauge group of the standard model is not SU(3)×SU(2)×U(1) , but rather S(U(3)×U(2)).  
+
+
+
+
+## gauge symmetries aren’t real symmetries: they are merely redundancies in our description of the system.
+
+
+
+
+# `[2019-03-17]` Shubhendu Trivedi on Twitter: "This post by Terence Tao is absolutely brilliant <https://t.co/QSMU5fmA62> no jargon, no attempt to "formalize" and get lost in the details. Favourite expressions: when you "fix" a gauge you "spend the symmetry", once you normalize later to restore invariance you "buy it back"."
+
+<https://twitter.com/_onionesque/status/1107041001976332289>  
+
+
+
+
+## `[2019-05-06]` ok, pretty good summary with examples of various rigorosity
+
+
+
+
+# Maldacena economics analogy gauge theory
+
+
+
+
+
+## `[2019-02-20]` Appendix<sub>2.pdf</sub>
+
+<https://plus.maths.org/content/sites/plus.maths.org/files/articles/2016/Maldacena/Appendix_2.pdf>  
+spin one theory from economic argument  
+
+
+
+
+## `[2019-02-20]` Appendix<sub>2.pdf</sub>
+
+<https://plus.maths.org/content/sites/plus.maths.org/files/articles/2016/Maldacena/Appendix_2.pdf>  
+nticommuting “numbers” to describe electrons, neutrinos or quarks.  
+Finally, Maxwell’s equations can be simply derived from the condition that the exchange rate variables Ai(x) are such that they minimize the probability.  
+
+
+
+
+## `[2019-02-20]` Appendix<sub>2.pdf</sub>
+
+<https://plus.maths.org/content/sites/plus.maths.org/files/articles/2016/Maldacena/Appendix_2.pdf>  
+You can cancel the debt and share the profits with your  
+friend. In physics, this would be analogous to a situation where you create an electron an  
+positron pair at some point in spacetime with some initial velocities so that they run away  
+from each other. Then the electric field pushes them back together at a later instant in  
+time.  
+
+
+
+
+# `[2018-11-10]` hmm, schrodinger equation is not gauge symmetric (phase?) <https://www.youtube.com/watch?v=iTTa9YcTe1k>      [[physics]] [[quantum]]
+
+
+
+
+# `[2018-11-10]` gauge symmetry &#x2013; Weyl made it up, origin from rail track symmetries      [[physics]]
+

@@ -1,0 +1,272 @@
+
+# Table of Contents
+
+-   [`[2015-03-16]` old notes](#ldnts) 
+-   [related](#rltd) [[physics]]
+-   [`[2020-08-26]` Velocity Raptor | TestTubeGames](#ststtbgmscmvlctyrptrhtmlvlctyrptrtsttbgms) [[relativity]] [[game]]
+-   [`[2015-03-16]` some special relativity notes](#smspclrltvtynts) [[relativity]]
+-   [`[2021-01-20]` (1) Could A Spaceship Wrap Around The Universe & Destroy Itself? - YouTube](#swwwytbcmwtchvmfjlkbycldspwrprndthnvrsdstrytslfytb) [[relativity]]
+-   [`[2019-08-25]` How Special Relativity Makes Magnets Work - YouTube https://www.youtube.com/watch?v=1TKSfAkWWN0](#hwspclrltvtymksmgntswrkytbswwwytbcmwtchvtksfkwwn) [[relativity]]
+-   [`[2019-09-06]` Например, космический корабль, который движется с ускорением свободного падения g, пройдет расстояние 13 миллиардов световых лет (долетит до края наблюдаемой Вселенной!) менее чем за сто лет, если считать время в собственной системе отсчета.](#напримеркосмическийкораблсобственнойсистемеотсчета) 
+-   [GR workbook?](#grwrkbk) [[study]]
+-   [`[2015-01-12]` perpendicular velocity addition in special relatility](#prpndclrvlctyddtnnspclrltlty) 
+
+
+
+
+
+# `[2015-03-16]` old notes
+
+    Postulate 1: the principle of relativity: the laws of physics are the same in all itertial frames
+    
+    Postulate 2: The speed of light is the same in all inertial frames
+    
+    Frames S: (x, t) and S': (x', t')
+    
+    Most general relation:
+    x' = f(x, t)
+    t' = g(x, t)
+    
+    1. Law of inertia: in inertial frame, particle travels at constant velocity. Maps straight lines to straight lines, which means:
+    x' = a1 x + a2 t
+    t' = a3 x + a4 t
+    
+    2. S' has velocity v relative to S, therefore, x = v t maps to x' = 0. Also: when t = 0, x' = 0, therefore,
+    x' = gamma(v) (x - v t)
+    
+    3. gamma(v) is even function:
+    x = gamma(v) (x' + v t')
+    
+    4. speed of light:
+    x = c t maps to x' = c t':
+    
+    c t' = gamma(v) (c - v) t
+    c t  = gamma(v) (c + v) t', therefore, gamma(v) = \sqrt{\frac{1}{1 - \frac{v^2}{c^2}}}
+    
+    
+    Lorentz transformations:
+    x' = gamma (x - v / c c t)
+    y' = y
+    z' = z
+    t' = gamma (c t - v / c x)
+    
+    
+    If c = 1:
+    x' = (x - v t) / sqrt(1 - v^2)
+    t' = (t - v x) / sqrt(1 - v^2)
+    
+    In the low v limit, we get Galilean transformations
+    
+    
+    Clock in frame S', intervals T'.
+    Events occur at (ct', 0), then (ct' + c T', 0) and so on.
+    In the frame S: t = gamma (t' + v x' / c^2), clock at x' = 0, therefore, T = gamma T'. "The time runs slower in moving frame"
+    
+    Twins paradox:
+    People A and B.
+    B jumps in a spaceship and flies to some planet at speed v, then turns around and returns after some time T and finds A dead since for A it was T/gamma.
+    However, we might consider it as: A flies away on some planet from B at speed v, then turns around and returns after time T and finds B dead since for B it was T / gamma.
+    Resolution: actually, no symmetry since someone has to change velocity from v to -v and accelerate (general relativity).
+    
+    Length contraction:
+    TODO
+    
+    Pole-barn paradox:
+    laddar of length 2L, barn of length L.
+    
+    * if you run fast enough with the ladder, from the barn POV, the ladder contracts to the length 2L / gamma. Possible to fit.
+    * from the ladder POV, the barn contracts to the lenght L / gamma. Impossible to fit.
+    No paradox, does depend on the frame!
+    
+    
+    TODO Addition of velocities
+    
+    Invariant interval: \Delta s^2 = c^2 \Delta t^2 - \Delta x^2
+    
+    * \Delta s^2 > 0: timelike separated, within each others lightcones. Closer in space than in time.
+    * \Delta s^2 < 0: spacelike separated, outside each other's lightcones. Observers can disagree about the temporal ordering.
+    * \Delta s^2 = 0: lightlike separated.
+    
+    Lorentz group:
+    
+    Minkowski metric:
+    
+    \eta
+    
+    1  0  0  0
+    0 -1  0  0
+    0  0 -1  0
+    0  0  0 -1
+    
+    inner product of 4-vectors:
+    
+    <X, X> = X^T \eta X = X^i \eta_{ij} X^j
+    
+    Lorentz transformation X' = \Lambda X
+    X'^i = \Lambda^i_j X^j
+    
+    Lorentz transformation are those leaving inner product invariant, that is, <X', X'> = <X, X>
+    
+    \Lambda^T \eta \Lambda = \eta
+    
+    Both sides are symmetric 4x4 matrices, 10 constrains on coefficients of \Lambda, therefore, 16 - 10 = 6 independent solutions
+    
+    # Solutions of form
+    1  0  0  0
+    0
+    0     R
+    0
+    R R^T = 1, R is space rotation matrix. Three independent matrices (rotations about the three spatial axis)
+    
+    # Solutions of form
+    gamma         -gamma v / c  0  0
+    -gamma v / c  gamma         0  0
+    0             0             1  0
+    0             0             0  1
+    Three solutions, for x, y and z axis.
+    
+    Set of all matrices is Lorentz group O(1, 3).
+    
+    det \Lambda^2 = 1
+    * subgroup SO(3): spatial rotations
+    * subgroup det \Lambda = 1: proper Lorentz group SO(1, 3)
+    * subgroup det \Lambda = -1
+    
+    
+    Proper time: \Delta \tau = \Delta s / c
+    
+    
+    4-velocity: derivative w.r.t. to infinitesimal proper time
+    
+    Action principle: minimal proper time along the trajectory
+    
+    
+    https://en.wikipedia.org/wiki/Four-vector
+    
+    Time dilation: moving clocks are observed to be running slower
+    Two observers still can measure time between two intervals to be equal
+    
+    Nice formal treatment of relativistic Doppler effect https://en.wikipedia.org/wiki/Relativistic_Doppler_effect#Systematic_derivation_for_inertial_observers
+    
+    Four-velocity U = dx / dtau: tangent four-vector to worldline, of magnitude 1
+    
+    In the object's O rest frame: U = (1, 0, 0, 0)
+    
+    t = gamma tau
+    
+    O' moving at velocity v from O.
+    
+    Applying Lorentz transformations: U' = (gamma, -v gamma, 0, 0)
+    
+    Derivation of velocity addition:
+    
+    A.     B.->u(relative to A)     C.->v(relative to B)
+    
+    * in C's frame: C's 4-velocity is U_C = (1, 0)
+    * in B's frame: C's 4-velocity is U_B = LT(v) U_C = (gamma_v, -v gamma_v)
+    * in B's frame: C's 4-velocity is LT(u) U_B = TODO
+    
+    https://en.wikipedia.org/wiki/Derivations_of_the_Lorentz_transformations
+    
+    Hyperbolic rotations of coordinates https://en.wikipedia.org/wiki/Lorentz_transformation#Hyperbolic_rotation_of_coordinates
+    
+    
+    	twins paradox
+    Acceleration
+
+
+
+
+# related       [[physics]]
+
+
+
+
+# `[2020-08-26]` [Velocity Raptor | TestTubeGames](https://testtubegames.com/velocityraptor.html)      [[relativity]] [[game]]
+
+
+
+
+# `[2015-03-16]` some special relativity notes      [[relativity]]
+
+-   t'<sup>2</sup> = t<sup>2</sup> - x<sup>2</sup>
+-   The gravity on the poles in a bit larger than the gravity on the equator due to the centrifugal force.
+-   Galilean group of transformations:  
+    1.  Translation x' = x + a
+    2.  Rotation x' = Rx, R R<sup>T</sup> = 1
+    3.  Boost: x' = x + vt
+
+-   t' = t + t<sub>0</sub>
+-   map intertial frames to intertial
+-   dx<sup>2</sup>/dt<sup>2</sup> = 0, then, for each transformation, dx'<sup>2</sup>/dt<sup>2</sup> = 0
+-   the principle of relativity: the Newton's laws are the same in all itertial frames
+-   The equation of motion is second order
+-   Potential V(x) is defined by: F(x) = -dV(x)/dx
+-   Energy E = 1/2 m v<sup>2</sup> + V(x). It is conserved, E' = 0 for any trajectory that obeys the equation of motion
+-   dynrel, p.20, potential!
+-   Energy is conserved iff there exists V such that F = - grad V.
+-   Central forces: angular momentum is conserved. L = m x &times; x'. dL/dt = mx &times; x'' = x &times; F.
+
+
+
+
+# `[2021-01-20]` [(1) Could A Spaceship Wrap Around The Universe & Destroy Itself? - YouTube](https://www.youtube.com/watch?v=6MfJ59lkABY)      [[relativity]]
+
+only preferred local frames of reference are forbidden, you can still have preferred global frames of reference. For example, big bang frame of reference, where the CMB appears still?  
+
+
+
+
+# `[2019-08-25]` How Special Relativity Makes Magnets Work - YouTube <https://www.youtube.com/watch?v=1TKSfAkWWN0>      [[relativity]]
+
+very good intuitive explanation! Basically, since charges in wire (protons/electrons) are moving relative to each other, they are slightly contracted  so in other frames of reference it creates a force  
+
+
+
+
+# `[2019-09-06]` Например, космический корабль, который движется с ускорением свободного падения g, пройдет расстояние 13 миллиардов световых лет (долетит до края наблюдаемой Вселенной!) менее чем за сто лет, если считать время в собственной системе отсчета.
+
+
+
+
+# GR workbook?      [[study]]
+
+-   Box 20.1
+-   224 the cosmological constant
+
+
+
+
+# `[2015-01-12]` perpendicular velocity addition in special relatility
+
+    A's frame: (1, 0, 0)
+    O's frame: gamma (1, 0, 0.9)
+    B's frame: (gamma^2, 0.9 gamma^2, 0.9 gamma)
+    
+    A's frame: U_A = (1, 0, 0)
+    Boost at the Y direction: u
+    LT(u) =
+    {
+    	gamma_u   , 0, -gamma_u u
+    	0         , 1, 0
+    	-gamma_u u, 0, gamma_u
+    }
+    O's frame: U_O = LT(u) U_A = (gamma_u, 0, -gamma_u u)
+    Boost at the X direction: v
+    LT(v) =
+    {
+    	gamma_v   , -gamma_v v, 0
+    	-gamma_v v, gamma_v   , 0
+    	0         , 0         , 1
+    }
+    B's frame: U_B = LT(v) U_O = (gamma_u gamma_v, gamma_u * -gamma_v v, -gamma_u u)
+    
+    U_B = LT(w) U_A (1, 0, 0)
+    
+    gamma_w = gamma_u gamma_v
+    -gamma_w w_x = -gamma_u gamma_v v
+    -gamma_w w_y = -gamma_u u
+    
+    w_x = v
+    w_y = u / gamma_v
+

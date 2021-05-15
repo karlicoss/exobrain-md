@@ -1,0 +1,415 @@
+
+# Table of Contents
+
+-   [related](#rltd) [[nodejs]]
+-   [`[2019-09-29]` Practical Ways to Write Better JavaScript - Stack Overflow Blog](#prctclwystwrtbttrjvscrptstckvrflwblg) 
+-   [`[2020-03-13]` Wes Bos on Twitter: "🔥 Optional Chaining (deep property checking) is now in Chrome, Firefox and babel-preset-env 7.8.0. This is a huge improvement in checking if nested properties exist! https://t.co/ypmHeQ8rGw" / Twitter](#wsbsntwttrptnlchnngdpprprprprtsxststcypmhqrgwtwttr) 
+-   [`[2019-11-10]` fuck, `replace` only replaces first occurence if string is used??](#fckrplcnlyrplcsfrstccrncfstrngssd) 
+-   [use let instead of var](#sltnstdfvr) [[drill]]
+-   [looping over collection { for x of arr }](#lpngvrcllctnfrxfrr) 
+-   [date parsing](#dtprsng) 
+-   [`[2019-07-14]` Enabling Async/Await and Generator Functions in Babel and Node JS](#nblngsyncwtndgnrtrfnctnsnbblndndjs) 
+-   [`[2019-07-14]` javascript - Is it safe to use async/await now? - Stack Overflow](#jvscrptstsftssyncwtnwstckvrflw) 
+-   [`[2020-11-10]` javascript - Is async await truly non-blocking in the browser? - Stack Overflow](#sstckvrflwcmqstnsssyncwttnnblckngnthbrwsrstckvrflw) 
+-   [https://github.com/feltcoop/why-svelte](#sgthbcmfltcpwhysvlt) 
+-   [`[2020-03-10]` Why Svelte is our choice for a large web project | Hacker News](#whysvltsrchcfrlrgwbprjcthckrnws) 
+-   [`[2019-06-30]` Implementing infinite scrolling : reactjs](#mplmntngnfntscrllngrctjs) 
+-   [`[2019-08-01]` google chrome extension - Injecting iframe into page with restrictive Content Security Policy - Stack Overflow](#gglchrmxtnsnnjctngfrmntpgtvcntntscrtyplcystckvrflw) 
+-   [`[2020-05-02]` Patching an NPM dependency without going completely insane](#smdmcmnvctcdptchngnnpmdpnmdpndncywthtgngcmpltlynsn) 
+-   [Tweet from Guy Bedford (@guybedford), at Dec 27, 19:23](#twtfrmgybdfrdgybdfrdtdc) [[js]] [[repl]]
+-   [`[2019-08-18]` stidges/jquery-searchable: Tiny, fast jQuery plugin to search through elements as you type.](#stdgsjqrysrchbltnyfstjqryplgntsrchthrghlmntssytyp) [[search]]
+-   [`[2019-08-18]` flexsearch - npm](#flxsrchnpm) [[search]]
+-   [codemirror search widget](#cdmrrrsrchwdgt) [[js]]
+-   [`[2020-01-30]` Svelte 3: Rethinking reactivity](#svltrthnkngrctvty) 
+-   [`[2020-07-18]` javascript - Easiest way to sort DOM nodes? - Stack Overflow](#sstckvrflwcmqstnssstwytsrptsstwytsrtdmndsstckvrflw) [[js]]
+-   [`[2020-06-21]` A little bit of plain JavaScript can do a lot | Hacker News](#snwsycmbntrcmtmdlttlbtfplnjvscrptcndlthckrnws) 
+-   [`[2019-09-06]` A small trick on using console.log to print data in JavaScript | Lobsters](#smlltrcknsngcnsllgtprntdtnjvscrptlbstrs) [[js]]
+-   [`[2020-06-05]` MaterialFuture: "Tried out DenoJS to play around with Vue and it w…" - Merveilles](#smrvllstwnmtrlftrmtrlftrtdnjstplyrndwthvndtwmrvlls) [[js]]
+-   [`[2020-04-02]` How to manage HTML DOM with vanilla JavaScript only?](#snwsycmbntrcmtmdhwtmnghtmldmwthvnlljvscrptnly) 
+-   [`[2021-01-03]` IMO, long names like appendChild, getElementById, createTextNode, etc discourage use of vanilla js](#mlngnmslkppndchldgtlmntbydcrttxtndtcdscrgsfvnlljs) [[plt]] [[js]]
+-   [inspecting object](#sndjsrgptlhtmltltlnspctbjctptnsnspctngbjct) [[nodejs]] [[debug]]
+-   [`[2020-04-08]` antonmedv/codejar: An embeddable code editor for the browser 🍯](#ntnmdvcdjrnmbddblcddtrfrthbrwsr) 
+-   [`[2019-08-28]` Flow vs Typescript /r/javascript](#srddtcmrjvscrptcmmntsbfwppfrcflwvstypscrptrjvscrpt) [[flow]] [[js]]
+-   [`[2019-09-01]` npm vs. yarn - which one and why? : javascript](#npmvsyrnwhchnndwhyjvscrpt) 
+-   [`[2019-07-22]` things that js has: destructing objects, named arguments https://simonsmith.io/destructuring-objects-as-function-parameters-in-es6](#thngsthtjshsdstrctngbjctsrctrngbjctssfnctnprmtrsns) 
+-   [`[2019-01-04]` eslint is best apparently](#slntsbstpprntly) [[js]]
+-   [`[2019-09-21]` addyosmani/es6-tools: An aggregation of tooling for using ES6 today](#ddysmnstlsnggrgtnftlngfrsngstdy) 
+-   [`[2018-12-13]` javascript - Inserting large quantities in IndexedDB's objectstore blocks UI - Stack Overflow](#jvscrptnsrtnglrgqnttsnndxddbsbjctstrblcksstckvrflw) 
+-   [`[2019-07-07]` Testing: Jest or Mocha? /r/vuejs](#srddtcmrvjscmmntsmyjfststmchdzrkvktstngjstrmchrvjs) [[js]]
+-   [`[2019-07-07]` How to Fix JavaScript Callbacks Variable Scope Problems | Pluralsight | Pluralsight](#hwtfxjvscrptcllbcksvrblscpprblmsplrlsghtplrlsght) 
+-   [`[2021-01-07]` vasturiano/react-force-graph: React component for 2D, 3D, VR and AR force directed graphs](#sgthbcmvstrnrctfrcgrphvstnntfrddvrndrfrcdrctdgrphs) [[viz]] [[js]]
+-   [`[2020-11-11]` Advanced features in Flow | sitr.us](#sstrsdvncdftrsnflwhtmldvncdftrsnflwstrs) 
+-   [Js flow example with tweets l, then could post on JavaScript subreddit?](#jsflwxmplwthtwtslthncldpstnjvscrptsbrddt) [[js]] [[toblog]] [[errors]]
+-   [`[2019-12-22]` BigInt Eilish 🌟 on Twitter: "@sveltejs Rewrote my Twitter search from React to Svelte @Reactjs 42kb Code: https://t.co/4fDXi7hqwG Site: https://t.co/Ync9baSs2n @Sveltejs 5kb Code: https://t.co/lD1gywleNp Site: https://t.co/pgmavoPLBy Had trouble w/ eslint/prettier, but overall much less code to write cc @wgao19 https://t.co/BthQ2I6C77" / Twitter](#bgntlshntwttrsvltjsrwrtmysscdtwrtccwgstcbthqctwttr) 
+-   [`[2020-06-04]` Show HN: Grid.js – Advanced table library that works everywhere](#snwsycmbntrcmtmdshwhngrdjvncdtbllbrrythtwrksvrywhr) 
+-   [`[2020-07-21]` Show HN: Datagridxl.js – No-nonsense fast Excel-like data table library](#snwsycmbntrcmtmdshwhndtgrsnnnsnsfstxcllkdttbllbrry) 
+-   [`[2021-03-13]` Vanilla List • The Vanilla JavaScript Repository](#svnlllsttpvnlllstthvnlljvscrptrpstry) [[javascript]]
+-   [`[2021-04-30]` Use console.log() like a pro - Marko Denic - Web Developer](#smrkdnccmscnsllglkprscnsllglkprmrkdncwbdvlpr) [[drill]] [[javascript]]
+
+
+
+
+
+# related       [[nodejs]]
+
+
+
+
+# `[2019-09-29]` Practical Ways to Write Better JavaScript - Stack Overflow Blog
+
+<https://stackoverflow.blog/2019/09/12/practical-ways-to-write-better-javascript/>  
+
+
+
+
+# `[2020-03-13]` Wes Bos on Twitter: "🔥 Optional Chaining (deep property checking) is now in Chrome, Firefox and babel-preset-env 7.8.0. This is a huge improvement in checking if nested properties exist! <https://t.co/ypmHeQ8rGw>" / Twitter
+
+<https://twitter.com/wesbos/status/1238468738946646017>  
+
+    Optional Chaining (deep property checking) is now in Chrome, Firefox and babel-preset-env 7.8.0.
+    This is a huge improvement in checking if nested properties exist!
+
+
+
+
+# `[2019-11-10]` fuck, `replace` only replaces first occurence if string is used??
+
+
+
+
+# use let instead of var      [[drill]]
+
+SCHEDULED: `[2022-03-25]`  
+
+
+
+
+# looping over collection { for x of arr }
+
+
+
+
+# date parsing
+
+<http://www.datejs.com/> looks ok, supports fuzzy stuff like 'next week', 'previous month', etc  
+
+
+
+
+# `[2019-07-14]` Enabling Async/Await and Generator Functions in Babel and Node JS
+
+<https://medium.com/@binyamin/enabling-async-await-and-generator-functions-in-babel-node-and-express-71e941b183e2>  
+
+    Uncaught ReferenceError: regeneratorRuntime is not defined
+    I found this answer to my troubles and it worked when I implemented it. Just change .babelrc to the following:
+    {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "node": "10"
+            }
+          }
+        ],
+        "@babel/preset-react"
+      ]
+    }
+
+
+
+
+# `[2019-07-14]` javascript - Is it safe to use async/await now? - Stack Overflow
+
+<https://stackoverflow.com/questions/42183155/is-it-safe-to-use-async-await-now>  
+
+    So depending on what you think is acceptable it is either safe or not safe. Note the following:
+        This question was originally asked on 2017, and we have come a long way so async/await is much more safe to use now.
+        By 2019, most mobile devices already support async/await.
+        Node 8 is released on May 2017 so it should be safe to use async/await on Node.js unless your Node.js servers are very outdated.
+
+
+
+
+# `[2020-11-10]` [javascript - Is async await truly non-blocking in the browser? - Stack Overflow](https://stackoverflow.com/questions/42773714/is-async-await-truly-non-blocking-in-the-browser)
+
+    Points for the worker without an external file. That's one cool trick
+
+
+
+
+# <https://github.com/feltcoop/why-svelte> 
+
+
+
+
+# `[2020-03-10]` Why Svelte is our choice for a large web project | Hacker News
+
+<https://news.ycombinator.com/item?id=22534639>  
+
+
+
+
+# `[2019-06-30]` Implementing infinite scrolling : reactjs
+
+<https://www.reddit.com/r/reactjs/comments/7z87o9/implementing_infinite_scrolling/>  
+
+    ssuming its only 100 items, i'd just display them all from the start, and let scroll do what scroll does. if you're trying to simplify a real world example where you might have 1000's of initially returned items, then something similar to /u/pqnst but instead of just slicing 0,(page * 20), you'd have to slice(20 * (page - 1), 20 * page) and account for the height of the sliced out elements in the scrollTop of the scrolling container
+
+
+
+
+# `[2019-08-01]` google chrome extension - Injecting iframe into page with restrictive Content Security Policy - Stack Overflow
+
+<https://stackoverflow.com/questions/24641592/injecting-iframe-into-page-with-restrictive-content-security-policy>  
+
+
+
+
+# `[2020-05-02]` [Patching an NPM dependency without going completely insane](https://medium.com/@invicticide/patching-an-npm-dependency-without-going-completely-insane-aa0b110a80c)
+
+
+
+
+# Tweet from Guy Bedford (@guybedford), at Dec 27, 19:23      [[js]] [[repl]]
+
+    Periodic reminder that `await import('//dev.jspm.io/[pkg]')` allows you to import anything from npm in the browser instantly. I often use this in the console to test things out.
+
+<https://twitter.com/guybedford/status/1202022281633030145>  
+
+
+
+
+# `[2019-08-18]` stidges/jquery-searchable: Tiny, fast jQuery plugin to search through elements as you type.      [[search]]
+
+<https://github.com/stidges/jquery-searchable>  
+
+    Tiny, fast jQuery plugin to search through elements as you type.
+
+
+
+
+# `[2019-08-18]` flexsearch - npm      [[search]]
+
+<https://www.npmjs.com/package/flexsearch>  
+
+
+
+
+# codemirror search widget      [[js]]
+
+
+
+
+# `[2020-01-30]` Svelte 3: Rethinking reactivity
+
+<https://svelte.dev/blog/svelte-3-rethinking-reactivity>  
+
+    Svelte is a component framework — like React or Vue — but with an important difference. Traditional frameworks allow you to write declarative state-driven code, but there's a penalty: the browser must do extra work to convert those declarative structures into DOM operations, using techniques like
+    that eat into your frame budget and tax the garbage collector.
+    Instead, Svelte runs at build time, converting your components into highly efficient imperative code that surgically updates the DOM. As a result, you're able to write ambitious applications with excellent performance characteristics.
+
+
+
+
+# `[2020-07-18]` [javascript - Easiest way to sort DOM nodes? - Stack Overflow](https://stackoverflow.com/questions/282670/easiest-way-to-sort-dom-nodes)      [[js]]
+
+    By using list.children instead of list.childNodes, you can avoid the check for text nodes.
+
+
+
+
+# `[2020-06-21]` [A little bit of plain JavaScript can do a lot | Hacker News](https://news.ycombinator.com/item?id=23578319)
+
+    A bit more minified/modern version of this that I'm using:
+        function $e(t='div',p={},c=[]){
+          let el=document.createElement(t);
+          Object.assign(el,p);
+          el.append(...c);
+          return el;
+        }
+        var $t=document.createTextNode.bind(document);
+
+
+
+
+# `[2019-09-06]` A small trick on using console.log to print data in JavaScript | Lobsters      [[js]]
+
+<https://lobste.rs/s/u2dyrr/small_trick_on_using_console_log_print>  
+
+    console.log("User(%o)", user)
+    console.table is also useful
+        faitswulff avatar faitswulff 3 hours ago | link |
+    I’ve started to use console.table for pretty much everything. It’s so nice.
+
+
+
+
+# `[2020-06-05]` [MaterialFuture: "Tried out DenoJS to play around with Vue and it w…" - Merveilles](https://merveilles.town/@materialfuture/104292286688572143)      [[js]]
+
+    Tried out DenoJS to play around with Vue and it was very pleasant to use.
+    I'm going to have to read more into it, but I think any personal JS projects will be using Deno simply due to the lack of dependencies and speed.
+
+
+
+
+# `[2020-04-02]` [How to manage HTML DOM with vanilla JavaScript only?](https://news.ycombinator.com/item?id=22758218)
+
+<https://htmldom.dev/>  
+
+
+
+
+# `[2021-01-03]` IMO, long names like appendChild, getElementById, createTextNode, etc discourage use of vanilla js      [[plt]] [[js]]
+
+
+
+
+# [inspecting object](https://nodejs.org/api/util.html#util_util_inspect_object_options)      [[nodejs]] [[debug]]
+
+    let util = require('util')
+    console.log(util.inspect(resp, {showHidden: false, depth: 1}))
+
+
+
+
+# `[2020-04-08]` antonmedv/codejar: An embeddable code editor for the browser 🍯
+
+<https://github.com/antonmedv/codejar>  
+
+    CodeJar honey_pot can be used via modules:
+    <script type="module">
+      import {CodeJar} from 'https://medv.io/codejar/codejar.js'
+    </script>
+
+
+
+
+# `[2019-08-28]` [Flow vs Typescript](https://reddit.com/r/javascript/comments/7bfwpl/flow_vs_typescript/dpif1rc/) /r/javascript      [[flow]] [[js]]
+
+    Having used both (Flow for one very large project and TypeScript for a few less large projects) I am very much in the TypeScript camp now.
+    
+    Firstly, DefinitelyTyped has vastly more library defs available than flow-typed, which matters a whole lot more than you might realize. It's pretty rare that `npm install @types/name-of-package` comes up empty.
+    
+    Secondly, Flow feels slower and buggier; I use VS Code full-time and have found that TS reacts to code changes far more quickly and accurately than Flow (almost instantaneously across an entire project), and provides much more useful error messages (I lost count of the number of times I saw `merge_strict_job exception: Utils_js.Key_not_found("LeaderHeap")`, which I believe usually indicates a bug in Flow itself but is also completely useless and extremely difficult to debug). Of course I realize that TS and Code are both Microsoft products so it's not surprising that TS works better, but even in Atom with Nuclide I found that Flow was a bit slow to catch up to things, and still sometimes threw very cryptic errors.
+    
+    Finally, TS has a pretty solid built-in compiler which tracks the official spec, and natively supports features like `async`/`await`.
+    
+    To your original question, I'm currently working on a React-heavy project with TS and have found it to have excellent support. Flow works very well with React as well, which is to be expected since both come from Facebook. I think either would be a fine decision, but definitely feel TS has the edge in stability and speed.
+
+
+
+
+# `[2019-09-01]` npm vs. yarn - which one and why? : javascript
+
+<https://www.reddit.com/r/javascript/comments/ad6zoj/npm_vs_yarn_which_one_and_why/>  
+
+    npm has greatly improved since the original days of yarn. With lock files and better dependency tree management, I find very few reasons to use yarn nowadays.
+    I'd say use npm until you find a feature from yarn that requires you to switch. npm is included with every Node.js install.
+
+
+
+
+# `[2019-07-22]` things that js has: destructing objects, named arguments <https://simonsmith.io/destructuring-objects-as-function-parameters-in-es6>
+
+
+
+
+# `[2019-01-04]` eslint is best apparently      [[js]]
+
+
+
+
+# `[2019-09-21]` addyosmani/es6-tools: An aggregation of tooling for using ES6 today
+
+<https://github.com/addyosmani/es6-tools#readme>  
+
+
+
+
+# `[2018-12-13]` javascript - Inserting large quantities in IndexedDB's objectstore blocks UI - Stack Overflow
+
+<https://stackoverflow.com/questions/10471759/inserting-large-quantities-in-indexeddbs-objectstore-blocks-ui>  
+
+
+
+
+# `[2019-07-07]` [Testing: Jest or Mocha?](https://reddit.com/r/vuejs/comments/8myjfs/testing_jest_or_mocha/dzrk3vk/) /r/vuejs      [[js]]
+
+    Jest is amazing! It is out of the box , takes way less time to run the tests than mocha. A small side note: If you're using a vue js app, you are going to want to take a look at [Vue Test Utils](https://vue-test-utils.vuejs.org/). Makes life so much easier. Also sinon.js for spies and fakes. PM me if you need tips and tricks to start with automated testing. 
+
+
+
+
+# `[2019-07-07]` How to Fix JavaScript Callbacks Variable Scope Problems | Pluralsight | Pluralsight
+
+<https://www.pluralsight.com/guides/javascript-callbacks-variable-scope-problem>  
+
+    ECMAScript 6 introduces the let keyword which allows you to declare a variable scoped to the nearest enclosing block and not global like var does. Thus the closure problem can be solved simply by replacing var with let:
+
+
+
+
+# `[2021-01-07]` [vasturiano/react-force-graph: React component for 2D, 3D, VR and AR force directed graphs](https://github.com/vasturiano/react-force-graph)      [[viz]] [[js]]
+
+
+
+
+# `[2020-11-11]` [Advanced features in Flow | sitr.us](https://sitr.us/2015/05/31/advanced-features-in-flow.html)
+
+
+
+
+# Js flow example with tweets l, then could post on JavaScript subreddit?      [[js]] [[toblog]] [[errors]]
+
+
+
+
+# `[2019-12-22]` BigInt Eilish 🌟 on Twitter: "@sveltejs Rewrote my Twitter search from React to Svelte @Reactjs 42kb Code: <https://t.co/4fDXi7hqwG> Site: <https://t.co/Ync9baSs2n> @Sveltejs 5kb Code: <https://t.co/lD1gywleNp> Site: <https://t.co/pgmavoPLBy> Had trouble w/ eslint/prettier, but overall much less code to write cc @wgao19 <https://t.co/BthQ2I6C77>" / Twitter
+
+<https://twitter.com/swyx/status/1208461215069945856>  
+
+    Rewrote my Twitter search from React to Svelte
+    @Reactjs  42kb
+    Code: https://github.com/sw-yx/bettertwitter/tree/reactapp
+    Site: https://inspiring-fermat.netlify.com
+    
+    @Sveltejs 5kb
+    Code: https://github.com/sw-yx/bettertwitter/tree/master
+    Site: https://bettertwitter.netlify.com
+    Had trouble w/ eslint/prettier, but overall much less code to write
+
+
+
+
+# `[2020-06-04]` [Show HN: Grid.js – Advanced table library that works everywhere](https://news.ycombinator.com/item?id=23420091)
+
+<https://gridjs.io/?hn>  
+
+
+
+
+# `[2020-07-21]` [Show HN: Datagridxl.js – No-nonsense fast Excel-like data table library](https://news.ycombinator.com/item?id=23909894)
+
+<https://datagridxl.com>  
+
+
+
+
+# `[2021-03-13]` [Vanilla List • The Vanilla JavaScript Repository](https://vanillalist.top/)      [[javascript]]
+
+
+
+
+# `[2021-04-30]` [Use console.log() like a pro - Marko Denic - Web Developer](https://markodenic.com/use-console-log-like-a-pro/)      [[drill]] [[javascript]]
+
+-   console.group() and console.groupEnd()
+
+    Creates a new inline group, indenting all following output by another level. To move back out a level, call groupEnd().
+
+-   console.time() and console.timeEnd()
+
+    
+    console.time() – Starts a timer with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.
+    console.timeEnd() – Stops the specified timer and logs the elapsed time in seconds since it started.
+

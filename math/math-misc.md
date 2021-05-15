@@ -1,0 +1,874 @@
+
+# Table of Contents
+
+-   [`[2016-10-19]` frequentist vs bayesian](#frqntstvsbysn) [[probability]]
+-   [`[2016-02-28]` Riemann surfaces](#rmnnsrfcs) [[complan]]
+-   [`[2015-01-27]` Elliptic vs Hyperbolic equations](#llptcvshyprblcqtns) [[drill]]
+    -   [Elliptic equations: well-posed BVP](#llptcqtnswllpsdbvp) 
+        -   [`[2019-07-18]` eh? what would be a practical example](#hwhtwldbprctclxmpl) 
+    -   [Hyperbolic: well-posed IVP. E.g. wave equation](#hyprblcwllpsdvpgwvqtn) 
+-   [intuition about harmonic function https://math.stackexchange.com/questions/751293/intuitive-significance-of-harmonicity/751459](#nttnbthrmncfnctnsmthstckxmqstnsnttvsgnfcncfhrmncty) [[physics]]
+    -   [You might be interested in reading Needham's Visual Complex Analysis.](#ymghtbntrstdnrdngndhmsvslcmplxnlyss) [[read]]
+-   [`[2018-09-03]` tensor space (product)](#tnsrspcprdct) [[tensor]]
+-   [`[2016-06-20]` continuity intuition](#cntntynttn) [[topology]]
+    -   [https://math.stackexchange.com/questions/15963/what-is-the-intuition-for-the-point-set-topology-definition-of-continuity](#smthstckxchngcmqstnswhtstrthpntsttplgydfntnfcntnty) 
+    -   [why the reverse doesn't work?](#whythrvrsdsntwrk) 
+    -   [topology as set of rulers https://mathoverflow.net/a/19156](#tplgysstfrlrssmthvrflwnt) 
+    -   [https://mathoverflow.net/a/19173](#smthvrflwnt) 
+        -   [`[2018-10-15]`  https://en.wikipedia.org/wiki/Kuratowski\_closure\_axioms](#snwkpdrgwkkrtwskclsrxms) 
+-   [`[2019-01-26]` topological spaces intuition](#tplgclspcsnttn) [[topology]]
+    -   [in terms of closeness https://mathoverflow.net/a/19173/29889](#ntrmsfclsnsssmthvrflwnt) 
+        -   [drill this?](#drllths) 
+        -   [compactness??](#cmpctnss) 
+        -   [open set: if no point touches its complement? e.g. with (0, 1) for any specific point we will find interval that separates from [-inf, 0] U [1, inf]](#pnstfnpnttchstscmplmntgwtllfndntrvlthtsprtsfrmnfnf) 
+        -   [`[2019-01-26]` right, I spent more than an hour proving something that could not be proved.. (that 0 touches (0, 1)). It really doesn't e.g. in discrete topology](#rghtspntmrthnnhrprvngsmthtchstrllydsntgndscrttplgy) 
+    -   [in terms of computability](#ntrmsfcmptblty) 
+    -   [continuity    in terms of 'touches' relation: { forall A. x v A => f(x) v f(A)  }](#cntntyntrmsftchsrltnfrllxvfxvf) [[drill]]
+    -   [connectedness in terms of 'touches' relation: { every cont. function from X ot (0, 1) is const }](#cnnctdnssntrmsftchsrltnvrycntfnctnfrmxtscnst) [[drill]]
+-   [Compactness](#cmpctnss) [[topology]]
+    -   [pdf by Tao compacness and compactification](#pdfbytcmpcnssndcmpctfctn) 
+    -   [read synthetic topology of data types and classical spaces](#rdsynthtctplgyfdttypsndclssclspcs) 
+-   [`[2016-08-14]` ODE Integrating factor: y' + f(t) y = g(t)](#dntgrtngfctryftygt) 
+-   [`[2016-06-20]` free structures](#frstrctrs) [[algebra]]
+    -   [`[2014-07-28]` free monoid](#frmnd) 
+-   [`[2020-03-22]` Shtetl-Optimized » Blog Archive » Ask Me Anything: Apocalypse Edition](#shttlptmzdblgrchvskmnythngpclypsdtn) [[math]]
+-   [`[2019-12-26]` Lean has real manifolds! | Xena](#lnhsrlmnfldsxn) [[lean]]
+-   [`[2019-12-26]` Prove a theorem. Write a function. | Xena](#prvthrmwrtfnctnxn) [[lean]]
+-   [`[2015-02-14]` cos(|z|) Not holomorphic anywhere except z = 0?](#csznthlmrphcnywhrxcptz) [[complan]]
+-   [`[2014-07-01]` types of equality](#typsfqlty) [[typetheory]]
+-   [`[2016-10-24]` Zeno's paradox: Achilles and Tortoise](#znsprdxchllsndtrts) 
+-   [`[2016-10-24]` Zeno's paradox: Achilles and Tortoise](#znsprdxchllsndtrts) 
+-   [`[2016-10-24]` Galileo's Paradox:](#gllsprdx) 
+-   [`[2016-10-27]` Heat equation: `U_t = U_xx`](#htqtntxx) [[physics]]
+-   [`[2016-10-26]` methods of integration](#mthdsfntgrtn) 
+    -   [Euler's method](#lrsmthd) 
+    -   [Runge-Kutta](#rngktt) 
+    -   [Forward Euler](#frwrdlr) 
+    -   [Backward Euler](#bckwrdlr) 
+-   [`[2018-12-03]` Is a functional derivative a generalized function? - Mathematics Stack Exchange](#sfnctnldrvtvgnrlzdfnctnmthmtcsstckxchng) 
+    -   [`[2018-12-09]` so, generally functional derivative is a (functional?) distribution: <dF[f]/df, v> = lim (F(f + eps v) - F(f)) / eps. However if a functional is 'good' enough, it can be represented as normal functional (as an integral).](#sgnrllyfnctnldrvtvsfnctnlrprsntdsnrmlfnctnlsnntgrl) 
+-   [hmmm cauchy riemann are just like euler lagrance! wonder if there is some direct analogy?](#hmmmcchyrmnnrjstlklrlgrncwndrfthrssmdrctnlgy) [[math]]
+-   [Theorem Proofs: These are the same as computer games. This is the mathematician’s favourite part. The natural number game is what happens if you take all the definitions and theorem statements out of the hands of the user, and just ask them to fill in the proofs, and give them enough of an API to make it fun. Bhavik Mehta made an impressive combinatorics repo and he told me that he never once had to think about how finite sets were actually implemented in Lean — he could just use the interface.](#thrmprfsthsrthsmscmptrgmsmplmntdnlnhcldjststhntrfc) 
+-   [null hypothesis](#nllhypthss) [[statistics]]
+-   [p-value](#pvl) [[statistics]]
+-   [`[2016-10-04]` random variables](#rndmvrbls) [[probability]]
+-   [`[2014-10-22]` eigenvalues](#gnvls) [[linalg]]
+-   [`[2014-09-27]` some functional analysis notes](#smfnctnlnlyssnts) [[funcan]]
+-   [`[2019-11-26]` Interactive Linear Algebra | Hacker News](#ntrctvlnrlgbrhckrnws) 
+-   [`[2019-11-21]` Differential Equation Solution Strategies | Intuitive Explanations](#dffrntlqtnsltnstrtgsnttvxplntns) [[diffeq]]
+-   [`[2019-11-26]` Immersive Math](#mmrsvmth) 
+-   [`[2020-04-02]` Is there something like this for math? Does anyone know? | Hacker News](#sthrsmthnglkthsfrmthdsnynknwhckrnws) [[math]]
+-   [`[2019-09-01]` Bourbaki dangerous bend symbol - Wikipedia](#brbkdngrsbndsymblwkpd) 
+-   [`[2019-05-04]` List of computer algebra systems - Wikipedia https://en.wikipedia.org/wiki/List\_of\_computer\_algebra\_systems](#lstfcmptrlgbrsystmswkpdsnpdrgwklstfcmptrlgbrsystms) 
+-   [`[2019-02-26]` LMS Popular Lecture Series 2017, 'The Unreasonable Effectiveness of Physics in Maths', David Tong](#lmspplrlctrsrsthnrsnblffctvnssfphyscsnmthsdvdtng) 
+-   [`[2019-11-23]` Supertasks - YouTube](#sprtsksytb) 
+-   [`[2019-12-26]` The Future of Mathematics? - YouTube](#thftrfmthmtcsytb) [[types]] [[math]]
+-   [`[2019-02-15]` linear algebra - Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition? - Mathematics Stack Exchange](#lnrlgbrnttvlywhtsthdffrncvldcmpstnmthmtcsstckxchng) 
+-   [`[2018-07-21]` Bayesian and frequentist reasoning in plain English - Cross Validated](#bysnndfrqntstrsnngnplnnglshcrssvldtd) [[bayes]]
+-   [https://jakevdp.github.io/blog/2014/06/12/frequentism-and-bayesianism-3-confidence-credibility/](#sjkvdpgthbblgfrqntsmndbysnsmcnfdnccrdblty) [[bayes]]
+-   [http://www.behind-the-enemy-lines.com/2008/01/are-you-bayesian-or-frequentist-or.html](#wwwbhndthnmylnscmrybysnrfrqntstrhtml) [[bayes]]
+-   [https://www.youtube.com/watch?v=KhAUfqhLakw](#swwwytbcmwtchvkhfqhlkw) [[bayes]]
+    -   [13:00](#31004_31241) 
+    -   [15:29 conditioning vs marginalization](#cndtnngvsmrgnlztn) 
+    -   [17:00 confidence vs credibility](#cnfdncvscrdblty) 
+-   [some interesting point about what people actually mean when debating frequentist vs bayes](#smntrstngpntbtwhtpplctllymnwhndbtngfrqntstvsbys) [[bayes]]
+-   [http://math.ucr.edu/home/baez/surprises.html surprises in math](#mthcrdhmbzsrprsshtmlsrprssnmth) [[baez]]
+-   [`[2019-11-11]` David Chapman on Twitter: "Excellent explanation of the emotional fallout from the crisis of the foundations of mathematics https://t.co/wxCBgLDizA" / Twitter](#dvdchpmnntwttrxcllntxplntsfmthmtcsstcwxcbgldztwttr) 
+-   [`[2018-04-02]` https://twitter.com/gabrielpeyre/status/980716282227118080?s=20](#stwttrcmgbrlpyrsttss) [[math]] [[pde]]
+-   [`[2018-12-25]` some proofs are better than others when you are working with proof assistants. In a sense this principle also applies here: some ways of deriving are easier for sympy to handle](#smprfsrbttrthnthrswhnyrwrmwysfdrvngrsrfrsympythndl) [[math]]
+-   [`[2020-12-23]` Aleph 0 - YouTube](#swwwytbcmclphvdslphytb) [[math]]
+-   [Try spaced repetition for basic topology](#tryspcdrpttnfrbsctplgy) [[topolog]] [[spacedrep]]
+-   [`[2019-06-20]` existence of solutions for IVP dy/dx = f(y, x); y(x<sub>0</sub>) = y<sub>0</sub>](#xstncfsltnsfrvpdydxfyxyxy) [[drill]] [[diffeq]]
+-   [`[2019-12-20]` verbit.ru/Job/HSE/Curriculum/all.txt http://verbit.ru/Job/HSE/Curriculum/all.txt](#vrbtrjbhscrrclmlltxtvrbtrjbhscrrclmlltxt) 
+-   [`[2018-10-30]` Topoi: The Categorial Analysis of Logic (Dover Books on Mathematics): Amazon.co.uk: Robert Goldblatt: 0800759450268: Books](#tpthctgrlnlyssflgcdvrbksnthmtcsmznckrbrtgldblttbks) 
+-   [`[2019-05-10]` What is Applied Category Theory? | Azimuth https://johncarlosbaez.wordpress.com/2018/09/18/what-is-applied-category-theory/](#whtsppldctgrythryzmthsjhnrdprsscmwhtsppldctgrythry) 
+-   [`[2019-05-10]` Об Байеса - 2 - Не кинокритик. Не палеонтолог. https://plakhov.livejournal.com/227597.html](#оббайесанекинокритикнепалонтологsplkhvlvjrnlcmhtml) 
+-   [`[2019-05-04]` Sage Manifolds - Wikipedia https://en.wikipedia.org/wiki/Sage\_Manifolds](#sgmnfldswkpdsnwkpdrgwksgmnflds) 
+-   [`[2019-02-22]` The Calculus of Variations | Bounded Rationality https://bjlkeng.github.io/posts/the-calculus-of-variations/](#thclclsfvrtnsbnddrtnltysblknggthbpststhclclsfvrtns) 
+-   [`[2019-11-03]` I hate the Pumping Lemma | Bosker Blog https://bosker.wordpress.com/2013/08/18/i-hate-the-pumping-lemma/](#htthpmpnglmmbskrblgsbskrwrdprsscmhtthpmpnglmm) 
+-   [`[2019-08-27]` The Existential Risk of Math Errors - Gwern.net https://www.gwern.net/The-Existential-Risk-of-Mathematical-Error#sn25](#thxstntlrskfmthrrrsgwrnnttthxstntlrskfmthmtclrrrsn) 
+-   [`[2019-12-26]` The Future of Mathematics? [video] | Hacker News https://news.ycombinator.com/item?id=21200721](#thftrfmthmtcsvdhckrnwssnwsycmbntrcmtmd) 
+-   [`[2019-12-26]` Theorem Proving in Lean | Hacker News https://news.ycombinator.com/item?id=17171101](#thrmprvngnlnhckrnwssnwsycmbntrcmtmd) 
+-   [`[2019-12-26]` Theorem Proving in Lean | Hacker News https://news.ycombinator.com/item?id=17171101](#thrmprvngnlnhckrnwssnwsycmbntrcmtmd) 
+-   [`[2019-12-26]` A Review of the Lean Theorem Prover | Jigger Wit https://jiggerwit.wordpress.com/2018/09/18/a-review-of-the-lean-theorem-prover/](#rvwfthlnthrmprvrjggrwtsjgwrdprsscmrvwfthlnthrmprvr) 
+-   [`[2019-12-08]` 11.3 - Identifying Outliers (Unusual y Values) | STAT 501 https://newonlinecourses.science.psu.edu/stat501/lesson/11/11.3](#dntfyngtlrsnslyvlssttsnwnlncrssscncpsdsttlssn) 
+-   [`[2020-05-12]` A 2020 Vision of Linear Algebra | Hacker News](#snwsycmbntrcmtmdvsnflnrlgbrhckrnws) 
+-   [`[2020-07-31]` Hyperbolica on Steam](#sstrstmpwrdcmpphyprblchyprblcnstm) [[math]] [[games]]
+-   [frequentist vs vs bayes probability](#frqntstvsvsbysprbblty) 
+
+
+
+
+
+# `[2016-10-19]` frequentist vs bayesian      [[probability]]
+
+frequentist probability: relative frequencies  
+Bayesian probability: degree of knowledge  
+
+
+
+
+# `[2016-02-28]` Riemann surfaces      [[complan]]
+
+Alternatively one can think of Riemann sheets whereby on crossing a branch cut  
+one moves onto a different Riemann sheet of the function; the number of branches equals  
+the number of Riemann sheets. This allows closed contours to be formed by going around  
+branch cuts as many times as required to get back to the original Riemann sheet. However  
+although this scheme is very elegant, for calculational purposes it is best to treat branch  
+cuts as barriers one cannot cross.  
+
+
+
+
+# `[2015-01-27]` Elliptic vs Hyperbolic equations      [[drill]]
+
+
+
+
+
+## Elliptic equations: well-posed BVP
+
+
+
+
+
+### `[2019-07-18]` eh? what would be a practical example
+
+
+
+
+## Hyperbolic: well-posed IVP. E.g. wave equation
+
+
+
+
+# intuition about harmonic function <https://math.stackexchange.com/questions/751293/intuitive-significance-of-harmonicity/751459>      [[physics]]
+
+A harmonic function is a function whose value at a point is always equal to the average of its values on a sphere centered at that point (reference). This is why they show up as steady-state solutions to the heat equation: if this averaging property weren't true, then heat would be flowing either from or to a point.  
+
+
+
+
+## You might be interested in reading Needham's Visual Complex Analysis.      [[read]]
+
+
+
+
+# `[2018-09-03]` tensor space (product)      [[tensor]]
+
+In mathematics, the tensor product V ⊗ W of two vector spaces V and W (over the same field) is itself a vector space, together with an operation of bilinear composition, denoted by ⊗, from ordered pairs in the Cartesian product V × W into V ⊗ W, in a way that generalizes the outer product. The tensor product of V and W is the vector space generated by the symbols v ⊗ w, with v ∈ V and w ∈ W, in which the relations of bilinearity are imposed for the product operation ⊗, and no other relations are assumed to hold.  
+
+<https://jeremykun.com/2014/01/17/how-to-conquer-tensorphobia/>  
+basically, (a, b) (x) (c, d) is a completely different element unless a is a multiple of c or b is a multiple of d  
+that's the difference from adiition where (a, b) + (c, d) would be (a + c, b + d)  
+
+
+
+
+# `[2016-06-20]` continuity intuition      [[topology]]
+
+Consider the statement "a continuous function preserves closeness". That means if f ( x ) f(x) and f ( y ) f(y) are close to each other then x x and y y were close to each other originally.  
+
+In analysis, a function is continuous if you can make the image in the codomain as small as you like, by choosing a small enough part of the domain.  
+
+
+
+
+## <https://math.stackexchange.com/questions/15963/what-is-the-intuition-for-the-point-set-topology-definition-of-continuity> 
+
+Instead, in metric spaces, I think of a function as continuous if it preserves limits, which can be intuitively (and generalizably) be phrased by saying that f is continuous if and only if whenever x is in the closure of a set A, then f(x) is in the closure of the set f(A).  
+
+
+
+
+## why the reverse doesn't work?
+
+
+
+
+## topology as set of rulers <https://mathoverflow.net/a/19156>
+
+This analogy is a backport from computer science back to geometry, and a bit was lost in the translation. In CS, for open, read "verifiable", and for closed, read "non-verifiable". Termination of blackbox programs is a verifiable property: if someone gives you a program and tells you it halts, then if they're telling the truth, if you wait you'll eventually see the machine stop and know they told you the truth. Nontermination is non-verifiable: no matter how long we wait, we can never be sure that the program won't halt soon, and so we can't verify we were told the truth. –  
+
+
+
+
+## <https://mathoverflow.net/a/19173> 
+
+mm. ok, function is continuous at p iff p in cl(A) means f(p) in cl(f(A)). okay that does make way more sense  
+
+
+
+
+### `[2018-10-15]`  <https://en.wikipedia.org/wiki/Kuratowski_closure_axioms>
+
+
+
+
+# `[2019-01-26]` topological spaces intuition      [[topology]]
+
+hmm interesting definition in terms of 'touches' (v)  
+
+
+
+
+## in terms of closeness <https://mathoverflow.net/a/19173/29889>
+
+-   No point touches the empty subset.
+-   If x is an element of A, then x touches A.
+-   If x touches A∪B, then x touches A or x touches B.
+-   If x touches A, and every element of A touches B, then x touches B.
+
+then,  
+
+-   continuity at point: forall A. x v A => f(x) v f(A)  
+    e.g. f(x) = sign(x). If we take x = 0 and A = (0, 1). In usual topology, 0 touches A, so f(0) = 0 should touch {1}. But it doesn't!
+-   X is connected iff every continuous function from x to {0, 1} is constant  
+    e.g. take two sets A, B. if you define f(A) = 0 and f(B) = 1 that's ok since B has no points near A and vice versa  
+    from nearness a better approach to continuity
+-   disconnected: if A∪B = X, A not v B and B not v A
+-   The sequence (xn) converges to the point x if x touches every subsequence of (xn).
+-   The topological space X is Hausdorff if for any two distinct points w,x∈X, there is a subset A of X such that w doesn't touch A and x doesn't touch the complement of A.  
+    dunno, this one is weird  
+    TODO shit, I really want the ability to insert todos wherever I want, not only on outline levels
+
+
+
+
+### drill this?
+
+
+
+
+### compactness?? 
+
+
+
+
+### open set: if no point touches its complement? e.g. with (0, 1) for any specific point we will find interval that separates from [-inf, 0] U [1, inf]
+
+and in reverse: x touches X if for all O in tau contaning x, U intersect X is not empty. ah shit makes sense.  
+
+if there is a continuous map to Sierpinski space?  
+    sierpinski space: topologically, {}, {top}, {top, bot}. so, bot v {top} but not in reverse  
+    this is also simplest example for non-symmetry I guess  
+    ugh. this is crap.  
+<https://math.stackexchange.com/questions/31859/what-concept-does-an-open-set-axiomatise>  
+Note that the above description really brings out the special role of the Sierpinski space S. Indeed, a subset of a topological space X is open precisely when the indicator function X→S is continuous.  
+
+
+
+
+### `[2019-01-26]` right, I spent more than an hour proving something that could not be proved.. (that 0 touches (0, 1)). It really doesn't e.g. in discrete topology
+
+
+-   what can we learn from it?
+
+    not sure&#x2026;  
+
+
+
+
+## in terms of computability
+
+'observable' sets are open in the topology  
+S = {T, bot}  
+
+
+
+
+## continuity    in terms of 'touches' relation: { forall A. x v A => f(x) v f(A)  }      [[drill]]
+
+
+
+
+## connectedness in terms of 'touches' relation: { every cont. function from X ot (0, 1) is const }      [[drill]]
+
+
+
+
+# Compactness       [[topology]]
+
+
+
+
+
+## pdf by Tao compacness and compactification
+
+The extended real line is compact: any sequencexnof extended real numbers willhave a subsequence that either converges to +∞, converges to−∞, or convergesto a finite number. Thus by using this compactification of the real line, we cangeneralise the notion of a limit, by no longer requiring that the limit has to bea real number.  
+
+
+
+
+## read synthetic topology of data types and classical spaces
+
+
+
+
+# `[2016-08-14]` ODE Integrating factor: y' + f(t) y = g(t)
+
+-   multiply both parts by e<sup>&int; f(t) dt</sup>
+-   after that, we have  
+    (y exp(&int; f(t) dt)' = g(x) exp(&int; f(t) dt)  
+    Easy to solve.
+
+Homogenous: Sum<sub>n=0</sub><sup>N</sup> A<sub>n</sub> y<sup>(n)</sup> = 0  
+
+-   Guess: y = e<sup>z x</sup>, then everything reduces to the polynomial:
+-   Replace derivative y<sup>(n)</sup> with z<sup>n</sup>, solve for z, get the solution.
+-   If multiplicity of root z is m, then: x<sup>k</sup> e<sup>zx</sup> for k from 0 to m-1
+-   Linear independence can be shown using Vandermonde determinant
+
+
+
+
+# `[2016-06-20]` free structures      [[algebra]]
+
+free monoids are lists  
+free semigroups are nonempty lists?  
+free magmas are nonempty binary trees (data is in lists)  
+
+
+
+
+## `[2014-07-28]` free monoid
+
+A monoid M is freely generated by a subset A of M, if the following conditions hold  
+
+-   Every element m∈M can be written as a product of elements in A: m=a1⋅M&#x2026;⋅Man,ai∈A
+-   No "nontrivial" relations hold in M, that is, if a1&#x2026;aj=a′1&#x2026;a′k, then this is required by the axioms for monoids.
+
+
+
+
+# `[2020-03-22]` Shtetl-Optimized » Blog Archive » Ask Me Anything: Apocalypse Edition      [[math]]
+
+<https://www.scottaaronson.com/blog/?p=4684>  
+
+    As a simple example, I’m totally fine uttering statements like, “a family of Boolean functions with superquadratic gap between randomized and quantum query complexities exists“—even though the type of “existence” that we’re talking about clearly isn’t physical (some would call it Platonic).
+
+
+
+
+# `[2019-12-26]` Lean has real manifolds! | Xena      [[lean]]
+
+<https://xenaproject.wordpress.com/2019/12/17/lean-has-real-manifolds/#comments>  
+
+
+
+
+# `[2019-12-26]` Prove a theorem. Write a function. | Xena      [[lean]]
+
+<https://xenaproject.wordpress.com/2019/12/07/prove-a-theorem-write-a-function/>  
+
+
+
+
+# `[2015-02-14]` cos(|z|) Not holomorphic anywhere except z = 0?      [[complan]]
+
+
+
+
+# `[2014-07-01]` types of equality      [[typetheory]]
+
+-   Definitional (intensional) : two = succ (succ zero)  
+    Might use reductions (computational/reductional equality) : (\x. x + x) two = succ (succ (succ (succ zero)))
+-   Propositional: <span class="underline">==</span>
+-   Extensionally equal, with particular numbers  
+    &forall; x, y -> x + y <span class="underline">==</span> y + x
+
+
+
+
+# `[2016-10-24]` Zeno's paradox: Achilles and Tortoise
+
+The point: infinite sum of positive numbers in not always unbounded.  
+
+
+
+
+# `[2016-10-24]` Zeno's paradox: Achilles and Tortoise
+
+The point: infinite sum of positive numbers in not always unbounded.  
+
+
+
+
+# `[2016-10-24]` Galileo's Paradox:
+
+First, some numbers are squares, while others are not; therefore, all the numbers, including both squares and non-squares, must be more numerous than just the squares. And yet, for every square there is exactly one positive number that is its square root, and for every number there is exactly one square; hence, there cannot be more of one than of the other. This is an early use, though not the first, of the idea of one-to-one correspondence in the context of infinite sets.  
+
+Resolution: different defintions of equally sized sets.  
+
+
+
+
+# `[2016-10-27]` Heat equation: `U_t = U_xx`      [[physics]]
+
+-   Explicit: forward time, central space
+-   Implicit: backward time, central space
+-   Crank–Nicolson: central time, central space
+
+
+
+
+# `[2016-10-26]` methods of integration
+
+
+
+
+
+## Euler's method
+
+<https://en.wikipedia.org/wiki/Semi-implicit_Euler_method>  
+
+    Euler’s method is easy to understand, but it has one very large problem.
+    Since the method approximates the solution as a linear equation, the Euler
+    solution always underestimates the curvature of the solution. The result
+    is that for any sort of oscillatory motion, the energy of Euler’s solution
+    increases with time.
+
+Energy drift: <https://en.wikipedia.org/wiki/Energy_drift>  
+
+<https://math.stackexchange.com/questions/354342/eulers-method-on-differential-equation>  
+
+Total error order: dt  
+
+
+
+
+## Runge-Kutta 
+
+-   Second order: Total error order: dt<sup>2</sup>
+
+
+
+
+## Forward Euler
+
+Explicit: Y(t + dt) = F(Y(t))  
+
+Might be unstable, stiff equations. The first type of equations is something what is identified as "stiff-problems". We expect exponential dynamical decay into some particular solution  
+
+
+
+
+## Backward Euler
+
+Implicit: G(Y(t + dt), Y(t)) = 0  
+
+
+
+
+# `[2018-12-03]` Is a functional derivative a generalized function? - Mathematics Stack Exchange
+
+<https://math.stackexchange.com/questions/908499/is-a-functional-derivative-a-generalized-function>  
+
+
+
+
+## `[2018-12-09]` so, generally functional derivative is a (functional?) distribution: <dF[f]/df, v> = lim (F(f + eps v) - F(f)) / eps. However if a functional is 'good' enough, it can be represented as normal functional (as an integral).
+
+
+
+
+# hmmm cauchy riemann are just like euler lagrance! wonder if there is some direct analogy?      [[math]]
+
+Not really.. the derivatives are pretty different  
+
+
+
+
+# Theorem Proofs: These are the same as computer games. This is the mathematician’s favourite part. The natural number game is what happens if you take all the definitions and theorem statements out of the hands of the user, and just ask them to fill in the proofs, and give them enough of an API to make it fun. Bhavik Mehta made an impressive combinatorics repo and he told me that he never once had to think about how finite sets were actually implemented in Lean — he could just use the interface.
+
+todo  
+from [ip](https://www.instapaper.com/read/1279727070/12330512)   [Lean is better for proper maths than all the other theorem provers](https://xenaproject.wordpress.com/2020/02/09/lean-is-better-for-proper-maths-than-all-the-other-theorem-provers/)  
+
+
+
+
+# null hypothesis      [[statistics]]
+
+  
+
+-   .
+
+    [–]skibilly 2 points 2 years ago*
+    When p-value is used it's because you are attempting to test a hypothesis of some sort. So let's first define a hypothesis. At its simplest, a hypothesis is an attempt to explain some observation (generally by linking it to other observations). To keep things simple, let's say that you have observed that every time a cat gives birth, you've also observed that the babies have been kittens. You therefore attempt to explain this with the following hypothesis: "When a cat gives birth, the resultant offspring will be kittens." We'll call this "H1" for hypothesis number 1.
+    Now, in statistics (and by extension, science in general) there is never just one hypothesis. There is your hypothesis AND there's something called the Null Hypothesis. The Null Hypothesis states that there is actually no relationship between the observations you're trying to link. In our example, the Null Hypothesis would state: "There is no relationship between pregnant cats and kittens." We'll call this "H0" for hypothesis number 0 or, null hypothesis.
+    But what's the point of having a null hypothesis?
+    Aside from math (as far as I know) nothing we know about the universe is absolute. All that we know is based on observation, and since we can't observe everything that there is, we can't say with complete certainty that any explanation of an observation is "true." However, we can say that any given hypothesis has a higher or lower probability of being true than other hypotheses. Through beating as many alternative explanations as possible, we can increase our confidence that our successful explanation is true....but we can't ever say that it is 100% true. This is called inductive reasoning and it is the basis for all that we think we know about the universe.
+    Back to our example of pregnant cats and kittens. Because we understand the limitations of inductive reasoning, we know that we can't ever prove 100% that a pregnant cat will always give birth to kittens (maybe on some far away planet cats give birth only to snakes). However, we can at least show that our hypothesis (H1) has a higher probability of being true than the null hypothesis (H0). In other words, we can say that there is a high probability that there is at least some relationship between pregnant cats and kittens.
+    So, we start tracking every cat birth that we possibly can. Each time a cat gives birth we mark down whether the offspring is a kitten or something else. Once we have a good size of observations, we run the result through a statistic called "p-value" or "calculated probability." The number that comes out at the end is the probability of getting the same results if the null hypothesis is true.
+    In our example, let's say we observed 100 pregnant cats. All 1,000 births resulted in kittens. No snakes, no turtles, no balls of anti-matter. Just kittens. Rather than doing all the math we'll just say that our resulting p-value is 0.01. This means that there is a 1% chance that all 100 pregnant cats gave birth to kittens and yet there's actually no relationship between the two. The p-value doesn't say that your hypothesis is correct, and it doesn't say the null hypothesis is incorrect. The p-value merely states the probability that you could get the same results as you observed due to random chance.
+    Typically in science we consider a p-value of 0.05 to be significant. Meaning that unless the probability of getting the same results due to random chance is 5% or less, we generally don't pursue the alternate hypothesis and instead either continue looking for something better or stick with the null hypothesis: the observations are unrelated.
+
+
+
+
+# p-value       [[statistics]]
+
+-   .
+
+    It's not significant with respect to your a priori cutoff value, so it is not significant. All these terms:
+    approaching
+    marginally
+    trending toward
+    are incorrect interpretations, as you have no idea what would happen if you were to collect more data (e.g. p could be 0.09 after collecting additional cases, so how can one justify saying that 0.055 is approaching significance?).
+
+-   .
+
+    A p value is not a statistical analysis or a test, it is the outcome of a statistical test. One of the issues in relying on p values is that there are a lot of different ways to get to a p value, and not all of these may be appropriate (this is sometimes called torturing, submitting data to various statistical tests until something comes up significant).
+    The other point to make here is that we don't prove or disprove hypotheses. We can reject the null hypothesis and provide support for the alternate hypotheses, or we can fail to reject the null hypothesis and find, well, not much.
+    So, what does a p value mean?
+    Let's use an example. Say we are interested in testing a new drug to treat depression. One good way to test this is to get a big group of depressed individuals and to give them either this new drug or a placebo. Before doing this, we measure their level of depression on the Fictitious Depression Inventory (FDI). Before giving them a course of our new drug and placebo, our two groups have rather similar FDI scores:
+    Drug: 44.2 Placebo: 46.7
+    We then give them the appropriate pills (double blind and randomised, of course). After, say, eight weeks of this, our groups don't look as similar anymore:
+    Drug: 36.7 Placebo: 42.4
+    Both have improved in their depression scores (as frequently happens, depression improves over time). We run some statistics on our two groups, and we find that the two groups are different, with an obtained p value of 0.038 (this is usually written as p = .038). This is smaller than our critical value of 0.05 and we can conclude that there is indeed a difference between our groups as a result of the drug being better at lowering FDI scores than a placebo control.
+    So, what does this all mean? Well, there's two important things here. One is the meaning of the null hypothesis, and the other is the meaning of p = .038.
+    The null hypothesis states that the difference between the two groups we have is not real. Any difference that we see in those numbers is just because of chance or sampling or something else, because that difference does not exist in the population. What we are working with is a sample, we have a small group of depressed individuals relative to all the people in the world who are depressed. We want to know if what we see in our sample applies to everyone else (the population). If the null hypothesis is true, it says that, yeah, okay we have a difference in our sample, because our two numbers are different, but this difference is just noise or something else, it's not about the pills. When we reject the null, we say that the difference we see in our numbers is not due to chance, and we infer that this effect exists in the population.
+    So what is the p value? The p value is a way for us to formally acknowledge that there is some risk that we are wrong when we say the null hypothesis is false. Specifically, the p value is how likely we are to see the two numbers we're seeing (or another two numbers that different from one another) if the null is true. The cutoff that we have all accepted is at most 5% chance of accepting a result when the null is in fact true (p < .05). Why 5%? Well, when Fisher developed the idea of null hypothesis testing, he threw number out as an example and people kind of ran with it.
+    What are the issues with null hypothesis significance testing? Well, one big one is that it dichotomises thinking. Everything ends up being significant or not, when there is a little more finesse in there. The other issues, closely related to this, is that people misinterpret the p value so that a smaller p (say 0.0001 instead of 0.001 or 0.049) means that your experiment worked better. This really isn't true. You can get a "really significant" finding that really isn't important. Going back to our fake example from above, say your groups looked like this:
+    Drug: 36.8 Placebo: 38.4
+    If this effect comes out to be "highly significant" (p = .0013), it doesn't mean that the results are all that important because the difference between the two groups is so tiny. The drug did have an effect, but it didn't really help people much with their depression. And given the side effects that drugs can have, and the cost, you're probably better off in the long run in just taking that sugar pill.
+    This dichotomous thinking has other downsides. It forces people to push for significance when maybe that's not the best thing given the data. You can slice a data pie in many different ways, and eventually you may be able to get a significant result, but perhaps not one that is meaningful or that will replicate.
+    Whether or not you get a significant result is also dependent on the sample size you're working with. Running experiments is very laborious, and it's in everyone's benefit to test the least number of participants to give robust findings. The issue is that testing too few people, however, can make it more likely to find a significant effect (and testing way too many does the same by inflating the degrees of freedom).
+    Edit: Apologies if any of this is incoherent, please feel free to ask followup questions.
+
+
+
+
+# `[2016-10-04]` random variables      [[probability]]
+
+    A new random variable Y can be defined by applying a real Borel measurable function {\displaystyle g\colon \mathbb {R} \rightarrow \mathbb {R} } g\colon \mathbb {R} \rightarrow \mathbb {R}  to the outcomes of a real-valued random variable {\displaystyle X} X. The cumulative distribution function of {\displaystyle Y\,\!} Y\,\! is
+    
+    {\displaystyle F_{Y}(y)=\operatorname {P} (g(X)\leq y).} F_{Y}(y)=\operatorname {P} (g(X)\leq y).
+    If function {\displaystyle g} g is invertible, i.e., {\displaystyle g^{-1}} g^{-1} exists, and is either increasing or decreasing, then the previous relation can be extended to obtain
+    
+    {\displaystyle F_{Y}(y)=\operatorname {P} (g(X)\leq y)={\begin{cases}\operatorname {P} (X\leq g^{-1}(y))=F_{X}(g^{-1}(y)),&{\text{if }}g^{-1}{\text{ increasing}},\\\\\operatorname {P} (X\geq g^{-1}(y))=1-F_{X}(g^{-1}(y)),&{\text{if }}g^{-1}{\text{ decreasing}}.\end{cases}}} F_{Y}(y)=\operatorname {P} (g(X)\leq y)={\begin{cases}\operatorname {P} (X\leq g^{-1}(y))=F_{X}(g^{-1}(y)),&{\text{if }}g^{-1}{\text{ increasing}},\\\\\operatorname {P} (X\geq g^{-1}(y))=1-F_{X}(g^{-1}(y)),&{\text{if }}g^{-1}{\text{ decreasing}}.\end{cases}}
+
+
+
+
+# `[2014-10-22]` eigenvalues      [[linalg]]
+
+Algebraic multiplicity: multiplicity as a root of the characteristic polynomial.  
+In case of the field of complex numbers, the sum of algebraic mult. is exactly n.  
+
+Geometric multiplicity: dimenstion of the eigenspace, associated with the eigenvalue.  
+
+Sum of geometric multiplicities for A - &lambda; I is equal to dim ket (A - &lambda; I)  
+
+Jordan cell corresponds to each subspace  
+
+
+
+
+# `[2014-09-27]` some functional analysis notes      [[funcan]]
+
+L^&infin; space  
+A sequence of bumps of height 1 functions:  
+
+f(x) = 1 if x &isin; [n; n + 1], 0 otherwise  
+
+Does not have a convergent subsequence!  
+
+Fischer-Rietz theorem: L<sup>p</sup> is a Banach space.  
+Dominated convergence theorem.  
+
+
+
+
+# `[2019-11-26]` Interactive Linear Algebra | Hacker News
+
+<https://news.ycombinator.com/item?id=21628449>  
+
+
+
+
+# `[2019-11-21]` Differential Equation Solution Strategies | Intuitive Explanations      [[diffeq]]
+
+<https://intuitiveexplanations.com/math/differential-equation-solution-strategies>  
+
+
+
+
+# `[2019-11-26]` Immersive Math
+
+<http://immersivemath.com/ila/index.html>  
+
+
+
+
+# `[2020-04-02]` Is there something like this for math? Does anyone know? | Hacker News      [[math]]
+
+<https://news.ycombinator.com/item?id=16373386>  
+like physics travel guide, but for math  
+
+
+
+
+# `[2019-09-01]` Bourbaki dangerous bend symbol - Wikipedia
+
+<https://en.wikipedia.org/wiki/Bourbaki_dangerous_bend_symbol>  
+
+    The dangerous bend or caution symbol ☡ (U+2621 ☡ CAUTION SIGN) was created by the Nicolas Bourbaki group of mathematicians and appears in the margins of mathematics books written by the group. It resembles a road sign that indicates a "dangerous bend" in the road ahead, and is used to mark passages tricky on a first reading or with an especially difficult argument.[2]
+
+
+
+
+# `[2019-05-04]` List of computer algebra systems - Wikipedia <https://en.wikipedia.org/wiki/List_of_computer_algebra_systems>
+
+    interesting, there are not that many different computer algebra systems. Also look that sagemath is updated more often than sympy?
+
+
+
+
+# `[2019-02-26]` LMS Popular Lecture Series 2017, 'The Unreasonable Effectiveness of Physics in Maths', David Tong
+
+<https://www.youtube.com/watch?v=UVuKyZ4pBzg&list=WL&index=71&t=0s>  
+18:42 if you're a mathematician, you're not gonna escape, the universe will find applications  
+
+
+
+
+# `[2019-11-23]` Supertasks - YouTube
+
+<https://www.youtube.com/watch?v=ffUnNaQTfZE>  
+good video on hypercomputation and infinite series  
+
+
+
+
+# `[2019-12-26]` The Future of Mathematics? - YouTube      [[types]] [[math]]
+
+<https://www.youtube.com/watch?v=Dp-mQ3HxgDE&list=WL&index=48&t=1s>  
+great talk (advocates Lean prover)  
+
+
+
+
+# `[2019-02-15]` linear algebra - Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition? - Mathematics Stack Exchange
+
+<https://math.stackexchange.com/questions/320220/intuitively-what-is-the-difference-between-eigendecomposition-and-singular-valu/320232#320232>  
+difference between svd and eigendecomposition  
+
+
+
+
+# `[2018-07-21]` Bayesian and frequentist reasoning in plain English - Cross Validated      [[bayes]]
+
+<https://stats.stackexchange.com/questions/22/bayesian-and-frequentist-reasoning-in-plain-english#comment3052_56>  
+
+
+
+
+# <https://jakevdp.github.io/blog/2014/06/12/frequentism-and-bayesianism-3-confidence-credibility/>       [[bayes]]
+
+
+
+
+# <http://www.behind-the-enemy-lines.com/2008/01/are-you-bayesian-or-frequentist-or.html>       [[bayes]]
+
+some practical example with beta distribution for bayes vs freq  
+
+
+
+
+# <https://www.youtube.com/watch?v=KhAUfqhLakw>       [[bayes]]
+
+good talk, nice explanation of bayes vs frequentist  
+takeaway: bayes os more natural for communicating scientific results to public: model parameter is 95% likely to be within the specific confidence interval  
+
+
+
+
+## 13:00 
+
+<https://en.wikipedia.org/wiki/Nuisance_parameter>  
+nuiscance parameter &#x2013; integrated over in bayessian method? <https://en.wikipedia.org/wiki/Marginal_likelihood#Bayesian_model_comparison>  
+
+
+
+
+## 15:29 conditioning vs marginalization
+
+frequentist taking a slice, bayessian is integrating over (see the pictures)  
+
+
+
+
+## 17:00 confidence vs credibility
+
+freq : If this experiment is repeated many times, in 95% xases the computed xonfidence interval will contain the true parameter. confidence interval varying, parameter fixed.  
+bayes: Given oyt observed data there is a 95% probability that the value of parameter lies within the credible region.  credible region fixed, parameter varying  
+
+
+
+
+# some interesting point about what people actually mean when debating frequentist vs bayes      [[bayes]]
+
+<https://www.lesswrong.com/posts/mQfNymou9q5riEKrf/frequentist-vs-bayesian-breakdown-interpretation-vs>  
+
+
+
+
+# <http://math.ucr.edu/home/baez/surprises.html> surprises in math      [[baez]]
+
+
+
+
+# `[2019-11-11]` David Chapman on Twitter: "Excellent explanation of the emotional fallout from the crisis of the foundations of mathematics <https://t.co/wxCBgLDizA>" / Twitter
+
+<https://twitter.com/Meaningness/status/1193683556364513280>  
+
+    Excellent explanation of the emotional fallout from the crisis of the foundations of mathematics
+
+
+
+
+# `[2018-04-02]` <https://twitter.com/gabrielpeyre/status/980716282227118080?s=20>      [[math]] [[pde]]
+
+    Parabolic PDEs (e.g. heat) smooth out singularities. Hyperbolic PDEs (e.g. wave) displace singularities. 
+
+
+
+
+# `[2018-12-25]` some proofs are better than others when you are working with proof assistants. In a sense this principle also applies here: some ways of deriving are easier for sympy to handle      [[math]]
+
+
+
+
+# `[2020-12-23]` [Aleph 0 - YouTube](https://www.youtube.com/c/Aleph0/videos)      [[math]]
+
+excellent videos  
+
+
+
+
+# Try spaced repetition for basic topology      [[topolog]] [[spacedrep]]
+
+
+
+
+# `[2019-06-20]` existence of solutions for IVP dy/dx = f(y, x); y(x<sub>0</sub>) = y<sub>0</sub>      [[drill]] [[diffeq]]
+
+if f(y, x) and df/dy(y, x) are continuous around y<sub>0</sub>, x<sub>0</sub>, there exists a local solution  
+Note that the theorem only guarantees the existence of solution nearby the initial values,and one cannot expect the solution to be defined for allx  
+
+
+
+
+# `[2019-12-20]` verbit.ru/Job/HSE/Curriculum/all.txt <http://verbit.ru/Job/HSE/Curriculum/all.txt>
+
+
+
+
+# `[2018-10-30]` Topoi: The Categorial Analysis of Logic (Dover Books on Mathematics): Amazon.co.uk: Robert Goldblatt: 0800759450268: Books
+
+<https://www.amazon.co.uk/Topoi-Categorial-Analysis-Logic-Mathematics/dp/0486450260>  
+
+
+
+
+# `[2019-05-10]` What is Applied Category Theory? | Azimuth <https://johncarlosbaez.wordpress.com/2018/09/18/what-is-applied-category-theory/>
+
+
+
+
+# `[2019-05-10]` Об Байеса - 2 - Не кинокритик. Не палеонтолог. <https://plakhov.livejournal.com/227597.html>
+
+
+
+
+# `[2019-05-04]` Sage Manifolds - Wikipedia <https://en.wikipedia.org/wiki/Sage_Manifolds>
+
+
+
+
+# `[2019-02-22]` The Calculus of Variations | Bounded Rationality <https://bjlkeng.github.io/posts/the-calculus-of-variations/>
+
+some good explanations for calculus of variations  
+
+
+
+
+# `[2019-11-03]` I hate the Pumping Lemma | Bosker Blog <https://bosker.wordpress.com/2013/08/18/i-hate-the-pumping-lemma/>
+
+
+
+
+# `[2019-08-27]` The Existential Risk of Math Errors - Gwern.net <https://www.gwern.net/The-Existential-Risk-of-Mathematical-Error#sn25>
+
+    Reading great mathematicians like Terence Tao discuss the heuristics they use on unsolved problems25, they bear some resemblances to computer science techniques.
+
+
+
+
+# `[2019-12-26]` The Future of Mathematics? [video] | Hacker News <https://news.ycombinator.com/item?id=21200721>
+
+    Lean: https://leanprover.github.io/
+    Repo: https://github.com/leanprover/lean/
+    Chat: https://leanprover.zulipchat.com/
+    The maths course (in French) that can be seen during the presentation: https://www.math.u-psud.fr/~pmassot/enseignement/math114/
+
+
+
+
+# `[2019-12-26]` Theorem Proving in Lean | Hacker News <https://news.ycombinator.com/item?id=17171101>
+
+    Lean deserves wide recognition. First, it's fast enough for highly interactive theorem development. Second it can also be used as a programming language. And lastly its syntax is pleasant to work with which is important to the experience.
+    If you have only heard about interactive theorem provers and don't yet have any opinions I'd give Lean a try first. The interactive tutorials are nice and the aforementioned features make it pleasant to work with.
+
+
+
+
+# `[2019-12-26]` Theorem Proving in Lean | Hacker News <https://news.ycombinator.com/item?id=17171101>
+
+    bandali on May 28, 2018 [-]
+    An Introduction to Lean [0] is another nice (albeit incomplete) tutorial.
+    There’s a fairly active community over on Zulip [1] if you like to drop by for a chat or get some help.
+    [0]: https://leanprover.github.io/introduction_to_lean/
+    [1]: https://leanprover.zulipchat.com
+
+
+
+
+# `[2019-12-26]` A Review of the Lean Theorem Prover | Jigger Wit <https://jiggerwit.wordpress.com/2018/09/18/a-review-of-the-lean-theorem-prover/>
+
+
+
+
+# `[2019-12-08]` 11.3 - Identifying Outliers (Unusual y Values) | STAT 501 <https://newonlinecourses.science.psu.edu/stat501/lesson/11/11.3>
+
+    An observation with an internally studentized residual that is larger than 3 (in absolute value) is generally deemed an outlier.
+
+
+
+
+# `[2020-05-12]` [A 2020 Vision of Linear Algebra | Hacker News](https://news.ycombinator.com/item?id=23150699)
+
+
+
+
+# `[2020-07-31]` [Hyperbolica on Steam](https://store.steampowered.com/app/1256230/Hyperbolica/)      [[math]] [[games]]
+
+
+
+
+# frequentist vs vs bayes probability
+
+<https://stats.stackexchange.com/questions/31867/bayesian-vs-frequentist-interpretations-of-probability>  
+
+    The snag is that we have to introduce the prior distribution into our analysis - this reflects our belief about the value of p before seeing the actual values of the Xi. The role of the prior is often criticised in the frequentist approach, as it is argued that it introduces subjectivity into the otherwise austere and object world of probability.
+    It might also be good to mention that the gap between the frequentist and Bayesian approaches is not nearly as great on a practical level: any frequentist method that produces useful and self-consistent results can generally be given a Bayesian interpretation, and vice versa. In particular, recasting a frequentist calculation in Bayesian terms typically yields a rule for calculating the posterior given some specific prior. One can then ask "Well, is that prior actually a reasonable one to assume?"
+    You're right about your interpretation of Frequentist probability: randomness in this setup is merely due to incomplete sampling. From the Bayesian viewpoint probabilities are "subjective", in that they reflect an agent's uncertainty about the world. It's not quite right to say that the parameters of the distributions "change". Since we don't have complete information about the parameters, our uncertainty about them changes as we gather more information.
+    A Bayesian may say that the probability that there was life on Mars a billion years ago is 1/2.
+    A frequentist will refuse to assign a probability to that proposition. It is not something that could be said to be true in half of all cases, so one cannot assign probability 1/2.
+    Frequentists posit that the probability of an event is its relative frequency over time,[1] (3.4) i.e., its relative frequency of occurrence after repeating a process a large number of times under similar conditions. This is also known as aleatory probability. The events are assumed to be governed by some random physical phenomena, which are either phenomena that are predictable, in principle, with sufficient information (see determinism); or phenomena which are essentially unpredictable. Examples of the first kind include tossing dice or spinning a roulette wheel; an example of the second kind is radioactive decay. In the case of tossing a fair coin, frequentists say that the probability of getting a heads is 1/2, not because there are two equally likely outcomes but because repeated series of large numbers of trials demonstrate that the empirical frequency converges to the limit 1/2 as the number of trials goes to infinity.
+
+<https://www.reddit.com/r/statistics/comments/ywrba/eli5_bayesian_statistics/>  
+
+    Bayesian statistics rely more on computational simulations and have become more common because computers have become much faster. A lot of people are put off by the fact that you incorporate prior believes into your estimate of the "truth", but you can use non-informative (vague) priors like in the example above (each possible outcome gets equal probability) and in any case with a lot of data your priors will become less important.
+

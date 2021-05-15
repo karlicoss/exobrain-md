@@ -1,0 +1,244 @@
+
+# Table of Contents
+
+-   [`[2016-06-20]` What is functional programming?](#whtsfnctnlprgrmmng) 
+-   [Free monads](#frmnds) [[monad]]
+-   [`[2016-10-24]` Kleisli monads](#klslmnds) [[monad]]
+-   [`[2016-02-05]` type classes: downcasting and instanceof are impossible!](#typclsssdwncstngndnstncfrmpssbl) 
+-   [`[2016-09-25]` parametricity](#prmtrcty) 
+-   [`[2016-08-07]` semantics](#smntcs) 
+-   [related](#rltd) [[programming]] [[haskell]] [[typetheory]]
+-   [`[2015-06-20]` foldl vs foldr](#fldlvsfldr) [[fp]]
+-   [`[2015-06-20]` let polymorphism http://stackoverflow.com/a/12033549/706389](#ltplymrphsmstckvrflwcm) [[fp]]
+-   [`[2021-01-01]` Bartosz Milewski (@BartoszMilewski): "Starting the new year with a new project: The Dao of Functional Programming. Here's a short intro." | nitter](#snttrntbrtszmlwsksttsbrtstnlprgrmmnghrsshrtntrnttr) 
+-   [`[2018-11-27]` Pinboard: bookmarks for karlicoss tagged 'fp'](#pnbrdbkmrksfrkrlcsstggdfp) [[fp]]
+-   [`[2016-02-28]` Existential types](#xstntltyps) [[haskell]]
+-   [`[2016-02-28]` Haskell version of Yoneda lemma](#hskllvrsnfyndlmm) [[yoneda]] [[haskell]]
+
+
+
+
+
+# `[2016-06-20]` What is functional programming?
+
+-   First-class and higher-order functions
+-   Pure functions
+-   Recursion (as a consequence of pure functions?)
+-   Strict versus non-strict evaluation
+-   Type systems
+
+    When do you choose functional programming over object oriented?
+    When you anticipate a different kind of software evolution:
+    
+    Object-oriented languages are good when you have a fixed set of operations on things, and as your code evolves, you primarily add new things. This can be accomplished by adding new classes which implement existing methods, and the existing classes are left alone.
+    
+    Functional languages are good when you have a fixed set of things, and as your code evolves, you primarily add new operations on existing things. This can be accomplished by adding new functions which compute with existing data types, and the existing functions are left alone.
+    
+    When evolution goes the wrong way, you have problems:
+    
+    - Adding a new operation to an object-oriented program may require editing many class definitions to add a new method.
+    - Adding a new kind of thing to a functional program may require editing many function definitions to add a new case.
+
+
+
+
+# Free monads      [[monad]]
+
+-   <http://www.parsonsmatt.org/2017/09/22/what_does_free_buy_us.html> good tutorial with examples
+-   <https://markkarpov.com/post/free-monad-considered-harmful.html>
+
+
+
+
+# `[2016-10-24]` Kleisli monads      [[monad]]
+
+Earlier I said that the key to a monad is its Kleisli arrows. The reason why is that Kleisli arrows are morphisms in the Kleisli category, where (>=>) is Kleisli arrow composition:  
+
+    (>=>) :: (Monad m) => (a -> m b) -> (b -> m c) -> (a -> m c)
+    (f >=> g) x = f x >>= g
+    .. and return is the identity:
+    return :: (Monad m) => a -> m a
+
+Like all categories, the Kleisli category must obey the category laws:  
+
+    return >=> f = f                   -- Left identity
+    f >=> return = f                   -- Right identity
+    (f >=> g) >=> h = f >=> (g >=> h)  -- Associativity
+
+
+
+
+# `[2016-02-05]` type classes: downcasting and instanceof are impossible!
+
+
+
+
+# `[2016-09-25]` parametricity
+
+    In a parametric language the presence of a universally quantified type variable intuitively conveys a very strong guarantee: A (part of a) value passed to a parametric polymorphic function in the position of a type variable is guaranteed only to be copied and moved around, but never inspected in the function
+
+
+
+
+# `[2016-08-07]` semantics
+
+Denotational semantics: natural, maps to mathematical domains  
+Operational semantics: describes execution on an abstract machine  
+
+-   Small step / big step
+
+Denotational semantics is similar to high-level operational semantics, except:  
+
+-   Machine is gone
+-   Language is mathematics (lambda calculus)
+
+The difference between denotational and operational semantics:  
+
+-   In operational semantics, the state changes are defined by coded algorithms for a virtual machine
+-   In denotational semantics, they are defined by rigorous mathematical functions
+
+
+
+
+# related       [[programming]] [[haskell]] [[typetheory]]
+
+
+
+
+# `[2015-06-20]` foldl vs foldr      [[fp]]
+
+    -- Left fold:
+    foldl :: (a -> b -> a) -> a -> [b] -> a
+    foldl f z []   = z
+    foldl f z (x:xs) = foldl f (f z x) xs
+    
+    -- Tail recurstion, but recurses forever if the list is infinite.
+    -- Might cause OOM due to enormous thunks.
+    
+    foldl' : strict version
+    foldl' :: (a -> b -> a) -> a -> [b] -> a
+    foldl' f !z [] = z
+    foldl' f !z (x: xs) = foldl' f (f z x) xs
+    
+    -- Right fold:
+    foldr :: (a -> b -> b) -> b -> [a] -> b
+    foldr f z []     = z
+    foldr f z (x:xs) = f x (foldr f z xs)
+
+foldr: under lazy evaluation, may stop early and thus can deal with infinite lists.  
+Might cause OOM: foldr (+) 0 [1..1000000]  
+
+TODO: internal thunk stack?  
+
+
+
+
+# `[2015-06-20]` let polymorphism <http://stackoverflow.com/a/12033549/706389>      [[fp]]
+
+We might want to define  
+	let x = expr in t  
+	as (\x.t) expr  
+
+We've got to assign a concrete type to f (TODO why?), which means it can't be forall a.a -> a  
+
+Instead, we define it as a primitive:  
+
+    \Gamma \vdash expr: S; \Gamma \vdash t[x -> expr]: T
+    ----------------------------------------------
+    \Gamma \vdash let x = expr in t: T
+    
+    \Gamma vdash expr:S to assure typability of expr at all.
+
+A key insight in this matter is that rather than just typing a lambda-abstraction with a potentially polymorphic argument type, we are typing a (sugared) abstraction that is (1) applied exactly once and, moreover, that is (2) applied to a statically known argument. That is, we can first subject the "argument" (i.e. the definiens of the local definition) to type reconstruction to find its (polymorphic) type; then assign the found type to the "parameter" (the definiendum); and then, finally, type the body in the extended type context.  
+
+Basically, we can write polymorphic functions, but can't use arguments in polymorphic way.  
+
+Note that it's perfectly possible to pass a polymorphic function as an argument to another function. So something like map id ["a","b","c"] is perfectly legal. But the function may only use it as monomorphic. In the example map uses id as if it had type String -> String  
+
+
+
+
+# `[2021-01-01]` [Bartosz Milewski (@BartoszMilewski): "Starting the new year with a new project: The Dao of Functional Programming. Here's a short intro." | nitter](https://nitter.net/BartoszMilewski/status/1345082689129365504)
+
+    Starting the new year with a new project: The Dao of Functional Programming. Here's a short intro.
+
+
+
+
+# `[2018-11-27]` Pinboard: bookmarks for karlicoss tagged 'fp'      [[fp]]
+
+<https://pinboard.in/u:karlicoss/t:fp>  
+
+
+
+
+# `[2016-02-28]` Existential types      [[haskell]]
+
+    data Obj = forall a. (Show a) => Obj a
+    
+    xs :: [Obj]
+    xs = [Obj 1, Obj "foo", Obj 'c']
+    
+    doShow :: [Obj] -> String
+    doShow [] = ""
+    doShow ((Obj x):xs) = show x ++ doShow xs
+
+Dynamic dispatch:  
+
+     class Shape_ a where
+       perimeter :: a -> Double
+       area      :: a -> Double
+    
+     data Shape = forall a. Shape_ a => Shape a
+    
+     type Radius = Double
+     type Side   = Double
+    
+     data Circle    = Circle    Radius
+     data Rectangle = Rectangle Side Side
+     data Square    = Square    Side
+    
+    
+     instance Shape_ Circle where
+       perimeter (Circle r) = 2 * pi * r
+       area      (Circle r) = pi * r * r
+    
+     instance Shape_ Rectangle where
+       perimeter (Rectangle x y) = 2 * (x + y)
+       area      (Rectangle x y) = x * y
+    
+     instance Shape_ Square where
+       perimeter (Square s) = 4*s
+       area      (Square s) = s*s
+    
+     instance Shape_ Shape where
+       perimeter (Shape shape) = perimeter shape
+       area      (Shape shape) = area      shape
+    
+    -- Smart constructor:
+    
+     circle :: Radius -> Shape
+     circle r = Shape (Circle r)
+    
+     rectangle :: Side -> Side -> Shape
+     rectangle x y = Shape (Rectangle x y)
+    
+     square :: Side -> Shape
+     square s = Shape (Square s)
+    
+     shapes :: [Shape]
+     shapes = [circle 2.4, rectangle 3.1 4.4, square 2.1]
+
+
+
+
+# `[2016-02-28]` Haskell version of Yoneda lemma      [[yoneda]] [[haskell]]
+
+    forall r . ((a -> r) -> f r) ~ f a, where f is a functor
+
+Concrete example:  
+
+    fun :: forall r . ((Bool -> r) -> [r]
+
+How many different implementations of fun are there? As many as there are lists of Bools.  
+

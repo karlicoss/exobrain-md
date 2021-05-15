@@ -1,0 +1,151 @@
+
+# Table of Contents
+
+-   [`[2019-02-14]` Notes - Gwern.net](#ntsgwrnnt) [[backup]]
+-   [Zfs and full fs backup?](#zfsndfllfsbckp) 
+    -   [https://www.reddit.com/r/DataHoarder/wiki/zfs](#swwwrddtcmrdthrdrwkzfs) 
+-   [backups and cloud sync should be treated differently](#bckpsndcldsyncshldbtrtddffrntly) [[toblog]]
+-   [`[2019-11-14]` GitHub Archive Program | The GitHub Archive Program will safely store every public GitHub repo for 1,000 years in the Arctic World Archive in Svalbard, Norway.](#gthbrchvprgrmthgthbrchvprthrctcwrldrchvnsvlbrdnrwy) 
+-   [three purposes?](#thrprpss) [[toblog]]
+-   [Use my own script instead of sms backup/restore? Not sure if would need it for phone migration though](#smywnscrptnstdfsmsbckprstntsrfwldndtfrphnmgrtnthgh) [[phone]] [[backup]]
+-   [`[2020-04-05]` huginn/example<sub>backup.rb</sub> at master · huginn/huginn](#hgnnxmplbckprbtmstrhgnnhgnn) [[backup]] [[huginn]]
+-   [`[2020-02-27]` Termux: For what are you using it? /r/fossdroid](#srddtcmrfssdrdcmmntsfzdtrtfxtrmxfrwhtrysngtrfssdrd) [[backup]]
+-   [`[2020-04-30]` Backup tooling](#sbrknsndlsnttchnclbckptlngbckptlng) 
+-   [`[2019-12-22]` Borg or Restic? – stickleback.dk](#brgrrstcstcklbckdk) [[borg]]
+-   [`[2018-09-19]` mount locks the repo, so can't be mount permanently https://github.com/borgbackup/borgweb/issues/103](#mntlcksthrpscntbmntprmnntlysgthbcmbrgbckpbrgwbsss) [[borg]]
+-   [check if borg is dropbox-friendly](#chckfbrgsdrpbxfrndly) [[backup]] [[borg]]
+    -   [`[2018-09-05]` hmm. doesn't appear so. for two photos, seems to have concatenated them..](#hmmdsntpprsfrtwphtssmsthvcnctntdthm) 
+    -   [`[2018-09-06]` ugh. it even splits data in chunks, but they can be sized up to 400Meg?&#x2026; maybe I can choose chunk size?](#ghtvnspltsdtnchnksbtthycnbszdptmgmybcnchschnksz) 
+-   [`[2018-08-18]` borgbackup/borgweb: Web UI for Borg Backup](#brgbckpbrgwbwbfrbrgbckp) [[borg]]
+-   [`[2018-07-05]` ok backintime refuses to backup symlinked folders](#kbckntmrfsstbckpsymlnkdfldrs) [[backup]]
+-   [`[2018-09-04]` tried archivemount&#x2026; meh, can't update archive on the fly :(](#trdrchvmntmhcntpdtrchvnthfly) [[backup]]
+-   [`[2020-01-27]` Re: backup software · Issue 1 · albertz/wiki](#rbckpsftwrsslbrtzwk) [[borg]]
+
+
+
+
+
+# `[2019-02-14]` Notes - Gwern.net      [[backup]]
+
+<https://www.gwern.net/Notes#november-2016-data-loss-postmortem>  
+
+    (In July 2017, I realized that my arbtt window-tracking logs, which I keep for productivity analyses, hadn’t been updated since December 2016, costing me over half a year of data; I discovered that I had deleted my local user binaries because they were compiled on the previous system, but had forgotten to reinstall arbtt locally and my cron job hardwired the local version. This was because the arbtt packaged by Debian/Ubuntu was too outdated so I installed from HEAD, and then the error from the missing binary was not reported in system emails because the call is wrapped in an infinite loop which ignores errors; and that was because arbtt would segfault once a month & stop recording data. I reinstalled arbtt, checked that the latest version worked & removed the hardwiring, and added a daily arbtt report which would expose any lack of data collection - but the lost data is forever.)
+
+
+
+
+# Zfs and full fs backup?
+
+
+
+
+
+## <https://www.reddit.com/r/DataHoarder/wiki/zfs> 
+
+
+
+
+# backups and cloud sync should be treated differently      [[toblog]]
+
+
+
+
+# `[2019-11-14]` GitHub Archive Program | The GitHub Archive Program will safely store every public GitHub repo for 1,000 years in the Arctic World Archive in Svalbard, Norway.
+
+<https://archiveprogram.github.com/>  
+
+
+
+
+# three purposes?      [[toblog]]
+
+-   replication (more for convenience), e.g. cloud
+-   disk failures
+-   emergency/prepping (i.e. 'grab your shit and run away' scenario)
+
+
+
+
+# Use my own script instead of sms backup/restore? Not sure if would need it for phone migration though      [[phone]] [[backup]]
+
+
+
+
+# `[2020-04-05]` huginn/example<sub>backup.rb</sub> at master · huginn/huginn      [[backup]] [[huginn]]
+
+<https://github.com/huginn/huginn/blob/master/doc/deployment/backup/example_backup.rb>  
+uh. fuck it's a bit complicated&#x2026;  
+
+
+
+
+# `[2020-02-27]` [Termux: For what are you using it?](https://reddit.com/r/fossdroid/comments/faezd9/termux_for_what_are_you_using_it/fixo397/) /r/fossdroid      [[backup]]
+
+    Make backups of my phone and camera (external SD card) with an USB-C SD reader and usb A female, and an SATA SSD (using a SATA to USB A adapter). I use restic with a simple bash wrapper.
+    I make a copy every night and then I keep the disk in the hotel. If someone stoles or I lose my camera bag, I would just lose the pictures taken that day.
+    EDIT: *restic, not Borg. I couldn't make Borg to work.
+
+
+
+
+# `[2020-04-30]` [Backup tooling](https://brokensandals.net/technical/backup-tooling/)
+
+    I'm a little bit of a data hoarder. When an app or cloud service becomes an important part of my life, I try to have some process in place to regularly backup my information from it. An excellent post by karlicoss on "Building data liberation infrastructure" inspired me to improve my own processes and share them.
+
+
+
+
+# `[2019-12-22]` Borg or Restic? – stickleback.dk      [[borg]]
+
+<https://stickleback.dk/borg-or-restic/>  
+
+    The single big advantage that Restic has over Borg is the support for different types of backup storage. If you need anything other than local storage or remote storage accessed via SSH, then you will have to use Restic. 
+
+
+
+
+# `[2018-09-19]` mount locks the repo, so can't be mount permanently <https://github.com/borgbackup/borgweb/issues/103>      [[borg]]
+
+
+
+
+# check if borg is dropbox-friendly      [[backup]] [[borg]]
+
+
+
+
+
+## `[2018-09-05]` hmm. doesn't appear so. for two photos, seems to have concatenated them..
+
+
+
+
+## `[2018-09-06]` ugh. it even splits data in chunks, but they can be sized up to 400Meg?&#x2026; maybe I can choose chunk size?
+
+
+
+
+# `[2018-08-18]` borgbackup/borgweb: Web UI for Borg Backup      [[borg]]
+
+<https://github.com/borgbackup/borgweb>  
+
+
+
+
+# `[2018-07-05]` ok backintime refuses to backup symlinked folders      [[backup]]
+
+kinda makes sense since when you restore you don't want to overwrite&#x2026;  
+
+
+
+
+# `[2018-09-04]` tried archivemount&#x2026; meh, can't update archive on the fly :(      [[backup]]
+
+
+
+
+# `[2020-01-27]` Re: backup software · Issue 1 · albertz/wiki      [[borg]]
+
+<https://github.com/albertz/wiki/issues/1>  
+my comments here  
+

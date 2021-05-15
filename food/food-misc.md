@@ -1,0 +1,303 @@
+
+# Table of Contents
+
+-   [`[2018-04-23]` Variation in stimulation is evolutionary beneficial](#vrtnnstmltnsvltnrybnfcl) [[gastronomy]]
+-   [`[2018-04-30]` Lemon and melon are the same molecule, just chiral mirror images](#lmnndmlnrthsmmlcljstchrlmrrrmgs) [[gastronomy]]
+-   [`[2018-05-11]` pancakes chemistry](#pnckschmstry) [[gastronomy]]
+-   [`[2018-07-06]` White chocolate is only cocoa butter + sugar + cream](#whtchcltsnlyccbttrsgrcrm) 
+-   [`[2018-05-29]` Oil: one reason for using oil is just to make a thermal path between the pan and the food, so the food doesn't only cook exactly where it touches.](#lnrsnfrsnglsjsttmkthrmlpthfddsntnlyckxctlywhrttchs) 
+-   [`[2017-02-26]` saturated and unsaturated fats: different molecule 'packing' patterns -> different internal energy, different boiling temperatures](#strtdndnstrtdftsdffrntmlctrnlnrgydffrntblngtmprtrs) 
+-   [`[2017-02-26]` how fruits are dried](#hwfrtsrdrd) 
+-   [Debunk This: This is The Most Powerful Natural Antibiotic Ever – Kills Any Infections in The Body https://www.reddit.com/r/DebunkThis/comments/2sfk0g/debunk\_this\_this\_is\_the\_most\_powerful\_natural/](#dbnkthsthssthmstpwrflntrldbnkthsthssthmstpwrflntrl) 
+-   [oven camembert (250g?) + 200-300g steamed tenderstem broccoli/asparagus spears (very ergonipic for dipping in cheese)](#vncmmbrtggstmdtndrstmbrccgssprsvryrgnpcfrdppngnchs) [[recipe]]
+-   [`[2018-07-23]` melting has something to do with ph (goat cheese)](#mltnghssmthngtdwthphgtchs) [[foodscience]] [[cheese]]
+-   [`[2018-07-11]` stinky cheese &#x2013; same type of bacteria as feet](#stnkychssmtypfbctrsft) [[foodscience]] [[cheese]]
+-   [`[2018-05-03]` Maillard reaction](#mllrdrctn) [[gastronomy]] [[chemistry]]
+    -   [`[2019-06-18]` need to drill it](#ndtdrllt) 
+-   [dietary guidelines were the cause of obesity epidemic?](#dtrygdlnswrthcsfbstypdmc) 
+    -   [`[2021-01-14]` eh. now thinkin it sounds like a conspiracy theory. have to be extremely cautious about these](#hnwthnkntsndslkcnsprcythryhvtbxtrmlyctsbtths) 
+-   [what other active compounds are in coffee? https://www.reddit.com/r/Nootropics/comments/8cnmd7/a\_cup\_of\_coffee\_always\_makes\_me\_feel\_more\_awake/dxgdxlb/](#whtthrctvcmpndsrncffswwwrfcfflwysmksmflmrwkdxgdxlb) [[study]]
+-   [`[2019-06-15]` ПОСТ №015 – Vlad Lunachev – Medium](#постvldlnchvmdm) [[food]]
+-   [`[2020-08-25]` Freeze Dried Food | Mountain House](#swwwmntnhscmfrzdrdfdmntnhs) 
+-   [`[2020-11-27]` Вера Кичанова, либертарианка, researcher в архитектурном бюро Захи Хадид - Кооператив «Темза»](#stmzckchnvfbcldwrgjqdnrntозахихадидкооперативтемза) 
+-   [`[2018-04-09]` Steaming is quick because conduction takes lots of energy](#stmngsqckbcscndctntksltsfnrgy) [[foodscience]]
+-   [They Go Really Well Together https://blog.khymos.org/tgrwt/](#thygrllywlltgthrsblgkhymsrgtgrwt) [[chemistry]] [[foodscience]]
+-   [https://nplus1.ru/news/2019/06/17/perfect-blinchik](#snplsrnwsprfctblnchk) [[foodscience]]
+-   [`[2018-03-04]` blanching broccoli](#blnchngbrccl) [[foodscience]]
+-   [`[2019-02-24]` Intermittent Fasting vs Regular Dieting - YouTube](#ntrmttntfstngvsrglrdtngytb) 
+-   [`[2018-07-11]` fish flesh if red due to myoglobin (if a fish is fast swimmer)](#fshflshfrddtmyglbnffshsfstswmmr) 
+-   [maillard reactions chemistry (from edx course)](#mllrdrctnschmstryfrmdxcrs) [[gastronomy]]
+-   [different heating protocols (from edx course)](#dffrnthtngprtclsfrmdxcrs) [[gastronomy]]
+-   [`[2018-07-27]` pandan cake &#x2013; pretty nice](#pndnckprttync) [[food]]
+-   [`[2018-08-10]` macadamia](#mcdm) [[food]]
+-   [`[2018-08-21]` DomesticApe23 comments on Is mold in blue cheeses different in any way from the mold we usually despise that makes it desireable in food?](#dmstcpcmmntsnsmldnblchssddwsllydspsthtmkstdsrblnfd) [[cheese]] [[wine]]
+-   [`[2018-06-30]` awesomedata/awesome-public-datasets: A topic-centric list of high-quality open datasets in public domains. Propose NEW data ☛☛☛PR☛☛☛](#wsmdtwsmpblcdtststpccntrcndtstsnpblcdmnsprpsnwdtpr) [[track_changes]]
+-   [`[2018-01-31]` Panettone italian cake](#pnttntlnck) 
+-   [`[2018-05-01]` cannoli http://www.casacannoli.com/cannoli/](#cnnlwwwcscnnlcmcnnl) 
+-   [`[2018-06-17]` jude's vanilla clotted cream &#x2013; pretty good! not super sweet](#jdsvnllclttdcrmprttygdntsprswt) 
+
+
+
+
+
+# `[2018-04-23]` Variation in stimulation is evolutionary beneficial      [[gastronomy]]
+
+e.g. different textures and tastes  
+
+
+
+
+# `[2018-04-30]` Lemon and melon are the same molecule, just chiral mirror images      [[gastronomy]]
+
+
+
+
+# `[2018-05-11]` pancakes chemistry      [[gastronomy]]
+
+<https://www.youtube.com/watch?v=pMhrV9sRjqI>  
+ butter milk: sourness???  
+
+-   fluffiness
+-   lactic acid  
+    
+    lactic acid + baking soda  
+    don't let batter seat, bubbles with escape  
+    browning: baking soda maillard reaction, basic environment  
+    overmixing batter makes it tough. too much gluten is formed, makes them chewy. Fat slows down gluten
+
+
+
+
+# `[2018-07-06]` White chocolate is only cocoa butter + sugar + cream
+
+
+
+
+# `[2018-05-29]` Oil: one reason for using oil is just to make a thermal path between the pan and the food, so the food doesn't only cook exactly where it touches.
+
+    The reason boiling doesn't achieve browning, is that water cannot be heated above 100C, except at extreme pressures. The Maillard Reaction is commonly what turns food brown and produces a pleasant taste, and this happens at 140 to 160 C.
+    And according to: http://www.finecooking.com/article/the-science-of-frying
+    "When food is plunged into hot oil, the water in the food starts to boil and percolate toward the surface. In order for a crisp, dry crust to develop, there must be a barrier between the hot oil and the migrating water. This barrier is typically something starchy. As the starch fries in the hot oil, it dries into a pleasantly crisp shell and protects the moisture beneath. The food inside steams while the coating browns and crisps."
+    EDIT: As /u/Choralone points out below, the Maillard reaction can take place at lower temperatures, but very slowly. So cooking items over several hours can sometimes produce similar results, but perhaps not with the types of food that are normally fried.
+
+
+
+
+# `[2017-02-26]` saturated and unsaturated fats: different molecule 'packing' patterns -> different internal energy, different boiling temperatures
+
+
+
+
+# `[2017-02-26]` how fruits are dried
+
+1.  freeze
+2.  lower pressure
+3.  reach the pressure where water goes directly from ice to vapour
+4.  fruits remain undamaged by the temperature
+
+
+
+
+# Debunk This: This is The Most Powerful Natural Antibiotic Ever – Kills Any Infections in The Body <https://www.reddit.com/r/DebunkThis/comments/2sfk0g/debunk_this_this_is_the_most_powerful_natural/>
+
+    Garlic:
+    It does contain an antibiotic compound known as allicin. The wiki article does a good job summing it up: allicin comes from bruised garlic tissue (but not from consumed garlic in the body). You can see the inhibitory concentrations in the article run as low at 16 mg/L in water. To reach those levels in the human body, you'd need roughly 5.5 times as much: ~88 mg in your circulating blood. Since there's roughly 9 mg allicin per garlic clove, this recipe would need roughly 10 cloves of garlic per dose. However, this same study did find an interesting use for purified allicin at level far above what you find in garlic.
+    
+    Hot peppers
+    Without an exact species of pepper, we can just assume the ingredient of interest here is the spice itself: capsaicin. Medical uses of capsaicin are primarily in pain treatment, not in fighting infections. I have found no evidence that consuming capsaicin is antibiotic.
+
+
+
+
+# oven camembert (250g?) + 200-300g steamed tenderstem broccoli/asparagus spears (very ergonipic for dipping in cheese)      [[recipe]]
+
+-   cut camembert on top and put in oven for 20 minutes (about 200 degrees)
+-   [optional] top with some conserve or berries or pomegranate seeds
+-   put for 5 more minutes
+-   also nice with gherkins
+
+
+
+
+# `[2018-07-23]` melting has something to do with ph (goat cheese)      [[foodscience]] [[cheese]]
+
+
+
+
+# `[2018-07-11]` stinky cheese &#x2013; same type of bacteria as feet      [[foodscience]] [[cheese]]
+
+<https://www.youtube.com/watch?v=Vk2V2bpxfAc>  
+cause the environment is simular: salty, moist, warm  
+
+
+
+
+# `[2018-05-03]` Maillard reaction      [[gastronomy]] [[chemistry]]
+
+between amino acids and reducing (TODO?) sugar  
+
+about 220 degrees (TODO fahrenheit?) is necessary to trigger it  
+
+some Maillard reaction results enhance other flavors  
+
+Example:  
+
+Melting of sugar  
+TODO onions?? browning and umami taste  
+
+TODO exothermal, so easy to overcook  
+
+Temperatures need to be high to bring about the Maillard reaction, but as long as the food is very wet, its temperature won’t climb above the boiling point of water. At atmospheric pressure, only high-heat cooking techniques can dry out the food enough to raise the temperature sufficiently. It’s not the water that stops the reaction, but rather the low boiling point at normal, sea-level pressure. In the sealed environment of a pressure cooker, the Maillard reaction can, and does, occur.  
+
+Drying and browning the surface first will, however, allow the reaction to proceed slowly at temperatures below the boiling point of water.  
+
+
+
+
+## `[2019-06-18]` need to drill it
+
+
+
+
+# dietary guidelines were the cause of obesity epidemic?
+
+    1977 - the first dietary guidelines were issued (McGovern report)
+    Interesting, are you implying that implementing these guidelines contribute to US/Worldwide childhood obesity or just pointing out a correlation?
+    I wouldn't be the first to make that assertion, but it is an interesting correlation.
+
+
+
+
+## `[2021-01-14]` eh. now thinkin it sounds like a conspiracy theory. have to be extremely cautious about these
+
+
+
+
+# what other active compounds are in coffee? <https://www.reddit.com/r/Nootropics/comments/8cnmd7/a_cup_of_coffee_always_makes_me_feel_more_awake/dxgdxlb/>      [[study]]
+
+
+
+
+# `[2019-06-15]` ПОСТ №015 – Vlad Lunachev – Medium      [[food]]
+
+<https://medium.com/@VladLunachev/%D0%BF%D0%BE%D1%81%D1%82-015-47d297521b?fbclid=IwAR1sQcke6GT-U8BenWk-igzvr-j06V5SQKJyQu1yL6aFyuaDhIhYZEKgkuM>  
+
+    А это не вредно? Насколько я знаю, нет. Есть институты парентерального и энтерального питания (внутривенного и через трубочку, для людей в коме или с травмами, при которых по-другому питаться не получается). Такие кейсы не редки и люди десятилетиями так питаются, без наблюдаемого вреда для здоровья. Для них есть питание и смеси, одобренные FDA. Тем не менее, сложно сказать на 100%, т.к. нет лонгитюдных исследований.
+
+
+
+
+# `[2020-08-25]` [Freeze Dried Food | Mountain House](https://www.mountainhouse.com/)
+
+
+
+
+# `[2020-11-27]` [Вера Кичанова, либертарианка, researcher в архитектурном бюро Захи Хадид - Кооператив «Темза»](https://temza.co/kichanova/?fbclid=IwAR3GjIQdn_-0rNtkR4xJzpG6LnKoMT9Da4MtKDSLi-lx4htEi_wxthVz7jk)
+
+    Очень люблю лондонские рынки — на тот же Боро-маркет по выходным хожу за своим любимым шоколадом в место под названием Rabot 1745. Еще люблю Mercato Metropolitano — итальянский рынок в районе Elephant and Castle, достаточно новый и пока не такой раскрученный. Там много хорошей еды, веселые люди, приятная музыка, а еще там есть узбекский ларек, где приятный хозяин (кстати, русскоговорящий) продает отличные манты и лагман.
+
+
+
+
+# `[2018-04-09]` Steaming is quick because conduction takes lots of energy      [[foodscience]]
+
+
+
+
+# They Go Really Well Together <https://blog.khymos.org/tgrwt/>      [[chemistry]] [[foodscience]]
+
+
+
+
+# <https://nplus1.ru/news/2019/06/17/perfect-blinchik>       [[foodscience]]
+
+
+
+
+# `[2018-03-04]` blanching broccoli      [[foodscience]]
+
+    you can blanch broccoli to give it a more vibrant green color so it can look better on your plate.
+    http://nchfp.uga.edu/how/freeze/blanching.html
+    Blanching destroys the enzymes that turn food brown and destroy nutrients. These enzymes are not stooped at freezer temps, but slowed. If you're going to eat the food in a month or 3, blanching may not be necessary, but blanching will improve the flavor and texture of what comes out of the freezer later. http://extension.psu.edu/food/preservation/news/2012/blanching-vegetables-is-a-must-before-freezing
+    
+    blanch with open lid; otherwise volatile acids are not carried away with steam and oxidise the vegetables
+
+<https://www.thekitchn.com/food-science-why-blanched-vege-53688>  
+
+
+
+
+# `[2019-02-24]` Intermittent Fasting vs Regular Dieting - YouTube
+
+<https://www.youtube.com/watch?v=6cejTkWPcKU>  
+elevated autophagy requires 4-5 days of fasting  
+
+
+
+
+# `[2018-07-11]` fish flesh if red due to myoglobin (if a fish is fast swimmer)
+
+salmon is exception; it's lazy but they eat krill, which contains red pigment  
+<https://www.youtube.com/watch?v=6F_OWtoTTrA>  
+
+
+
+
+# maillard reactions chemistry (from edx course)      [[gastronomy]]
+
+adding a base (e.g. baking soda) &#x2013; reacts with amino groups? pretzels are brushed with baking soda to give them dark colors  
+
+
+
+
+# different heating protocols (from edx course)      [[gastronomy]]
+
+heat diffusion equation blah blah  
+
+
+
+
+# `[2018-07-27]` pandan cake &#x2013; pretty nice      [[food]]
+
+
+
+
+# `[2018-08-10]` macadamia      [[food]]
+
+    [​](http://telegra.ph/file/ec323aa2d1291bb47fd08.jpg)Макадамия – самый крепкий и самый дорогой орех в мире. Его скорлупа твёрже бетона, а чтобы получить первый урожай, нужно около 5 лет. Именно 5 лет назад я впервые его попробовал. Очищенные орехи мне привёз друг с Гавайев. Я подумал, что у них интересный вкус, но не более того.
+    А пару дней назад я узнал, что макадамию можно купить в скорлупе. Ещё на заводе при помощи специального аппарата её надпиливают, а сами орехи продают с ключиком, который вставляется в скорлупу и проворачивается, за счёт чего она раскалывается.
+    Такого насыщенного шоколадно-ванильно-карамельного флейвора я ещё никогда не пробовал. Наверное, это самый вкусный орех в мире. И именно скорлупа прекрасно сохраняет его особенности. Всегда покупайте макадамию в скорлупе, если можете. И не забывайте мыть все орехи – сальмонелла живёт не только в куриных яйцах.
+
+
+
+
+# `[2018-08-21]` DomesticApe23 comments on Is mold in blue cheeses different in any way from the mold we usually despise that makes it desireable in food?      [[cheese]] [[wine]]
+
+<https://www.reddit.com/r/askscience/comments/946wd9/is_mold_in_blue_cheeses_different_in_any_way_from/e3j8s6n/>  
+
+     Grey mould, the soft hairy mould you see growing on fruit you leave out too long, is Botrytis cinerea. It is one of the world's most common agri/horticultural pests, in everything from floristry to tomato farming.
+    It is also a vital ingredient in a certain type of dessert wine. If grapes on the vine are infected with Botrytis and then kept below a certain temp and relatively dry, the mould infection is called Noble Rot. The grapes do not rot, they become permeable and allow water to evaporate, thus concentrating the sugars.
+    I find it interesting to note that the same pest that ruins your tomato plants is, in another scenario, a necessary ingredient in high quality wine products.
+
+
+
+
+# `[2018-06-30]` awesomedata/awesome-public-datasets: A topic-centric list of high-quality open datasets in public domains. Propose NEW data ☛☛☛PR☛☛☛      [[track_changes]]
+
+<https://github.com/awesomedata/awesome-public-datasets>  
+
+
+
+
+# `[2018-01-31]` Panettone italian cake
+
+
+
+
+# `[2018-05-01]` cannoli <http://www.casacannoli.com/cannoli/>
+
+
+
+
+# `[2018-06-17]` jude's vanilla clotted cream &#x2013; pretty good! not super sweet
+
